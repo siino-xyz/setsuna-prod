@@ -38,7 +38,6 @@ export default function Home() {
         />
         <Form />
       </Layout>
-      
       <Footer />
     </>
   )

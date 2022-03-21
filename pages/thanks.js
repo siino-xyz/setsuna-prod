@@ -63,18 +63,20 @@ const ThanksPage = () => {
             setsunaへお問い合わせ頂きありがとうございます。<br />
             原則１営業日以内に折り返しご連絡致しますので、今しばらくお待ち下さい。
           </Prag>
-
-          <Button
-            variant="contained" 
-            color='success'
-            font='h1'
-            sx={{
-              color:'#ffffff',
-              lineHeight: '2rem',
-            }}
-          >
-            トップページに戻る
-          </Button>
+        
+          <Link href='/'>
+            <Button
+              variant="contained" 
+              color='success'
+              font='h1'
+              sx={{
+                color:'#ffffff',
+                lineHeight: '2rem',
+              }}
+            >
+              トップページに戻る
+            </Button>
+          </Link>
 
         </Stack>
       </Box>

@@ -44,7 +44,9 @@ const Header = () => {
               flexDirection: 'row',
               justifyContent: 'space-between'
             }}>
-            <Image src="/logo/setsuna-logo-typo.svg" width={192} height={63} alt='setsuna-logo'/>
+            <Link href='/'>
+             <Image src="/logo/setsuna-logo-typo.svg" width={192} height={63} alt='setsuna-logo'/>
+            </Link>
             <Box
                 sx={{
                   display: 'flex',
@@ -57,7 +59,9 @@ const Header = () => {
                 }}
               >
                 <Item>
-                  <Image src="/icons/twitter-logo.svg" width={35} height={35} alt="twitter-logo"/>
+                  <a target="_blank" href='https://twitter.com/siino_webdev' rel="noopener noreferrer">
+                    <Image src="/icons/twitter-logo.svg" width={35} height={35} alt="twitter-logo"/>
+                  </a>
                 </Item>
                 <Item>
                   <Image src="/icons/contact-icon.svg" width={35} height={35} alt="email-icon"/>

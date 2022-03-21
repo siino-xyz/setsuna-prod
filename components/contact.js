@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles'
@@ -64,6 +65,8 @@ export default function MultilineTextFields() {
           variant="filled"
         />
       </Box>
+
+      <Link href='/thanks'>
         <Button
               variant="contained" 
               color='success'
@@ -79,6 +82,7 @@ export default function MultilineTextFields() {
             >
               送信
         </Button>
+      </Link>
     </Box>
   );
 }

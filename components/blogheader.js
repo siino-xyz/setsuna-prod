@@ -60,8 +60,12 @@ const BlogHeader = () => {
               spacing="1"
               sx={{
               }}>
+
+               
               <Grid item>
-               <Image src="/logo/setsuna-logo-blog.svg" width={192} height={63} alt='setsuna-logo'/>
+                <Link href='/'> 
+                    <Image src="/logo/setsuna-logo-blog.svg" width={192} height={63} alt='setsuna-logo'/>
+                </Link>
               </Grid>
 
               <Grid item md={6}>
