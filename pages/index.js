@@ -11,8 +11,9 @@ import Layout from '../components/layout'
 import Detail from '../components/detail'
 import Profile from '../components/profile'
 import SectionTitle from '../components/sectiontitle'
-import Form from '../components/form'
+import Form from '../components/contact'
 import HeroHeader from '../components/heroheader'
+import BlogHeader from '../components/blogheader'
 
 export default function Home() {
   return (
@@ -28,7 +29,13 @@ export default function Home() {
           sectiontitle={'Jamstackとは？'}
         />
         <Detail />
+        <SectionTitle
+          sectiontitle={'プロフィール'}
+        />
         <Profile />
+        <SectionTitle
+          sectiontitle={'ご用命・ご相談はこちらから'}
+        />
         <Form />
       </Layout>
       

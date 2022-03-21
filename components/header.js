@@ -15,6 +15,8 @@ const Item = (props) => {
         pr: 1,
         pl: 1,
         backgroundColor: 'secoundary.main',
+        display: 'flex',
+        alignItems: 'center',
         ...sx,
       }}
       {...other}
@@ -29,12 +31,13 @@ const Header = () => {
         <Box sx={{ 
           flexGrow: 1,      
         }}>
-          <AppBar position="absolute" sx={{ 
-            backgroundColor: 'palette.background.default',
+          <AppBar position="fixed" color="warning" sx={{ 
+            backgroundColor: 'palette.primary.light',
             boxShadow: 'none',
+            backdropFilter: 'blur(2px)',
             py: 0.5,
             px: 2,
-            mt: 1,
+            mt: 0,
           }}>
             <Box sx= {{
               display: 'flex',

@@ -8,21 +8,29 @@ const theme = createTheme({
       default: '#353349'
     },
     primary: {
-      main: 'rgba(0,0,0,0)',
+      main: '#00D1FF',
     },
     secondary: {
       main: '#92FF26',
     },
     text: {
-      primary: '#F4F4F4'
+      primary: '#F4F4F4',
+      secondary: '#C8C8C8'
     },
     common: {
       balck: '#292929',
       white: '#F4F4F4',
     },
+    success: {
+        main: '#F37D27'
+    },    
+    warning: {
+        main: 'rgba(0, 0, 0, 0)',
+    },
     error: {
       main: red.A400,
     },
+
   },
       typography: {
         htmlFontSize: 14,
@@ -73,6 +81,7 @@ const theme = createTheme({
                 '"Segoe UI Emoji"',
                 '"Segoe UI Symbol"',
             ].join(','),
+            letterSpacing: '0.1rem',
             fontWeight: 700,
         },
         h3Jp: {
@@ -175,6 +184,13 @@ const theme = createTheme({
             fontWeight: 400,
             letterSpacing: "0.08em", 
             lineHeight: '1.6rem' 
+        },
+        button: {
+            fontFamily: 'Zen Kaku Gothic Antique',
+            fontWeight: 700,
+            fontSizz: '0.7rem',
+            textTransform: 'none',
+            letterSpacing: '0.08rem',
         },
         fontFamily: [
             '-apple-system',

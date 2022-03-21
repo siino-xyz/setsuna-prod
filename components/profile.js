@@ -15,7 +15,8 @@ const Profile = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        my: 0,
+        mb: 10,
+        mt: 5,
         mx: 'auto',
         width: '100%',
         maxWidth: 420

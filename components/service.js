@@ -9,7 +9,7 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(0.5),
   textAlign: 'left',
   color: theme.palette.text.primary,
-  backgroundColor: theme.palette.primary.main,
+  backgroundColor: theme.palette.warning.main,
   boxShadow: 'none',
   marginTop: '5rem'
 }));
