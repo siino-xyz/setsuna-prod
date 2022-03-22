@@ -1,4 +1,7 @@
 export default function handler(req, res) {  
+
+  let response = null;
+  
   if(req.method === 'POST') {
     const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey(process.env.SENDGRID_APIKEY); 
@@ -13,7 +16,7 @@ export default function handler(req, res) {
  
     (async () => {
       try {
-        await sgMail.send(msg);
+       response =  await sgMail.send(msg);
       } catch (error) {
         console.error(error);
         if (error.response) {
@@ -24,4 +27,5 @@ export default function handler(req, res) {
   }
  
   res.status(200)
+  res.send(response);
 }
