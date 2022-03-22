@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 const Layout = ({children, index}) => {
   return (
     <>  
+   {index ? (<>
     <Box sx={{
       maxWidth: 1050,
       width: '85%',
@@ -11,6 +12,20 @@ const Layout = ({children, index}) => {
     }}>
       <main>{children}</main>
     </Box>
+
+   </>):(<>
+
+
+    <Box sx={{
+        maxWidth: 944,
+        width: '90%',
+        mx: 'auto',
+        my: 0,
+      }}>
+        <main>{children}</main>
+      </Box>
+   </>)} 
+   
     </>
   )
 }

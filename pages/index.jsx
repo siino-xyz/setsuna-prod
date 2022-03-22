@@ -13,7 +13,7 @@ import Profile from '../components/profile'
 import SectionTitle from '../components/sectiontitle'
 import HeroHeader from '../components/heroheader'
 import BlogHeader from '../components/blogheader'
-import InputForm from '../components/inputform'
+// import InputForm from '../components/inputform'
 import Sat from '../components/articles'
 
 export default function Home({articles}) {
@@ -35,7 +35,7 @@ export default function Home({articles}) {
         ))}
       </ul>
 
-      <Layout>
+      <Layout index>
         <SectionTitle
           sectiontitle={'高速でセキュアなウェブサイトを作ります'}
         />
@@ -51,7 +51,7 @@ export default function Home({articles}) {
         <SectionTitle
           sectiontitle={'ご用命・ご相談はこちらから'}
         />
-        <InputForm />
+        {/* <InputForm /> */}
       </Layout>
       <Footer />
     </>

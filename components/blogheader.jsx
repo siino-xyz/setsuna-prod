@@ -44,8 +44,8 @@ const BlogHeader = () => {
         <Box sx={{ 
           flexGrow: 1,      
         }}>
-          <AppBar position="fixed" sx={{ 
-            backgroundColor: 'palette.background.default',
+          <AppBar position="static" color="warning" sx={{ 
+            backgroundColor: 'palette.primary.light',
             boxShadow: 'none',
             backdropFilter: 'blur(2px)',
             py: 0.5,

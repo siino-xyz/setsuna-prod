@@ -37,16 +37,7 @@ const InputForm = () => {
  
 
   // フォーム送信時の処理
-  const onSubmit = async (data: Schema) => {
-    const res = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data),
-    })
-    console.log(schema);
-  }
+  const onSubmit = async (data: Schema) => {}
   
   
 
