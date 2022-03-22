@@ -19,10 +19,10 @@ const ArticlesHome = ({articles, category}) => {
       <ul>
         {category.map((category) => (
           <Cate
-          category={category}
           key={category.id}
+          category={category}
           >
-        </Cate>
+          </Cate>
         ))}
       </ul>
       <ul>

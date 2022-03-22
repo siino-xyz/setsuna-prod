@@ -14,11 +14,11 @@ export default function categoryId({ articles }) {
     <div>
       <ul>
         {articles.map((articles) => (
-        <Sat
-        articles={articles}
-        key={articles.id}
-        >
-        </Sat>
+          <Sat
+            articles={articles}
+            key={articles.id}
+            >
+          </Sat>
         ))}
       </ul>
     </div>
@@ -35,7 +35,7 @@ export const getStaticPaths = async () => {
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const data = await client.get({ endpoint: "articles", queries: { filters: `category[equals]${id}` } });
+  const data = await client.get({ endpoint: "articles", queries: { filters: `categories[equals]${id}` } });
 
   return {
     props: {

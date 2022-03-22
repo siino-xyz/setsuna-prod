@@ -58,16 +58,6 @@ export default function Home({articles}) {
   )
 }
 
-// export const getStaticProps = async () => {
-//   const data = await client.get({endpoint: 'articles'})
-
-//   return {
-//     props: {
-//       articles: data.contents,
-//     }
-//   }
-// }
-
 
 export const getStaticProps = async () => {
   const key = {
