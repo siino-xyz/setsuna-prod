@@ -50,22 +50,22 @@ const Service = () => {
         </Grid>
         <Grid item xs={7}>
           <Item>
-            <Image 
+            {/* <Image 
               src='/gif/wireframe.gif' 
               width={550} 
               height={327} 
               alt='wireframe-gif' 
-            />
+            /> */}
           </Item>
         </Grid>
         <Grid item xs={7}>
           <Item>
-            <Image 
+            {/* <Image 
               src='/gif/codeview.gif' 
               width={550} 
               height={290} 
               alt='codeview-gif' 
-            />
+            /> */}
           </Item>
         </Grid>
         <Grid item xs={5}>

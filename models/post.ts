@@ -7,7 +7,15 @@ export default interface Articles {
   title:string
   date: string
   body: string
-  categories: string
+  categories: {
+    id: string
+    name: string
+    createdAt: string
+    updatedAt: string
+    publishedAt:string
+    revisedAt: string
+    categories: string
+  },
   eye_catch: {
       url:string
       height: number

@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Moment from 'react-moment'
 
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 import Header from '../components/header'
@@ -15,6 +16,7 @@ import HeroHeader from '../components/heroheader'
 import BlogHeader from '../components/blogheader'
 // import InputForm from '../components/inputform'
 import Sat from '../components/articles'
+import ResponsiveGrid from '../components/temp-component'
 
 export default function Home({articles}) {
 
@@ -22,20 +24,25 @@ export default function Home({articles}) {
     <>
       <Header />
       <HeroHeader />
-
-      <ul>
-        {articles.map((articles) => (
-            
-              <Sat
-              articles={articles}
-              key={articles.id}
-              >
-              </Sat>
-            
-        ))}
-      </ul>
+      {/* <ResponsiveGrid /> */}
+ 
 
       <Layout index>
+
+      <Box sx={{ 
+        flexGrow: 1,
+        my: 10,
+      }}>
+        <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+          {articles.map((articles) => (
+                <Sat
+                articles={articles}
+                key={articles.id}
+                >
+                </Sat>
+          ))}
+        </Grid>
+      </Box>
         <SectionTitle
           sectiontitle={'高速でセキュアなウェブサイトを作ります'}
         />
