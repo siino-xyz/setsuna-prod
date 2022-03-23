@@ -12,11 +12,11 @@ jobs:
 
     - name: Create env file
       shell: bash
-      env: 
-       MCMS: ${{ secrets.MICROCMS_API_KEY }}
+     
       run: |
+        ls
         touch .env
-        echo MCMS >> .env
+        echo "MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }}" >> .env
         npm install
         npm run build
         
