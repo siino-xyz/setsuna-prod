@@ -12,13 +12,11 @@ jobs:
 
     - name: Create env file
       shell: bash
+      env: 
+       MCMS: ${{ secrets.MICROCMS_API_KEY }}
       run: |
-        touch .env
-        echo 'MCMS=${{ secrets.MICROCMS_API_KEY }}' >> .env
-        
         npm install
         npm run build
-        
     - uses: amondnet/vercel-action@v20.0.1
       with:
         # GitHub Actions の Secrets で作成した値を参照する形で
