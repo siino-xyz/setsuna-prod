@@ -1,10 +1,6 @@
-// import { client } from '../libs/client'
 import Link from 'next/link'
-import Moment from 'react-moment'
 
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-
+//components
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Service from '../components/service'
@@ -13,36 +9,31 @@ import Detail from '../components/detail'
 import Profile from '../components/profile'
 import SectionTitle from '../components/sectiontitle'
 import HeroHeader from '../components/heroheader'
-import BlogHeader from '../components/blogheader'
-// import InputForm from '../components/inputform'
-import Sat from '../components/articles'
-import ResponsiveGrid from '../components/temp-component'
+import ArticleCard from '../components/articles'
+//mui components
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 export default function Home({articles}) {
-
   return (
     <>
       <Header />
-      <HeroHeader />
-      {/* <ResponsiveGrid /> */}
- 
-
+      <HeroHeader /> 
       <Layout index>
-
-      <Box sx={{ 
-        flexGrow: 1,
-        my: 10,
-      }}>
-        <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {articles.map((articles) => (
-                <Sat
-                articles={articles}
-                key={articles.id}
-                >
-                </Sat>
-          ))}
-        </Grid>
-      </Box>
+        <Box sx={{ 
+          flexGrow: 1,
+          my: 10,
+        }}>
+          <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            {articles.map((articles) => (
+              <ArticleCard
+              articles={articles}
+              key={articles.id}
+              >
+              </ArticleCard>
+            ))}
+          </Grid>
+        </Box>
         <SectionTitle
           sectiontitle={'高速でセキュアなウェブサイトを作ります'}
         />
@@ -64,7 +55,6 @@ export default function Home({articles}) {
     </>
   )
 }
-
 
 export const getStaticProps = async () => {
   const key = {

@@ -63,7 +63,7 @@ const BlogHeader = () => {
 
                
               <Grid item>
-                <Link href='/'> 
+                <Link href='/' passHref> 
                     <Image src="/logo/setsuna-logo-blog.svg" width={192} height={63} alt='setsuna-logo'/>
                 </Link>
               </Grid>

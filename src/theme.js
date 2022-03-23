@@ -18,7 +18,7 @@ const theme = createTheme({
       secondary: '#C8C8C8'
     },
     common: {
-      black: '#292929',
+      balck: '#292929',
       white: '#F4F4F4',
     },
     success: {
@@ -52,7 +52,7 @@ const theme = createTheme({
             
         },
         h2: {
-            fontSize: "2rem",
+            fontSize: "1.5rem",
             fontWeight: 700,
             fontFamily: [
                 'Zen Kaku Gothic Antique',
@@ -137,7 +137,7 @@ const theme = createTheme({
             fontSize: "0.8rem",
             letterSpacing: "0.07rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'MuseoModerno',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -204,16 +204,6 @@ const theme = createTheme({
             '"Segoe UI Symbol"',
         ].join(','),
     },
-    // components: {
-    //     MuiCardContent: {
-    //         styleOverrides: {
-    //             root: {
-    //                 paddingBottom: '0.5rem !important',
-    //                 padding: 0,
-    //             },
-    //         },
-    //     },
-    // },
 });
 
 export default theme;

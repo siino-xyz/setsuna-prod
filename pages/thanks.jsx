@@ -64,7 +64,7 @@ const ThanksPage = () => {
             原則１営業日以内に折り返しご連絡致しますので、今しばらくお待ち下さい。
           </Prag>
         
-          <Link href='/'>
+          <Link href='/' passHref>
             <Button
               variant="contained" 
               color='success'

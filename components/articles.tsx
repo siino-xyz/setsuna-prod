@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 
-const Sat = ({ articles }: {
+const ArticleCard = ({ articles }: {
   articles: Articles
 }) => {
   const MaxLength = 5;
@@ -31,7 +31,7 @@ const Sat = ({ articles }: {
         key={articles.id}
       >
 
-        <Link href={`/articles/${articles.id}`}>
+        <Link href={`/articles/${articles.id}`} passHref>
           <a>
             <Box sx={{
               overflow: 'hidden',
@@ -62,7 +62,7 @@ const Sat = ({ articles }: {
             {articles.categories.name}
           </Typography>
 
-          <Link href={`/articles/${articles.id}`}>
+          <Link href={`/articles/${articles.id}`} passHref>
             <a>
              <Typography 
              variant='subtitle1'
@@ -101,6 +101,6 @@ const Sat = ({ articles }: {
   )
 }
 
-export default Sat
+export default ArticleCard
 
 

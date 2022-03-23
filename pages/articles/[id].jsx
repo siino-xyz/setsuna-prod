@@ -37,7 +37,7 @@ export default function ArticlesId({ articles }) {
           <Image 
             src={articles.eye_catch.url}
             width={944}
-            height={389}
+            height={531}
             layout='intrinsic'
             alt="eye_catch"
           />
@@ -49,17 +49,39 @@ export default function ArticlesId({ articles }) {
           mb: '5rem',
         }}>
 
-          <Typography variant='h2' component='h1' sx={{
-            pt: '1rem',
-            pb: 0,
+        <Stack spacing={1}   alignItems="flex-start"
+          sx={{
+            mt: 2,
+            mb: 4,
+        }}>
+      
+          <Typography variant='subtitle2' component='span' 
+          sx={{
+            backgroundColor:'common.black',
+            px: 1.5,
+            py: 0.5,
+            borderRadius: '0.2rem',
           }}>
-           {articles.title}
+              {articles.categories.name}
           </Typography>
 
-
-          <Moment format="YYYY/MM/DD">
+          <Typography variant='h2' component='h1' 
+            sx={{
+              pt: 1,
+            }}>
+            {articles.title}
+          </Typography>
+          <Typography variant='smalltitle2' component='p' 
+            sx={{
+              pl: 0.5,
+            }}>
+            <Moment format="YYYY/MM/DD">
               {articles.publishedAt}
-          </Moment>
+            </Moment>
+          </Typography>
+        </Stack>
+
+
           <div
             dangerouslySetInnerHTML={{
               __html: `${articles.body}`,

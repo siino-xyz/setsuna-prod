@@ -41,6 +41,7 @@ import Image from 'next/image'
               width={255}
               height={70}
               alt='footer-logo'
+              layout='intrinsic'
             />
           </Box>
         </Grid>
@@ -54,6 +55,7 @@ import Image from 'next/image'
               width={35}
               height={35}
               alt='twitter-logo'
+              layout='intrinsic'
             />
           </Box>
         </Grid>
@@ -73,6 +75,7 @@ import Image from 'next/image'
                 width={60}
                 height={36}
                 alt='nextjs-logo'
+                layout='intrinsic'
                 />
               </Grid>
               <Grid item>
@@ -81,6 +84,7 @@ import Image from 'next/image'
                 width={26}
                 height={26}
                 alt='materialui-logo'
+                layout='intrinsic'
                 />
               </Grid>
               <Grid item>
@@ -89,6 +93,7 @@ import Image from 'next/image'
                 width={110}
                 height={22}
                 alt='microcms-logo'
+                layout='intrinsic'
                 />
               </Grid>
               <Grid item>
@@ -97,6 +102,7 @@ import Image from 'next/image'
                 width={89}
                 height={20}
                 alt='vercel-logo'
+                layout='intrinsic'
                 />
               </Grid>
             </Grid>

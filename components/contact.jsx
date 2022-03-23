@@ -66,7 +66,7 @@ export default function MultilineTextFields() {
         />
       </Box>
 
-      <Link href='/thanks'>
+      <Link href='/thanks' passHref>
         <Button
               variant="contained" 
               color='success'
