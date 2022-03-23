@@ -14,7 +14,6 @@ jobs:
       shell: bash
      
       run: |
-        ls
         touch .env
         echo "MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }}" >> .env
         npm install
