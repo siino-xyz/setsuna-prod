@@ -1,17 +1,21 @@
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography'
 import Image from 'next/image'
+import styled from '@emotion/styled'
 
-const SubTitle = styled(Typography)(({ theme }) => ({
-  ...theme.typography.h3Jp,
-  textAlign: 'left',
-  marginBottom: '1rem',
-  marginTop: 0,
-}))
-
-
+//emotion styled
+const TypoH1 = styled.h1`
+  font-size: 2.5rem;
+  font-family: 'MuseoModerno';
+  font-weight: 600;
+  line-height: 3.2rem;
+`;
+const TypoSub1 = styled.span`
+  font-size: 1rem;
+  font-family: 'Zen Kaku Gothic Antique';
+  font-weight: 700;
+`;
+//emotion styled end
 
 const HeroHeader = () => {
   return (
@@ -37,16 +41,17 @@ const HeroHeader = () => {
           <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin:"auto"
+            justifyContent: 'flex-start',
+            margin:"auto",
+            textAlign: 'left',
           }}>
-            <Typography variant="h2" component="h1">
+            <TypoH1>
               Webサイト制作・デザインのsetsuna
-            </Typography>
-            <Typography variant="subtitle1" component="span">
+            </TypoH1>
+            <TypoSub1 >
               Webサイトも人生も勝負は一瞬。やるなら「速い」ほうがいい。
-            </Typography>
+            </TypoSub1>
+          
           </Box>
         </Grid>
         <Grid 
@@ -56,7 +61,7 @@ const HeroHeader = () => {
           direction="row"
           justifyContent="flex-end"
           textAlign="right"
-          >
+        >
           <Image 
             src='/images/fv-tv.svg'
             width={721}

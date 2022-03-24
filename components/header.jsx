@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 
 //mui
 import Box from '@mui/material/Box';
-import AppBar from '@mui/material/AppBar';
+
 
 
 const Item = (props) => {
@@ -25,31 +25,36 @@ const Item = (props) => {
   )
 }
 
+//emotion styled
 const RedLink = styled.a`
   color: red;
   cursor: pointer;
 `;
-
-
+const AppBar = styled.div`
+  display: flex;
+  flex-direction: ;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  padding: 1rem;
+  width: 100%;
+  z-index: 999;
+`;
+const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+`;
+//emtion styled end
 
 const Header = () => {
   return (
         <Box sx={{ 
           flexGrow: 1,      
         }}>
-          <AppBar position="fixed" color="warning" sx={{ 
-            backgroundColor: 'palette.primary.light',
-            boxShadow: 'none',
-            backdropFilter: 'blur(2px)',
-            py: 0.5,
-            px: 2,
-            mt: 0,
-          }}>
-            <Box sx= {{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'space-between'
-            }}>
+          <AppBar>
             <Link href='/' passHref>
               <RedLink>
                 <Image 
@@ -60,39 +65,28 @@ const Header = () => {
                 />
               </RedLink>
             </Link>
-            <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  pr: 0.1,
-                  pl: 0.1,
-                  m: 1,
-                  bgcolor: 'secoundary.main',
-                  
-                }}
-              >
-                <Item>
-                  <Link href='https://twitter.com/siino_webdev' passHref>
-                    <a target="_blank" rel="noopener noreferrer">
-                      <Image 
-                      src="/icons/twitter-logo.svg" 
-                      width={35} height={35}f
-                      alt="twitter-logo"
-                      layout='intrinsic'
-                    />
-                    </a>
-                  </Link>
-                </Item>
-                <Item>
-                  <Image 
-                  src="/icons/contact-icon.svg" 
-                  width={35} height={35} 
-                  alt="email-icon"
-                  layout='intrinsic'
+            <IconWrapper>
+              <Item>
+                <Link href='https://twitter.com/siino_webdev' passHref>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <Image 
+                    src="/icons/twitter-logo.svg" 
+                    width={35} height={35}f
+                    alt="twitter-logo"
+                    layout='intrinsic'
                   />
-                </Item>
-              </Box>
-            </Box>
+                  </a>
+                </Link>
+              </Item>
+              <Item>
+                <Image 
+                src="/icons/contact-icon.svg" 
+                width={35} height={35} 
+                alt="email-icon"
+                layout='intrinsic'
+                />
+              </Item>
+            </IconWrapper>
           </AppBar>
         </Box>   
   )
