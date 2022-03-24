@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import styled from '@emotion/styled'
 
 
 //mui
@@ -24,6 +25,11 @@ const Item = (props) => {
   )
 }
 
+const RedLink = styled.a`
+  color: red;
+  cursor: pointer;
+`;
+
 
 
 const Header = () => {
@@ -45,12 +51,14 @@ const Header = () => {
               justifyContent: 'space-between'
             }}>
             <Link href='/' passHref>
-             <Image 
-              src="/logo/setsuna-logo-typo.svg" 
-              width={192} height={63} 
-              alt='setsuna-logo'
-              layout='intrinsic'
-            />
+              <RedLink>
+                <Image 
+                  src="/logo/setsuna-logo-typo.svg" 
+                  width={192} height={63} 
+                  alt='setsuna-logo'
+                  layout='intrinsic'
+                />
+              </RedLink>
             </Link>
             <Box
                 sx={{
@@ -64,14 +72,16 @@ const Header = () => {
                 }}
               >
                 <Item>
-                  <a target="_blank" href='https://twitter.com/siino_webdev' rel="noopener noreferrer">
-                    <Image 
-                    src="/icons/twitter-logo.svg" 
-                    width={35} height={35}f
-                    alt="twitter-logo"
-                    layout='intrinsic'
-                  />
-                  </a>
+                  <Link href='https://twitter.com/siino_webdev' passHref>
+                    <a target="_blank" rel="noopener noreferrer">
+                      <Image 
+                      src="/icons/twitter-logo.svg" 
+                      width={35} height={35}f
+                      alt="twitter-logo"
+                      layout='intrinsic'
+                    />
+                    </a>
+                  </Link>
                 </Item>
                 <Item>
                   <Image 

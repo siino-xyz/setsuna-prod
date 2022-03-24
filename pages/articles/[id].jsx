@@ -11,6 +11,17 @@ import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 
+import {
+  TwitterIcon,
+  TwitterShareButton,
+  FacebookShareButton,
+  FacebookIcon,
+  LineIcon,
+  LineShareButton,
+  PinterestIcon,
+  PinterestShareButton
+} from "react-share";
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.warning.main,
   textAlign: 'center',
@@ -107,34 +118,28 @@ export default function ArticlesId({ articles }) {
               >
 
                 <Item>
-                  <Image 
-                    src='/icons/twitter-logo.svg'
-                    width={35}
-                    height={35}
-                    layout='fixed'
-                    alt="twitter_icon"
-                  />
+                  <TwitterShareButton url={[`http://localhost:8080/articles/${articles.id}`]} title={[articles.title]}>
+                    <TwitterIcon size={32} round />
+                  </TwitterShareButton>
                 </Item>
                 <Item>
-                  <Image 
-                    src='/icons/line-icon.svg'
-                    width={35}
-                    height={35}
-                    layout='fixed'
-                    alt="line_icon"
-                  />
+                  <FacebookShareButton url={[`http://localhost:8080/articles/${articles.id}`]}>
+                    <FacebookIcon size={32} round />
+                  </FacebookShareButton>
                 </Item>
                 <Item>
-                  <Image 
-                    src='/icons/fb-icon.svg'
-                    width={35}
-                    height={35}
-                    layout='fixed'
-                    alt="fb_icon"
-                  />
+                  <LineShareButton url={[`http://localhost:8080/articles/${articles.id}`]} title={[articles.title]}>
+                    <LineIcon size={32} round />
+                  </LineShareButton>
+                </Item>
+                <Item>
+                  <PinterestShareButton url={[`http://localhost:8080/articles/articles/${articles.id}`]} media={[`http://localhost:8080/${articles.eye_catch.url}`]} description={[articles.title]}>
+                    <PinterestIcon size={32} round />
+                  </PinterestShareButton>
                 </Item>
               </Stack>
             </Stack>
+
           </Box>
         </Box>
       </Box>

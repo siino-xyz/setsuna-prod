@@ -1,8 +1,9 @@
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image'
+import Link from 'next/link'
+import { styled } from '@mui/material/styles';
+// import Paper from '@mui/material/Paper';
 
 // const Item = styled(Paper)(({ theme }) => ({
 //   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -36,13 +37,16 @@ import Image from 'next/image'
             px: 2,
             py: 2,
           }}>
-            <Image
-              src='/logo/footer-logo.svg'
-              width={255}
-              height={70}
-              alt='footer-logo'
-              layout='intrinsic'
-            />
+            <Link href='/' passHref>
+              <a>
+                <Image 
+                  src="/logo/footer-logo.svg" 
+                  width={192} height={63} 
+                  alt='setsuna-logo'
+                  layout='intrinsic'
+                />
+              </a>
+            </Link>
           </Box>
         </Grid>
 
@@ -50,13 +54,16 @@ import Image from 'next/image'
           <Box sx={{
             textAlign: 'center'
           }}>
-            <Image
-              src='/icons/twitter-logo.svg'
-              width={35}
-              height={35}
-              alt='twitter-logo'
-              layout='intrinsic'
-            />
+            <Link href='https://twitter.com/siino_webdev' passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <Image 
+                src="/icons/twitter-logo.svg" 
+                width={35} height={35}f
+                alt="twitter-logo"
+                layout='intrinsic'
+              />
+              </a>
+            </Link>
           </Box>
         </Grid>
 
