@@ -1,9 +1,9 @@
-import BlogHeader from '../../components/blogheader'
-import Footer from '../../components/footer'
-import Layout from '../../components/layout'
 import { client } from "../../libs/client"
 import Image from 'next/image'
 import Moment from 'react-moment'
+
+import ArticleLayout from '../../layouts/article-layout'
+import NestedLayout from '../../layouts/nested-layout'
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box'
@@ -33,8 +33,7 @@ export default function ArticlesId({ articles }) {
 
   return (
     <>
-    <BlogHeader />
-    <Layout>
+   
       <Box sx={{
         mt: '2rem'
       }}>
@@ -143,11 +142,20 @@ export default function ArticlesId({ articles }) {
           </Box>
         </Box>
       </Box>
-    </Layout>
-    <Footer />
+    
     </>
   );
 }
+
+
+ArticlesId.getLayout = function ArticlesHome(articlesid) {
+  return (
+    <ArticleLayout>
+      <NestedLayout>{articlesid}</NestedLayout>
+    </ArticleLayout>
+  )
+}
+
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
