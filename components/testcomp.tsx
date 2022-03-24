@@ -4,23 +4,26 @@ import Link from 'next/link'
 import styled from '@emotion/styled'
 
 import Box from '@mui/material/Box';
+import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button';
 
 
-const AppBar = styled.div`
-  display: flex;
-  flex-direction: ;
-  justify-content: space-between;
-  background-color: rgba(0,0,0,0);
-  backdrop-filter: blur(2px);
-  position: fixed;
-  padding: 1rem;
-  width: 100%;
-  z-index: 999;
-`;
+import Category from "../models/category"
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
-
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
+}
 
 const Item = (props) => {
   const { sx, ...other} = props;
@@ -45,7 +48,9 @@ const Totoplink = styled.a`
 
 
 
-const BlogHeader = (category) => {
+const Test = ({ category }: {
+  category: Array<Category>
+}) => {
   const [value, setValue] = React.useState('one');
 
   const handleChange = (event, newValue) => {
@@ -56,7 +61,14 @@ const BlogHeader = (category) => {
         <Box sx={{ 
           flexGrow: 1,      
         }}>
-          <AppBar>
+          <AppBar position="static"  sx={{ 
+            backgroundColor: 'palette.primary.light',
+            boxShadow: 'none',
+            backdropFilter: 'blur(2px)',
+            py: 0.5,
+            px: 2,
+            mt: 0,
+          }}>
             <Grid
               container
               direction="row"
@@ -83,20 +95,22 @@ const BlogHeader = (category) => {
 
 
               <Grid item md={6}>
-      
+              <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
+                  {category.map((category) => (
+                    <div key={category.id}>
+                      <Link href={`/category/${category.id}`} passHref>
+                        <LinkTab label={category.name} />
+                      </Link>
+                    </div>
+                    ))}
+                </Tabs>
               </Grid>
 
               <Grid item>
                 <Link href="/" passHref>
                   <Totoplink target="_blank" rel="noopener noreferrer">
                     <Button
-                    variant="contained" 
-                    color='success'
-                    font='h1'
-                    sx={{
-                      color:'#ffffff',
-                      lineHeight: '2rem'
-                    }}
+                   
                     >
                       setsunaについて
                     </Button>
@@ -110,7 +124,7 @@ const BlogHeader = (category) => {
 }
 
 
-export default BlogHeader
+export default Test
 
 
 

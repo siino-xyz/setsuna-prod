@@ -7,7 +7,6 @@ import ArticleCard from '../components/articles'
 import Cate from '../components/category'
 
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
@@ -22,6 +21,7 @@ const ArticlesHome = ({articles, category}) => {
         category={category}
       >
       </Cate>
+      
       <Box sx={{ 
           flexGrow: 1,
           my: 10,

@@ -5,8 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 
-import * as React from 'react';
-
+import * as React from 'react'
 
 function LinkTab(props) {
   return (
