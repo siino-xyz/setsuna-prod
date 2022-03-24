@@ -3,6 +3,12 @@ import Link from 'next/link'
 import Moment from 'react-moment'
 
 
+import * as React from 'react';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+
+
+
 import Footer from '../components/footer'
 import BlogHeader from '../components/blogheader'
 import ArticleCard from '../components/articles'
@@ -15,12 +21,26 @@ import Box from '@mui/material/Box';
 
 
 const ArticlesHome = ({articles, category}) => {
+  const [value, setValue] = React.useState(2);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   
   return (
     <>
     <BlogHeader />
     <Layout>
-      <ul>
+    <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
+      {category.map((category) => (
+            <Cate
+            key={category.id}
+            category={category}
+            >
+            </Cate>
+          ))}
+      </Tabs>
+      {/* <ul>
         {category.map((category) => (
           <Cate
           key={category.id}
@@ -28,7 +48,7 @@ const ArticlesHome = ({articles, category}) => {
           >
           </Cate>
         ))}
-      </ul>
+      </ul> */}
       <Box sx={{ 
           flexGrow: 1,
           my: 10,

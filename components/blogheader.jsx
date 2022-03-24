@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from '@emotion/styled'
 
+import Category from '../models/category'
+
 
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import FiberNewIcon from '@mui/icons-material/FiberNew';
