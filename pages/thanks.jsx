@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Header from '../components/header'
-import Layout from '../components/layout'
+import Layout from '../layouts/layout'
+import NestedLayout from '../layouts/nested-layout'
 
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack';
@@ -29,8 +29,6 @@ const Prag = styled(Typography)(({ theme }) => ({
 const ThanksPage = () => {
   return (
     <>
-    <Header />
-    <Layout>
       <Box sx={{
         height: '100vh',
         width: '80%',
@@ -80,8 +78,15 @@ const ThanksPage = () => {
 
         </Stack>
       </Box>
-    </Layout>
     </>
+  )
+}
+
+ThanksPage.getLayout = function getLayout(thankspage) {
+  return (
+    <Layout>
+      <NestedLayout>{thankspage}</NestedLayout>
+    </Layout>
   )
 }
 

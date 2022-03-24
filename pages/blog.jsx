@@ -2,20 +2,15 @@ import { client } from '../libs/client'
 import Link from 'next/link'
 import Moment from 'react-moment'
 
+import ArticleLayout from '../layouts/article-layout'
+import NestedLayout from '../layouts/nested-layout'
+
+import ArticleCard from '../components/articles'
+import Cate from '../components/category'
 
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-
-
-
-import Footer from '../components/footer'
-import BlogHeader from '../components/blogheader'
-import ArticleCard from '../components/articles'
-import Cate from '../components/category'
-import Layout from '../components/layout'
-
-//mui components
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
@@ -29,9 +24,7 @@ const ArticlesHome = ({articles, category}) => {
   
   return (
     <>
-    <BlogHeader />
-    <Layout>
-    <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
+      <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
       {category.map((category) => (
             <Cate
             key={category.id}
@@ -40,15 +33,7 @@ const ArticlesHome = ({articles, category}) => {
             </Cate>
           ))}
       </Tabs>
-      {/* <ul>
-        {category.map((category) => (
-          <Cate
-          key={category.id}
-          category={category}
-          >
-          </Cate>
-        ))}
-      </ul> */}
+
       <Box sx={{ 
           flexGrow: 1,
           my: 10,
@@ -63,9 +48,16 @@ const ArticlesHome = ({articles, category}) => {
             ))}
           </Grid>
         </Box>
-    </Layout>
-    <Footer />
     </>
+  )
+}
+
+
+ArticlesHome.getLayout = function ArticlesHome(articleshome) {
+  return (
+    <ArticleLayout>
+      <NestedLayout index>{articleshome}</NestedLayout>
+    </ArticleLayout>
   )
 }
 
