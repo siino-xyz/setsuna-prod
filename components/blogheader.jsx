@@ -3,14 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from '@emotion/styled'
 
-import Category from '../models/category'
-
-
-import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
-import FiberNewIcon from '@mui/icons-material/FiberNew';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid'
@@ -44,7 +36,7 @@ const Totoplink = styled.a`
 
 
 
-const BlogHeader = () => {
+const BlogHeader = (category) => {
   const [value, setValue] = React.useState('one');
 
   const handleChange = (event, newValue) => {
@@ -89,23 +81,7 @@ const BlogHeader = () => {
 
 
               <Grid item md={6}>
-                <Box sx={{ 
-                  width: '100%',
-                }}>
-                  <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    textColor="secondary"
-                    indicatorColor="secondary"
-                    aria-label="secondary tabs example"
-                    centered
-                    >
-                      <Tab icon={<FiberNewIcon />} value="one" iconPosition="start" label="新着"/>
-                      <Tab icon={<OfflineBoltIcon />} value="two" iconPosition="start" label="人気"/>
-                      <Tab value="three" label="プログラミング" />
-                      <Tab value="four" label="デザイン" />
-                  </Tabs>
-                </Box>
+      
               </Grid>
 
               <Grid item>

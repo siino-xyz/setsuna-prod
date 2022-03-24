@@ -3,8 +3,9 @@ import Category from "../models/category"
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid'
+
+
+import * as React from 'react';
 
 
 function LinkTab(props) {
@@ -20,23 +21,29 @@ function LinkTab(props) {
 }
 
 const Cate = ({ category }: {
-  category: Category
+  category: Array<Category>
 }) => {
+
+  const [value, setValue] = React.useState(2);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <>
-    {/* <li key={category.id}>
-      <Link href={`/category/${category.id}`} passHref>
-        <a>{category.name}</a>
-      </Link>
-    </li> */}
-    <div key={category.id}>
-      <Link href={`/category/${category.id}`} passHref>
-        <LinkTab label={category.name} />
-      </Link>
-    </div>
+      <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
+        {category.map((category) => (
+          <div key={category.id}>
+            <Link href={`/category/${category.id}`} passHref>
+              <LinkTab label={category.name} />
+            </Link>
+          </div>
+          ))}
+      </Tabs>
    </>
   )
 }
 
 export default Cate
+
