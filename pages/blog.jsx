@@ -15,6 +15,10 @@ const ArticlesHome = ({articles, category}) => {
   
   return (
     <>
+    <Box sx={{
+      mt: 8,
+    }}>
+
       <Cate
         Category={[...category]}
         key={category.id}
@@ -36,6 +40,7 @@ const ArticlesHome = ({articles, category}) => {
             ))}
           </Grid>
         </Box>
+    </Box>
     </>
   )
 }

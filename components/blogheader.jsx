@@ -98,11 +98,8 @@ const BlogHeader = (category) => {
 
 
 
-          <Grid item md={6}>
-  
-          </Grid>
-
-          <Grid item>
+    
+          {/* <Grid item>
             <Link href="/" passHref>
               <Totoplink target="_blank" rel="noopener noreferrer">
                 <ToTopBtn>
@@ -110,7 +107,7 @@ const BlogHeader = (category) => {
                 </ToTopBtn>
               </Totoplink>
             </Link>
-          </Grid>
+          </Grid> */}
         </Grid>
       </AppBar>
     </Box>   

@@ -23,7 +23,10 @@ const NestedLayout = ({children, index}) => {
           maxWidth: 944,
           width: '90%',
           mx: 'auto',
-          my: 0,
+          my: 3,
+          "@media screen and (max-width:400px)": {
+            width: '95%',
+            },
         }}>
           <main>{children}</main>
         </Box>
