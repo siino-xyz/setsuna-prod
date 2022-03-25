@@ -34,12 +34,13 @@ const HeroHeader = () => {
         sx={{
         width: '100%',
         height: '100vh',
+        overFlow: 'hidden',
         margin:0,
         background: "linear-gradient(.25turn, rgba(83,120,201,1) 0%, rgba(5,8,43,1) 67%)",
       }}>
         <Grid 
           item
-          xs={6} 
+          xs={12} 
           md={5}
           container
           >
@@ -61,9 +62,10 @@ const HeroHeader = () => {
           
           </Box>
         </Grid>
+
         <Grid 
           item 
-          xs={6}
+          xs={12}
           md={7}
           direction="column"
           justifyContent="flex-end"

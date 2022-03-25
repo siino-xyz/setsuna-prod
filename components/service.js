@@ -32,10 +32,9 @@ const Service = () => {
     <Box sx={{ 
       flexGrow: 1,
       mb: '5rem',
-      
     }}>
       <Grid container spacing={2}>
-        <Grid item xs={5}>
+        <Grid item xs={12} md={5}>
           <Item>
             <SubTitle component="h2">
               Whats setsuna?
@@ -48,7 +47,7 @@ const Service = () => {
             </Prag>
           </Item>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={12} md={7}>
           <Item>
             {/* <Image 
               src='/gif/wireframe.gif' 
@@ -58,7 +57,7 @@ const Service = () => {
             /> */}
           </Item>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item md={7} xs={12}>
           <Item>
             {/* <Image 
               src='/gif/codeview.gif' 
@@ -68,7 +67,7 @@ const Service = () => {
             /> */}
           </Item>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item md={5} xs={12}>
           <Item>
               <SubTitle component="h2">
                 Jamstack

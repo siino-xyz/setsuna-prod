@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 // import Paper from '@mui/material/Paper';
 
 // const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',n
 //   ...theme.typography.body2,
 //   padding: theme.spacing(1),
 //   textAlign: 'center',
@@ -18,30 +18,30 @@ import { styled } from '@mui/material/styles';
     <Box sx={{ 
       flexGrow: 1,
       width: '100%',
-      pt: 5,
-      pb: 2,
+      pt: 1,
+      pb: 1,
       px: 2,
       mt: 5,
       mb: 0,
       mx: 0,
-      background: "linear-gradient(.75turn, rgba(83,120,201,1) 0%, rgba(5,8,43,1) 50%)",
+      background: '#292929',
     }}>
       <Grid 
-        spacing={2}
+        spacing={0}
         container 
         direction="row"
         justifyContent="center"
         alignItems="center">
-        <Grid item xs>
+        <Grid item xs={4} md={3}>
           <Box sx={{
-            px: 2,
-            py: 2,
+            px: 0,
+            py: 0,
           }}>
             <Link href='/' passHref>
               <a>
                 <Image 
-                  src="/logo/footer-logo.svg" 
-                  width={192} height={63} 
+                  src="/logo/f-l.svg" 
+                  width={295} height={99} 
                   alt='setsuna-logo'
                   layout='intrinsic'
                 />
@@ -50,7 +50,7 @@ import { styled } from '@mui/material/styles';
           </Box>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={4} md={6}>
           <Box sx={{
             textAlign: 'center'
           }}>
@@ -67,16 +67,16 @@ import { styled } from '@mui/material/styles';
           </Box>
         </Grid>
 
-        <Grid item xs>
+        <Grid item xs={4} md={3}>
           <Box>
             <Grid 
               spacing={1}
               container
-              direction="row"
               justifyContent="center"
               alignItems="center"
+              columns={{ xs: 4, md: 12 }}
             >
-              <Grid item>
+              <Grid item xs={2} md={3}>
                 <Image
                 src='/icons/nextjs-logo.svg'
                 width={60}
@@ -85,7 +85,9 @@ import { styled } from '@mui/material/styles';
                 layout='intrinsic'
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={2} md={2} sx={{
+                textAlign: 'center',
+              }}>
                 <Image
                 src='/icons/materialui-logo.svg'
                 width={26}
@@ -94,7 +96,7 @@ import { styled } from '@mui/material/styles';
                 layout='intrinsic'
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={2} md={3}>
               <Image
                 src='/icons/microcms-logo.svg'
                 width={110}
@@ -103,7 +105,7 @@ import { styled } from '@mui/material/styles';
                 layout='intrinsic'
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={2} md={3}>
               <Image
                 src='/icons/vercel-logo.svg'
                 width={89}

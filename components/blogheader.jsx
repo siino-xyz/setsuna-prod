@@ -28,18 +28,18 @@ const Totoplink = styled.a`
   cursor: pointer !important;
 `
 const ToTopBtn = styled.button`
- padding: 0.5rem 1.5rem;
- border-radius: 0.2rem;
- background-color: white;
- outline: none;
- border: none;
- box-shadow: none;
- cursor: pointer !important;
- font-family: 'Zen Kaku Gothic Antique';
- font-size: 1rem;
- font-weight: 600;
- letter-spacing: 0.05rem;
-
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.2rem;
+  background-color: #F37D27;
+  color: #EEEEEE;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer !important;
+  font-family: 'MuseoModerno';
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
 `;
 
 const Item = (props) => {
@@ -87,8 +87,8 @@ const BlogHeader = (category) => {
           <Link href='/blog' passHref>
           <a>
             <Image 
-              src="/logo/setsuna-logo-blog.svg" 
-              width={192} height={63} 
+              src="/logo/blog-h.svg" 
+              width={210} height={70} 
               alt='setsuna-logo'
               layout='intrinsic'
             />

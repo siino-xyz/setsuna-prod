@@ -9,6 +9,11 @@ const NestedLayout = ({children, index}) => {
         width: '85%',
         mx: 'auto',
         my: 0,
+
+        "@media screen and (max-width:600px)": {
+          width: "90%",
+          display: '',
+        },
       }}>
         <main>{children}</main>
       </Box>

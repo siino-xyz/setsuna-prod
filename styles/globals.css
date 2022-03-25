@@ -2,3 +2,7 @@ a {
   text-decoration: none !important;
   cursor: pointer !important;
 }
+html{
+  margin: 0;
+  width: 100%;
+}

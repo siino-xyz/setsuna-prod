@@ -31,13 +31,17 @@ const ArticleCard = ({ articles }: {
   return (
     <>
 
-    <Grid item xs={2} sm={4} md={4}>
+    <Grid item xs={10} sm={4} md={4}
+         
+    >
       <Card sx={{ 
           maxWidth: 330,
           py: 0,
           boxShadow: 'none',
-          borderRadius: '0.3rem',
+          borderRadius: '0.1rem',
           overflow: 'hidden',
+          mx: 'auto',
+          backgroundColor: 'common.black',
         }} 
         key={articles.id}
       >
@@ -86,6 +90,10 @@ const ArticleCard = ({ articles }: {
                mx: 0,
                minHeight: '100px',
                maxHeight: '100px',
+                  "@media screen and (max-width:400px)": {
+                    minHeight: '40px',
+                    maxHeight: '40px',
+                  },
              }}
              >
               {articles.title}

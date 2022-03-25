@@ -40,6 +40,9 @@ const AppBar = styled.div`
   padding: 0.4rem 1rem 0 1rem;
   width: 100%;
   z-index: 999;
+  @media (max-width: 420px) {
+        padding: 0.4rem 1rem 0 0;
+      }
 `;
 const IconWrapper = styled.div`
   display: flex;
@@ -59,8 +62,8 @@ const Header = () => {
             <Link href='/' passHref>
               <RedLink>
                 <Image 
-                  src="/logo/setsuna-logo-typo.svg" 
-                  width={192} height={63} 
+                  src="/logo/t.svg" 
+                  width={210} height={70} 
                   alt='setsuna-logo'
                   layout='intrinsic'
                 />
