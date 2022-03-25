@@ -14,41 +14,45 @@ import LinkButton from '../components/button'
 export default function Home({articles}) {
   return (
     <>
-        <Box sx={{ 
-          flexGrow: 1,
-          my: 10,
-        }}>
-          <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            {articles.map((articles) => (
-              <ArticleCard
-              articles={articles}
-              key={articles.id}
-              >
-              </ArticleCard>
-            ))}
-          </Grid>
-          <LinkButton
-            url={'blog'}
-            button={'記事一覧'}
-          />
+      <Grid 
+       container spacing={{ xs: 2, md: 5 }}
+       columns={{ xs: 4, sm: 8, md: 12 }}
+       sx={{
+         mx: 'auto',
+         pt: 7,
+         pb: 1,
 
-        </Box>
-        <SectionTitle
-          sectiontitle={'高速でセキュアなウェブサイトを作ります'}
-        />
-        <Service />
-        <SectionTitle
-          sectiontitle={'Jamstackとは？'}
-        />
-        <Detail />
-        <SectionTitle
-          sectiontitle={'プロフィール'}
-        />
-        <Profile />
-        <SectionTitle
-          sectiontitle={'ご用命・ご相談はこちらから'}
-        />
-       
+       }}
+      >
+
+        {articles.map((articles) => (
+          <ArticleCard
+          articles={articles}
+          key={articles.id}
+          >
+          </ArticleCard>
+        ))}
+      </Grid>
+
+      <LinkButton
+        url={'blog'}
+        button={'記事一覧'}
+      />
+      <SectionTitle
+        sectiontitle={'高速でセキュアなウェブサイトを作ります'}
+      />
+      <Service />
+      <SectionTitle
+        sectiontitle={'Jamstackとは？'}
+      />
+      <Detail />
+      <SectionTitle
+        sectiontitle={'プロフィール'}
+      />
+      <Profile />
+      <SectionTitle
+        sectiontitle={'ご用命・ご相談はこちらから'}
+      />
     </>
   )
 }

@@ -99,7 +99,12 @@ export default function ArticlesId({ articles , category }) {
         </Stack>
 
 
-          <div
+          <Box
+            sx={{
+              width:'100%',
+              mx: 'auto',
+              
+            }}
             dangerouslySetInnerHTML={{
               __html: `${articles.body}`,
             }}
