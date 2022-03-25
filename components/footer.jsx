@@ -24,7 +24,7 @@ import { styled } from '@mui/material/styles';
       mt: 5,
       mb: 0,
       mx: 0,
-      background: "linear-gradient(217deg, rgba(57,81,133, 1), rgba(41,41,41, .8) 50.71%)",
+      background: "linear-gradient(.75turn, rgba(83,120,201,1) 0%, rgba(5,8,43,1) 50%)",
     }}>
       <Grid 
         spacing={2}

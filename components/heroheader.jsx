@@ -5,15 +5,20 @@ import styled from '@emotion/styled'
 
 //emotion styled
 const TypoH1 = styled.h1`
-  font-size: 2.5rem;
-  font-family: 'MuseoModerno';
+  font-size: 2.1rem;
+  font-family: 'Zen Kaku Gothic Antique';
   font-weight: 600;
-  line-height: 3.2rem;
+  line-height: 1rem;
 `;
 const TypoSub1 = styled.span`
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: 'Zen Kaku Gothic Antique';
-  font-weight: 700;
+  font-weight: 400;
+`;
+
+const HikakinTv = styled.div`
+ padding-top: 5rem;
+ padding-left: 14rem;
 `;
 //emotion styled end
 
@@ -28,9 +33,9 @@ const HeroHeader = () => {
         spacing={2}
         sx={{
         width: '100%',
-        margin:0,
         height: '100vh',
-        background: "linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%)",
+        margin:0,
+        background: "linear-gradient(.25turn, rgba(83,120,201,1) 0%, rgba(5,8,43,1) 67%)",
       }}>
         <Grid 
           item
@@ -44,6 +49,8 @@ const HeroHeader = () => {
             justifyContent: 'flex-start',
             margin:"auto",
             textAlign: 'left',
+            pl: 1,
+            pt: 1,
           }}>
             <TypoH1>
               Webサイト制作・デザインのsetsuna
@@ -58,16 +65,19 @@ const HeroHeader = () => {
           item 
           xs={6}
           md={7}
-          direction="row"
+          direction="column"
           justifyContent="flex-end"
           textAlign="right"
         >
+        <HikakinTv>
           <Image 
             src='/images/fv-tv.svg'
-            width={721}
-            height={610}
+            width={854}
+            height={721}
+            layout='intrinsic'
             alt="hikakin-tv"
           />
+        </HikakinTv>
         </Grid>
       </Grid>
     </>

@@ -28,16 +28,16 @@ const Item = (props) => {
 //emotion styled
 const RedLink = styled.a`
   color: red;
-  cursor: pointer;
+  cursor: pointer !important;
 `;
 const AppBar = styled.div`
   display: flex;
   flex-direction: ;
   justify-content: space-between;
   background-color: rgba(0,0,0,0);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   position: fixed;
-  padding: 1rem;
+  padding: 0.4rem 1rem 0 1rem;
   width: 100%;
   z-index: 999;
 `;
@@ -46,6 +46,7 @@ const IconWrapper = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
 `;
 //emtion styled end
 
@@ -71,7 +72,8 @@ const Header = () => {
                   <a target="_blank" rel="noopener noreferrer">
                     <Image 
                     src="/icons/twitter-logo.svg" 
-                    width={35} height={35}f
+                    width={35} 
+                    height={35}f
                     alt="twitter-logo"
                     layout='intrinsic'
                   />
@@ -79,12 +81,17 @@ const Header = () => {
                 </Link>
               </Item>
               <Item>
-                <Image 
-                src="/icons/contact-icon.svg" 
-                width={35} height={35} 
-                alt="email-icon"
-                layout='intrinsic'
-                />
+              <Link href='https://twitter.com/siino_webdev' passHref>
+                <a target="_blank" rel="noopener noreferrer">
+                  <Image 
+                  src="/icons/contact-icon.svg" 
+                  width={35} 
+                  height={35} 
+                  alt="email-icon"
+                  layout='intrinsic'
+                  />
+                </a>
+              </Link>
               </Item>
             </IconWrapper>
           </AppBar>

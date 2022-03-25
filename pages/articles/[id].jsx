@@ -5,11 +5,14 @@ import Moment from 'react-moment'
 import ArticleLayout from '../../layouts/article-layout'
 import NestedLayout from '../../layouts/nested-layout'
 
+import LinkButton from '../../components/button'
+
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
+
 
 import {
   TwitterIcon,
@@ -29,13 +32,15 @@ const Item = styled(Paper)(({ theme }) => ({
   mx: 'auto',
 }));
 
-export default function ArticlesId({ articles }) {
+
+
+export default function ArticlesId({ articles , category }) {
 
   return (
     <>
    
       <Box sx={{
-        mt: '2rem'
+        mt: '5rem'
       }}>
 
         <Box sx={{
@@ -65,7 +70,7 @@ export default function ArticlesId({ articles }) {
             mb: 4,
         }}>
       
-          <Typography variant='subtitle2' component='span' 
+          <Typography variant='subtitle2' color='primary' component='span' 
           sx={{
             backgroundColor:'common.black',
             px: 1.5,
@@ -75,9 +80,11 @@ export default function ArticlesId({ articles }) {
               {articles.categories.name}
           </Typography>
 
-          <Typography variant='h2' component='h1' 
+          <Typography variant='h3' component='h1' 
             sx={{
               pt: 1,
+              textDecoration: 'none !important',
+              
             }}>
             {articles.title}
           </Typography>
@@ -140,9 +147,14 @@ export default function ArticlesId({ articles }) {
             </Stack>
 
           </Box>
+          <LinkButton 
+            url={'/blog'}
+            button={'記事一覧に戻る'}
+          />
         </Box>
       </Box>
-    
+     
+
     </>
   );
 }
@@ -157,7 +169,6 @@ ArticlesId.getLayout = function ArticlesHome(articlesid) {
 }
 
 
-// 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });
 
@@ -165,10 +176,10 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context) => {
   const id = context.params.id;
   const data = await client.get({ endpoint: "articles", contentId: id });
+  
 
   return {
     props: {
