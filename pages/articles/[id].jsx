@@ -40,7 +40,7 @@ export default function ArticlesId({ articles , category }) {
     <>
    
       <Box sx={{
-        mt: '5rem'
+        mt: '7rem'
       }}>
 
         <Box sx={{

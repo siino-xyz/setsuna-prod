@@ -2,24 +2,21 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image'
 import Link from 'next/link'
-import { styled } from '@mui/material/styles';
-// import Paper from '@mui/material/Paper';
+import styled from '@emotion/styled'
 
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',n
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: 'center',
-//   color: theme.palette.text.secondary,
-// }));
+const Typography = styled.span`
+  font-size: 12px;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 400;
+`;
 
  const Footer = () => {
   return (
     <Box sx={{ 
       flexGrow: 1,
       width: '100%',
-      pt: 1,
-      pb: 1,
+      pt: 2,
+      pb: 2,
       px: 2,
       mt: 5,
       mb: 0,
@@ -30,12 +27,15 @@ import { styled } from '@mui/material/styles';
         spacing={0}
         container 
         direction="row"
-        justifyContent="center"
+        justifyContent="left"
         alignItems="center">
-        <Grid item xs={4} md={3}>
+        <Grid item xs={12} md={2}>
           <Box sx={{
             px: 0,
             py: 0,
+            "@media screen and (max-width:400px)": {
+                    textAlign: 'center',
+                  },
           }}>
             <Link href='/' passHref>
               <a>
@@ -50,72 +50,12 @@ import { styled } from '@mui/material/styles';
           </Box>
         </Grid>
 
-        <Grid item xs={4} md={6}>
-          <Box sx={{
-            textAlign: 'center'
-          }}>
-            <Link href='https://twitter.com/siino_webdev' passHref>
-              <a target="_blank" rel="noopener noreferrer">
-                <Image 
-                src="/icons/twitter-logo.svg" 
-                width={35} height={35}f
-                alt="twitter-logo"
-                layout='intrinsic'
-              />
-              </a>
-            </Link>
-          </Box>
-        </Grid>
-
-        <Grid item xs={4} md={3}>
-          <Box>
-            <Grid 
-              spacing={1}
-              container
-              justifyContent="center"
-              alignItems="center"
-              columns={{ xs: 4, md: 12 }}
-            >
-              <Grid item xs={2} md={3}>
-                <Image
-                src='/icons/nextjs-logo.svg'
-                width={60}
-                height={36}
-                alt='nextjs-logo'
-                layout='intrinsic'
-                />
-              </Grid>
-              <Grid item xs={2} md={2} sx={{
-                textAlign: 'center',
-              }}>
-                <Image
-                src='/icons/materialui-logo.svg'
-                width={26}
-                height={26}
-                alt='materialui-logo'
-                layout='intrinsic'
-                />
-              </Grid>
-              <Grid item xs={2} md={3}>
-              <Image
-                src='/icons/microcms-logo.svg'
-                width={110}
-                height={22}
-                alt='microcms-logo'
-                layout='intrinsic'
-                />
-              </Grid>
-              <Grid item xs={2} md={3}>
-              <Image
-                src='/icons/vercel-logo.svg'
-                width={89}
-                height={20}
-                alt='vercel-logo'
-                layout='intrinsic'
-                />
-              </Grid>
-            </Grid>
-          </Box>
+        <Grid item xs={12} md={8} sx={{
+          textAlign: 'center',
+        }}>
+          <Typography varitant='subtitle1' component='span'>
+            ©copylight setsuna all lights.
+          </Typography>
         </Grid>
       </Grid>
     </Box>
