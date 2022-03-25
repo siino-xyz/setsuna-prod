@@ -2,6 +2,7 @@ import Link from "next/link"
 import Articles from "../models/post"
 import Image from 'next/image'
 import Moment from 'react-moment'
+import styled from '@emotion/styled'
 
 // //mui-components
 import Card from '@mui/material/Card';
@@ -12,6 +13,15 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
+
+// const HoverEyeCt = styled.a`
+// transition: all .3s;
+// display:
+//   &:hover {
+//     backdrop-filter: blur(4px);
+//     opacity: .8;
+//   } 
+// `;
 
 const ArticleCard = ({ articles }: {
   articles: Articles
@@ -26,7 +36,8 @@ const ArticleCard = ({ articles }: {
           maxWidth: 330,
           py: 0,
           boxShadow: 'none',
-          borderRadius: '0.2rem',
+          borderRadius: '0.3rem',
+          overflow: 'hidden',
         }} 
         key={articles.id}
       >
@@ -34,7 +45,7 @@ const ArticleCard = ({ articles }: {
         <Link href={`/articles/${articles.id}`} passHref>
           <a>
             <Box sx={{
-              overflow: 'hidden',
+              
             }}>
               <Image
                 src={articles.eye_catch.url}
@@ -47,7 +58,7 @@ const ArticleCard = ({ articles }: {
           </a>
         </Link>
         <CardContent sx={{
-      
+             backgroundColor: 'common.white',
         }}>
           <Typography variant='subtitle2' component='span'
           sx={{

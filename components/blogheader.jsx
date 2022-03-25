@@ -5,7 +5,8 @@ import styled from '@emotion/styled'
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid'
-import Button from '@mui/material/Button';
+
+import LinkButton from './button'
 
 
 const AppBar = styled.div`
@@ -13,14 +14,33 @@ const AppBar = styled.div`
   flex-direction: ;
   justify-content: space-between;
   background-color: rgba(0,0,0,0);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
+  padding: 0.4rem 1rem 0 1rem;
   position: fixed;
-  padding: 1rem;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 999;
 `;
 
+const Totoplink = styled.a`
+  text-decoration: none;
+  cursor: pointer !important;
+`
+const ToTopBtn = styled.button`
+ padding: 0.5rem 1.5rem;
+ border-radius: 0.2rem;
+ background-color: white;
+ outline: none;
+ border: none;
+ box-shadow: none;
+ cursor: pointer !important;
+ font-family: 'Zen Kaku Gothic Antique';
+ font-size: 1rem;
+ font-weight: 600;
+ letter-spacing: 0.05rem;
 
+`;
 
 const Item = (props) => {
   const { sx, ...other} = props;
@@ -39,11 +59,6 @@ const Item = (props) => {
   )
 }
 
-const Totoplink = styled.a`
-  text-decoration: none;
-`
-
-
 
 const BlogHeader = (category) => {
   const [value, setValue] = React.useState('one');
@@ -51,61 +66,54 @@ const BlogHeader = (category) => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const quotation = `'`
  
   return (
-        <Box sx={{ 
-          flexGrow: 1,      
-        }}>
-          <AppBar>
-            <Grid
-              container
-              direction="row"
-              justifyContent="space-between"
-              alignItems="center"
-              spacing="1"
-              sx={{
-              }}>
+    <Box sx={{ 
+      flexGrow: 1,      
+    }}>
+      <AppBar>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          spacing="1"
+          sx={{
+          }}>
 
-               
-              <Grid item>
-              <Link href='/blog' passHref>
-              <a>
-                <Image 
-                  src="/logo/setsuna-logo-blog.svg" 
-                  width={192} height={63} 
-                  alt='setsuna-logo'
-                  layout='intrinsic'
-                />
-              </a>
+            
+          <Grid item>
+          <Link href='/blog' passHref>
+          <a>
+            <Image 
+              src="/logo/setsuna-logo-blog.svg" 
+              width={192} height={63} 
+              alt='setsuna-logo'
+              layout='intrinsic'
+            />
+          </a>
+        </Link>
+          </Grid>
+
+
+
+          <Grid item md={6}>
+  
+          </Grid>
+
+          <Grid item>
+            <Link href="/" passHref>
+              <Totoplink target="_blank" rel="noopener noreferrer">
+                <ToTopBtn>
+                 {`What${quotation}s setsuna?`}
+                </ToTopBtn>
+              </Totoplink>
             </Link>
-              </Grid>
-
-
-
-              <Grid item md={6}>
-      
-              </Grid>
-
-              <Grid item>
-                <Link href="/" passHref>
-                  <Totoplink target="_blank" rel="noopener noreferrer">
-                    <Button
-                    variant="contained" 
-                    color='success'
-                    font='h1'
-                    sx={{
-                      color:'#ffffff',
-                      lineHeight: '2rem'
-                    }}
-                    >
-                      setsunaについて
-                    </Button>
-                  </Totoplink>
-                </Link>
-              </Grid>
-            </Grid>
-          </AppBar>
-        </Box>   
+          </Grid>
+        </Grid>
+      </AppBar>
+    </Box>   
   )
 }
 

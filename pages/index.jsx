@@ -9,6 +9,7 @@ import ArticleCard from '../components/articles'
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import LinkButton from '../components/button'
 
 export default function Home({articles}) {
   return (
@@ -26,6 +27,11 @@ export default function Home({articles}) {
               </ArticleCard>
             ))}
           </Grid>
+          <LinkButton
+            url={'blog'}
+            button={'記事一覧'}
+          />
+
         </Box>
         <SectionTitle
           sectiontitle={'高速でセキュアなウェブサイトを作ります'}
