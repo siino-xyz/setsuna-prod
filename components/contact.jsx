@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 const FromrunGotcha = styled.div`
   position:absolute!important;
@@ -13,16 +15,32 @@ const ContactForm = () => {
     <form  action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
       <div>
         <label>お名前</label>
-        <input 
+        {/* <input 
           name="お名前"
-          type="text"/>
+          type="text"/> */}
+      <TextField 
+        id="outlined-basic" 
+        name="お名前" 
+        type="text"
+        label="お名前" 
+        variant="outlined" 
+      />
       </div>
 
       <div>
         <label>メールアドレス [必須]</label>
-        <input 
+        {/* <input 
           name="メールアドレス" 
           type="text" 
+          data-formrun-type="email" 
+          data-formrun-required 
+        /> */}
+        <TextField 
+          id="outlined-basic" 
+          name="メールアドレス" 
+          type="text"
+          label="メールアドレス" 
+          variant="outlined"
           data-formrun-type="email" 
           data-formrun-required 
         />
@@ -31,9 +49,17 @@ const ContactForm = () => {
 
       <div>
         <label>お問い合わせ [必須]</label>
-        <textarea name="お問い合わせ" data-formrun-required></textarea>
+        <TextField
+          name="お問い合わせ"
+          id="outlined-basic" 
+          label="お問い合わせ" 
+          variant="outlined"
+          data-formrun-required
+        />
+        {/* <textarea name="お問い合わせ" data-formrun-required></textarea> */}
         <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
       </div>
+
 
       <div>
         <label>個人情報利用同意 [必須]</label>
