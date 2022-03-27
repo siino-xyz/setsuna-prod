@@ -8,7 +8,6 @@ import SectionTitle from '../components/sectiontitle'
 import ArticleCard from '../components/articles'
 
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import LinkButton from '../components/button'
 
 export default function Home({articles}) {
@@ -35,7 +34,7 @@ export default function Home({articles}) {
       </Grid>
 
       <LinkButton
-        url={'blog'}
+        url={'/blog'}
         button={'記事一覧'}
       />
       <SectionTitle
@@ -68,7 +67,7 @@ Home.getLayout = function getLayout(home) {
 export const getStaticProps = async () => {
   const key = {
     headers: {'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY},
-  };
+  }
   const data = await fetch('https://kp822wg687.microcms.io/api/v1/articles?offset=0&limit=3', key)
     .then(res => res.json())
     .catch(() => null);
@@ -78,5 +77,5 @@ export const getStaticProps = async () => {
       articles: data.contents,
       totalCount: data.totalCount
     },
-  };
-};
+  }
+}

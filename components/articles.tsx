@@ -2,32 +2,19 @@ import Link from "next/link"
 import Articles from "../models/post"
 import Image from 'next/image'
 import Moment from 'react-moment'
-import styled from '@emotion/styled'
 
 // //mui-components
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 
-// const HoverEyeCt = styled.a`
-// transition: all .3s;
-// display:
-//   &:hover {
-//     backdrop-filter: blur(4px);
-//     opacity: .8;
-//   } 
-// `;
+
 
 const ArticleCard = ({ articles }: {
   articles: Articles
 }) => {
-  const MaxLength = 5;
-
   return (
     <>
 

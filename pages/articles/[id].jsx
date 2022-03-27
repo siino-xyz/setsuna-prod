@@ -34,7 +34,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
-export default function ArticlesId({ articles , category }) {
+export default function ArticlesId({ articles }) {
 
   return (
     <>
