@@ -6,8 +6,6 @@ import styled from '@emotion/styled'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid'
 
-import LinkButton from './button'
-
 
 const AppBar = styled.div`
   display: flex;
@@ -60,7 +58,7 @@ const Item = (props) => {
 }
 
 
-const BlogHeader = (category) => {
+const BlogHeader = () => {
   const [value, setValue] = React.useState('one');
 
   const handleChange = (event, newValue) => {
@@ -84,7 +82,7 @@ const BlogHeader = (category) => {
 
             
           <Grid item>
-          <Link href='/blog' passHref>
+          <Link href='/' passHref>
           <a>
             <Image 
               src="/logo/blog-h.svg" 
