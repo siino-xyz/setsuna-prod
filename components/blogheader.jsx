@@ -82,7 +82,7 @@ const BlogHeader = () => {
 
             
           <Grid item>
-          <Link href='/' passHref>
+          <Link href='/blog' passHref>
           <a>
             <Image 
               src="/logo/blog-h.svg" 

@@ -20,11 +20,6 @@ const CategoryTab = ({ category }: {
   category: Category
 }) => {
 
-  const [value, setValue] = React.useState(2);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <>

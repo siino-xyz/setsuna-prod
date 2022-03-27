@@ -9,7 +9,12 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 
 const ArticlesHome = ({ articles ,category }) => {
-  
+  const [value, setValue] = React.useState(2);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <>
       <Box sx={{
@@ -17,7 +22,7 @@ const ArticlesHome = ({ articles ,category }) => {
       }}>
 
         {/* Category tab menu start */}
-        {/* <Box sx={{
+        <Box sx={{
                 textAlign: 'center',
                 mx: 'auto',
                 pt: 5,
@@ -31,7 +36,7 @@ const ArticlesHome = ({ articles ,category }) => {
                     />
                   ))}
                 </Tabs>
-              </Box> */}
+              </Box>
         {/* Category tab menu  end */}
 
         <Box sx={{ 
