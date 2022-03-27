@@ -6,6 +6,7 @@ import Detail from '../components/detail'
 import Profile from '../components/profile'
 import SectionTitle from '../components/sectiontitle'
 import ArticleCard from '../components/articles'
+import ContactForm from '../components/contact'
 
 import Grid from '@mui/material/Grid';
 import LinkButton from '../components/button'
@@ -52,6 +53,7 @@ export default function Home({articles}) {
       <SectionTitle
         sectiontitle={'ご用命・ご相談はこちらから'}
       />
+      <ContactForm />
     </>
   )
 }

@@ -1,88 +1,65 @@
-import * as React from 'react';
-import Link from 'next/link'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import { styled } from '@mui/material/styles'
-
-import Button from '@mui/material/Button';
+import styled from '@emotion/styled'
 
 
+const FromrunGotcha = styled.div`
+  position:absolute!important;
+  height:1px;width:1px;
+  overflow:hidden;
+`;
 
-
-export default function MultilineTextFields() {
-  const [value, setValue] = React.useState();
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
+const ContactForm = () => {
   return (
-    <Box
-      component="form"
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        maxWidth: 600,
-        justifyContent:'center',
-        textAlign: 'center',
-        alignItems: 'center',
-        mx: 'auto',
-        my: '4'
-      }}
-      noValidate
-      autoComplete="off"
-    >
+    <>
+    <form  action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
+      <div>
+        <label>お名前</label>
+        <input 
+          name="お名前"
+          type="text"/>
+      </div>
 
-      <Box sx={{
-          width: '100%',
-
-          '& .MuiTextField-root': { 
-          display: 'flex', 
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          width: '100%',
-          my: 5,
-          },
-      }}>
-        <TextField
-          id="filled-textarea"
-          label="ご担当者様のお名前（必須）"
-          multiline
-          variant="filled"
-
+      <div>
+        <label>メールアドレス [必須]</label>
+        <input 
+          name="メールアドレス" 
+          type="text" 
+          data-formrun-type="email" 
+          data-formrun-required 
         />
-        <TextField
-          id="filled-textarea"
-          label="受信可能なメールアドレス（必須）"
-          multiline
-          variant="filled"
-        />
-        <TextField
-          id="filled-multiline-static"
-          label="ご用件の内容（必須）"
-          multiline
-          rows={4}
-          variant="filled"
-        />
-      </Box>
+        <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+      </div>
 
-      <Link href='/thanks' passHref>
-        <Button
-              variant="contained" 
-              color='success'
-              font='h1'
-              sx={{
-                color:'#F4F4F4',
-                lettterSpacing: '0.5rem',
-                lineHeight: '2rem',
-                margin: 'auto',
-                paddingRight: '5rem',
-                paddingLeft: '5rem',
-              }}
-            >
-              送信
-        </Button>
-      </Link>
-    </Box>
-  );
+      <div>
+        <label>お問い合わせ [必須]</label>
+        <textarea name="お問い合わせ" data-formrun-required></textarea>
+        <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+      </div>
+
+      <div>
+        <label>個人情報利用同意 [必須]</label>
+        <input 
+          type="checkbox" 
+          name="個人情報利用同意" 
+          data-formrun-required 
+        />
+        <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
+      </div>
+
+      <FromrunGotcha>
+       
+        <label>If you are a human, ignore this field</label>
+        <input 
+          type="text" 
+          name="_formrun_gotcha" 
+          id="_formrun_gotcha" 
+        />
+      </FromrunGotcha>
+
+      <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+    </form>
+    </>
+
+  )
 }
+
+export default ContactForm
