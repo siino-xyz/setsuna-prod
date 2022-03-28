@@ -18,20 +18,20 @@ export default function MyApp(props) {
 
   return getLayout(
     <>
-    <CacheProvider value={emotionCache}>
-      <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head>
-      <Script
-              src="https://sdk.form.run/js/v2/formrun.js"
-              strategy='beforeInteractive'
-           />
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <Component {...pageProps} />
-        <CssBaseline />
-      </ThemeProvider>
-    </CacheProvider>
+      <CacheProvider value={emotionCache}>
+        <Head>
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+        </Head>
+        <Script
+                src="https://sdk.form.run/js/v2/formrun.js"
+                strategy='beforeInteractive'
+            />
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <Component {...pageProps} />
+          <CssBaseline />
+        </ThemeProvider>
+      </CacheProvider>
     </>
   );
 }

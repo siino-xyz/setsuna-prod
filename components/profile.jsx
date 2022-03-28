@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 
 const Prag = styled(Typography)(({ theme }) => ({
   ...theme.typography.smallParagraph,
-  marginTop: '1rem'
+  // marginTop: '1rem'
 }))
 
 const Profile = () => {
@@ -15,8 +15,8 @@ const Profile = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        mb: 10,
-        mt: 5,
+        // mb: 10,
+        // mt: 5,
         mx: 'auto',
         width: '100%',
         maxWidth: 420

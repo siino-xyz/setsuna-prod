@@ -154,7 +154,7 @@ export default function ArticlesId({ articles }) {
           </Box>
           <LinkButton 
             url={'/blog'}
-            button={'記事一覧に戻る'}
+            button={'ブログ一覧に戻る'}
           />
         </Box>
       </Box>

@@ -5,7 +5,7 @@ import { red } from '@mui/material/colors';
 const theme = createTheme({
   palette: {
     background: {
-      default: 'rgba(5,8,43,1)'
+      default: '#121212'
     },
     primary: {
       main: '#00D1FF',
@@ -18,7 +18,7 @@ const theme = createTheme({
       secondary: '#C8C8C8'
     },
     common: {
-      black: '#292929',
+      black: '#121212',
       white: '#EEEEEE',
     },
     success: {
@@ -55,7 +55,7 @@ const theme = createTheme({
             fontSize: "2rem",
             fontWeight: 700,
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'MuseoModerno',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -68,9 +68,9 @@ const theme = createTheme({
             ].join(','),
         },
         h3: {
-            fontSize: "1.6rem",
+            fontSize: "1.5rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'MuseoModerno',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -85,7 +85,7 @@ const theme = createTheme({
             fontWeight: 700,
         },
         h3Jp: {
-            fontSize: "1.6rem",
+            fontSize: "1.5rem",
             fontFamily: [
                 'Zen Kaku Gothic Antique',
                 '-apple-system',
@@ -99,7 +99,7 @@ const theme = createTheme({
                 '"Segoe UI Symbol"',
             ].join(','),
             fontWeight: 700,
-            letterSpacing: '0.1rem'
+            letterSpacing: '0.07rem'
         },
         h4: {
             fontSize: "1.25rem",

@@ -18,7 +18,7 @@ const TypoSub1 = styled.span`
 
 const HikakinTv = styled.div`
  padding-top: 5rem;
- padding-left: 14rem;
+ padding-left: 5rem;
 `;
 //emotion styled end
 
@@ -36,46 +36,45 @@ const HeroHeader = () => {
         height: '100vh',
         overFlow: 'hidden',
         margin:0,
-        background: "linear-gradient(.25turn, rgba(83,120,201,1) 0%, rgba(5,8,43,1) 67%)",
+        background: "linear-gradient( 110deg, #121212 58% , #52D5F2 42%)",
       }}>
         <Grid 
           item
           xs={12} 
-          md={5}
+          md={6}
           container
           >
           <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'flex-start',
+            justifyContent: 'center',
             margin:"auto",
             textAlign: 'left',
-            pl: 1,
+            pl: 0,
             pt: 1,
           }}>
             <TypoH1>
-              Webサイト制作・デザインのsetsuna
+            Webサイトも人生も勝負は一瞬。
             </TypoH1>
-            <TypoSub1 >
-              Webサイトも人生も勝負は一瞬。やるなら「速い」ほうがいい。
-            </TypoSub1>
-          
+            <TypoH1>
+            やるなら「速い」ほうがいい。
+            </TypoH1>
           </Box>
         </Grid>
 
         <Grid 
           item 
           xs={12}
-          md={7}
+          md={6}
           direction="column"
-          justifyContent="flex-end"
-          textAlign="right"
+          justifyContent="center"
+          textAlign="center"
         >
         <HikakinTv>
           <Image 
-            src='/images/fv-tv.svg'
-            width={854}
-            height={721}
+            src='/logo/se-newlogo.svg'
+            width={379}
+            height={475}
             layout='intrinsic'
             alt="hikakin-tv"
           />

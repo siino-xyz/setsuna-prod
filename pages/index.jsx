@@ -1,19 +1,56 @@
 import Layout from '../layouts/layout'
 import NestedLayout from '../layouts/nested-layout'
 
+import LinkButton from '../components/button'
 import Service from '../components/service'
 import Detail from '../components/detail'
 import Profile from '../components/profile'
 import SectionTitle from '../components/sectiontitle'
+import SectionText from '../components/section-text'
 import ArticleCard from '../components/articles'
-import ContactForm from '../components/contact'
 
-import Grid from '@mui/material/Grid';
-import LinkButton from '../components/button'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
 
 export default function Home({articles}) {
   return (
     <>
+
+      <SectionTitle
+        sectiontitle={'SE-27(setsuna)は、「速さ」について考えるweb制作所です。'}
+      />
+      <Service />
+      <SectionTitle
+        sectiontitle={'Jamstackとは？'}
+      />
+      <Detail />
+      <SectionTitle
+        sectiontitle={'Profile'}
+      />
+      <Profile />
+      <SectionTitle
+        sectiontitle={'Contact'}
+      />
+        <Box sx={{
+          pb: 1,
+          mt: 3,
+        }}>
+          <SectionText 
+            sectiontext={'気になる！と思った方は、下記フォームよりお気軽にご連絡ください'}
+          />
+          <SectionText 
+            sectiontext={'ご質問、ご相談も歓迎しております。'}
+          />
+        </Box>
+      
+      <LinkButton
+        url={'/contact'}
+        button={'フォームからお問い合わせする'}
+      />
+
+      <SectionTitle
+        sectiontitle={'News/blog'}
+      />
       <Grid 
        container spacing={{ xs: 2, md: 5 }}
        columns={{ xs: 4, sm: 8, md: 12 }}
@@ -36,24 +73,8 @@ export default function Home({articles}) {
 
       <LinkButton
         url={'/blog'}
-        button={'記事一覧'}
+        button={'setsuna Blogを見る'}
       />
-      <SectionTitle
-        sectiontitle={'高速でセキュアなウェブサイトを作ります'}
-      />
-      <Service />
-      <SectionTitle
-        sectiontitle={'Jamstackとは？'}
-      />
-      <Detail />
-      <SectionTitle
-        sectiontitle={'プロフィール'}
-      />
-      <Profile />
-      <SectionTitle
-        sectiontitle={'ご用命・ご相談はこちらから'}
-      />
-      <ContactForm />
     </>
   )
 }

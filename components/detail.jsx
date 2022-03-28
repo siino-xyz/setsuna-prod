@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import { styled } from '@mui/material/styles'
 import Image from 'next/image'
+import InnerTitle from './inner-title'
 
 const Item = (props) => {
   const { sx, ...other } = props
@@ -10,7 +11,8 @@ const Item = (props) => {
     sx={{
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'flex-start',
+      // justifyContent: 'flex-start',
+      alignItems: 'flex-start',
       p: 0,
       mb: '5rem',
       mt: '4rem',
@@ -33,7 +35,6 @@ const Prag = styled(Typography)(({ theme }) => ({
 const Detail = () => {
   return (
     <>
-
       <Box sx={{
         pb: 5,
         maxWidth: 920,
@@ -52,14 +53,15 @@ const Detail = () => {
         jamstackアーキテクチャでウェブサイトを構築すると、ユーザーにとってどのようなメリットがあるのかを簡単にご紹介します。
         </Prag>
         <Item>
+          <InnerTitle
+              innertitle={'melit1'}
+          />
           <Image 
             src='/images/melit-1.svg'
             width={920}
             height={167}
             alt='melit-1'
           />
-
-
           <Prag>
           速さは正義です。ユーザーがアクセスした時、ページが表示されるまでの読み込み速度は重要なSEOの指標でもあります。<br />
           jamstackでは、高速なコンテンツ表示やリロードなしでのページ遷移など、あらゆる部分でそのスピードを体感することができます。
@@ -68,6 +70,9 @@ const Detail = () => {
         </Item>
 
         <Item>
+        <InnerTitle
+          innertitle={'melit2'}
+        />
           <Image 
             src='/images/melit-2.svg'
             width={920}
@@ -86,7 +91,6 @@ const Detail = () => {
     </>
   )
 }
-
 export default Detail
 
 

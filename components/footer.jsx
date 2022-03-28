@@ -40,8 +40,8 @@ const Typography = styled.span`
             <Link href='/' passHref>
               <a>
                 <Image 
-                  src="/logo/f-l.svg" 
-                  width={295} height={99} 
+                  src="/logo/se-logo-sp-footer.svg" 
+                  width={338} height={107} 
                   alt='setsuna-logo'
                   layout='intrinsic'
                 />

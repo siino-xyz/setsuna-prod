@@ -5,10 +5,15 @@ const SectionTitle = (props) => {
     <Typography 
     variant='h2'
     component='h2'
+    color='common.black'
     sx= {{
-      mx: 'auto',
-      my: '1rem',
-      textAlign: 'center',
+      mb: 3,
+      mt: 17,
+      textAlign: 'left',
+      backgroundColor: 'common.white',
+      px: 2,
+      py: 1,
+      display: 'inline-block',
     }}
     >
       {props.sectiontitle}

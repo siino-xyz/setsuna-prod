@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Layout from '../layouts/layout'
 import NestedLayout from '../layouts/nested-layout'
 
 import Typography from '@mui/material/Typography'
@@ -30,15 +29,14 @@ const ThanksPage = () => {
   return (
     <>
       <Box sx={{
-        height: '100vh',
+        height: '80vh',
         width: '80%',
         maxWidth: 710,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        mx: 'auto',
-        pl: 5     
+        mx: 'auto',  
       }}>
         <Stack 
           direction="column"
@@ -84,9 +82,9 @@ const ThanksPage = () => {
 
 ThanksPage.getLayout = function getLayout(thankspage) {
   return (
-    <Layout>
+    
       <NestedLayout>{thankspage}</NestedLayout>
-    </Layout>
+    
   )
 }
 

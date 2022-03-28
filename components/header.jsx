@@ -62,8 +62,8 @@ const Header = () => {
             <Link href='/' passHref>
               <RedLink>
                 <Image 
-                  src="/logo/t.svg" 
-                  width={210} height={70} 
+                  src="/logo/se-minilogo.svg" 
+                  width={65} height={82} 
                   alt='setsuna-logo'
                   layout='intrinsic'
                 />
