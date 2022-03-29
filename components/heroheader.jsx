@@ -7,7 +7,7 @@ import styled from '@emotion/styled'
 const TypoH1 = styled.h1`
   font-size: 2.1rem;
   font-family: 'Zen Kaku Gothic Antique';
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1rem;
 `;
 const TypoSub1 = styled.span`

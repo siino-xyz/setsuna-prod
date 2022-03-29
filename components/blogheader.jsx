@@ -28,13 +28,13 @@ const Totoplink = styled.a`
 const ToTopBtn = styled.button`
   padding: 0.5rem 1.5rem;
   border-radius: 0.2rem;
-  background-color: #F37D27;
+  background-color: #F39423;
   color: #EEEEEE;
   outline: none;
   border: none;
   box-shadow: none;
   cursor: pointer !important;
-  font-family: 'MuseoModerno';
+  font-family: 'Zen Kaku Gothic Antique';
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.01rem;
@@ -97,15 +97,15 @@ const BlogHeader = () => {
 
 
     
-          {/* <Grid item>
+          <Grid item>
             <Link href="/" passHref>
               <Totoplink target="_blank" rel="noopener noreferrer">
                 <ToTopBtn>
-                 {`What${quotation}s setsuna?`}
+                 {`ご依頼・ご相談はコチラ`}
                 </ToTopBtn>
               </Totoplink>
             </Link>
-          </Grid> */}
+          </Grid>
         </Grid>
       </AppBar>
     </Box>   

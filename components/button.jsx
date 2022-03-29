@@ -13,10 +13,12 @@ const LinkButton = (props) => {
     }}>
     <Link href={`/${props.url}`} passHref>
       <Button 
-      variant="outlined"
+      variant="contained"
       sx={{
         margin: 'auto',
         textAlign: 'center',
+        color: 'common.white',
+        borderRadius: 0.5,
       }}>
         {props.button}
       </Button>

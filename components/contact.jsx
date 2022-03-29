@@ -106,7 +106,7 @@ const ContactForm = () => {
           </FromrunGotcha>
 
           <Button
-            variant="outlined"
+            variant="contained"
             type="submit" 
             data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..."
             sx={{

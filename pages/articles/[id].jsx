@@ -129,22 +129,22 @@ export default function ArticlesId({ articles }) {
               >
 
                 <Item>
-                  <TwitterShareButton url={[`http://localhost:8080/articles/${articles.id}`]} title={[articles.title]}>
+                  <TwitterShareButton url={[`hhttps://setsuna-dev.vercel.app/articles/${articles.id}`]} title={[articles.title]}>
                     <TwitterIcon size={32} round />
                   </TwitterShareButton>
                 </Item>
                 <Item>
-                  <FacebookShareButton url={[`http://localhost:8080/articles/${articles.id}`]}>
+                  <FacebookShareButton url={[`https://setsuna-dev.vercel.app/articles/${articles.id}`]}>
                     <FacebookIcon size={32} round />
                   </FacebookShareButton>
                 </Item>
                 <Item>
-                  <LineShareButton url={[`http://localhost:8080/articles/${articles.id}`]} title={[articles.title]}>
+                  <LineShareButton url={[`https://setsuna-dev.vercel.app/articles/${articles.id}`]} title={[articles.title]}>
                     <LineIcon size={32} round />
                   </LineShareButton>
                 </Item>
                 <Item>
-                  <PinterestShareButton url={[`http://localhost:8080/articles/articles/${articles.id}`]} media={[`http://localhost:8080/${articles.eye_catch.url}`]} description={[articles.title]}>
+                  <PinterestShareButton url={[`https://setsuna-dev.vercel.app/articles/articles/${articles.id}`]} media={[`http://localhost:8080/${articles.eye_catch.url}`]} description={[articles.title]}>
                     <PinterestIcon size={32} round />
                   </PinterestShareButton>
                 </Item>

@@ -13,6 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.warning.main,
   boxShadow: 'none',
   // marginTop: '5rem'
+  paddingBottom: '2rem',
 }));
 
 const Prag = styled(Typography)(({ theme }) => ({
@@ -25,9 +26,9 @@ const Service = () => {
   return (
     <Box sx={{ 
       flexGrow: 1,
-      // mb: '5rem',
+      mt: '2rem',
     }}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item xs={12} md={5}>
           <Item>
             <InnerTitle
@@ -44,12 +45,12 @@ const Service = () => {
         </Grid>
         <Grid item xs={12} md={7}>
           <Item>
-            {/* <Image 
-              src='/gif/wireframe.gif' 
+            <Image 
+              src='/gif/codeview.gif' 
               width={550} 
               height={327} 
               alt='wireframe-gif' 
-            /> */}
+            />
           </Item>
         </Grid>
         <Grid item xs={12} md={5}>
@@ -67,12 +68,12 @@ const Service = () => {
         </Grid>
         <Grid item xs={12} md={7}>
           <Item>
-            {/* <Image 
+            <Image 
               src='/gif/wireframe.gif' 
               width={550} 
               height={327} 
               alt='wireframe-gif' 
-            /> */}
+            />
           </Item>
         </Grid>
         

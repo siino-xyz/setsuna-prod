@@ -27,7 +27,7 @@ const Item = (props) => {
 
 const Prag = styled(Typography)(({ theme }) => ({
   ...theme.typography.body1,
-  marginTop: '2.5rem',
+  marginTop: '1rem',
   width: '100%',
 }))
 

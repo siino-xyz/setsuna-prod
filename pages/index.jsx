@@ -15,40 +15,7 @@ import Grid from '@mui/material/Grid'
 export default function Home({articles}) {
   return (
     <>
-
-      <SectionTitle
-        sectiontitle={'SE-27(setsuna)は、「速さ」について考えるweb制作所です。'}
-      />
-      <Service />
-      <SectionTitle
-        sectiontitle={'Jamstackとは？'}
-      />
-      <Detail />
-      <SectionTitle
-        sectiontitle={'Profile'}
-      />
-      <Profile />
-      <SectionTitle
-        sectiontitle={'Contact'}
-      />
-        <Box sx={{
-          pb: 1,
-          mt: 3,
-        }}>
-          <SectionText 
-            sectiontext={'気になる！と思った方は、下記フォームよりお気軽にご連絡ください'}
-          />
-          <SectionText 
-            sectiontext={'ご質問、ご相談も歓迎しております。'}
-          />
-        </Box>
-      
-      <LinkButton
-        url={'/contact'}
-        button={'フォームからお問い合わせする'}
-      />
-
-      <SectionTitle
+            <SectionTitle
         sectiontitle={'News/blog'}
       />
       <Grid 
@@ -56,7 +23,7 @@ export default function Home({articles}) {
        columns={{ xs: 4, sm: 8, md: 12 }}
        sx={{
          mx: 'auto',
-         pt: 7,
+         pt: 0,
          pb: 1,
 
        }}
@@ -75,6 +42,41 @@ export default function Home({articles}) {
         url={'/blog'}
         button={'setsuna Blogを見る'}
       />
+      <SectionTitle
+        sectiontitle={'SE-27(setsuna)は「速さ」について考えるweb制作所です。'}
+      />
+      <Service />
+      <SectionTitle
+        sectiontitle={'Jamstackとは？'}
+      />
+      <Detail />
+      <SectionTitle
+        sectiontitle={'Profile'}
+      />
+      <Profile />
+      <SectionTitle
+        sectiontitle={'Contact'}
+      />
+        <Box sx={{
+          pb: 1,
+          mt: 3,
+        }}>
+          <SectionText 
+            sectiontext={'個人・事業者様問わずご依頼をお引き受けしておりますので、'}
+          />
+          <SectionText 
+            sectiontext={'まずは下記フォームよりお気軽にお問い合わせください。'}
+          />
+          <SectionText 
+            sectiontext={'コーディングのみ、デザインのみのご相談も歓迎しております。'}
+          />
+        </Box>
+      
+      <LinkButton
+        url={'/contact'}
+        button={'フォームからお問い合わせする'}
+      />
+
     </>
   )
 }

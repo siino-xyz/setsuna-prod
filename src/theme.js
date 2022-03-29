@@ -8,7 +8,7 @@ const theme = createTheme({
       default: '#121212'
     },
     primary: {
-      main: '#00D1FF',
+      main: '#F39423',
     },
     secondary: {
       main: '#92FF26',
@@ -54,8 +54,9 @@ const theme = createTheme({
         h2: {
             fontSize: "2rem",
             fontWeight: 700,
+            letterSpacing: '0.08rem',
             fontFamily: [
-                'MuseoModerno',
+                'Zen Kaku Gothic Antique',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -70,7 +71,7 @@ const theme = createTheme({
         h3: {
             fontSize: "1.5rem",
             fontFamily: [
-                'MuseoModerno',
+                'Zen Kaku Gothic Antique',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -83,23 +84,6 @@ const theme = createTheme({
             ].join(','),
             letterSpacing: '0.1rem',
             fontWeight: 700,
-        },
-        h3Jp: {
-            fontSize: "1.5rem",
-            fontFamily: [
-                'Zen Kaku Gothic Antique',
-                '-apple-system',
-                'BlinkMacSystemFont',
-                '"Segoe UI"',
-                '"Helvetica Neue"',
-                'Arial',
-                'sans-serif',
-                '"Apple Color Emoji"',
-                '"Segoe UI Emoji"',
-                '"Segoe UI Symbol"',
-            ].join(','),
-            fontWeight: 700,
-            letterSpacing: '0.07rem'
         },
         h4: {
             fontSize: "1.25rem",

@@ -8,6 +8,7 @@ const SubTitle = styled(Typography)(({ theme }) => ({
   textAlign: 'left',
   display: 'inline-block',
   marginTop: 0,
+  borderRadius: '0.11rem',
 }))
 
 const InnerTitle = (props) => {

@@ -75,8 +75,8 @@ const ArticleCard = ({ articles }: {
                cursor: 'pointer',
                my: 1,
                mx: 0,
-               minHeight: '100px',
-               maxHeight: '100px',
+               minHeight: '70px',
+               maxHeight: '70px',
                   "@media screen and (max-width:400px)": {
                     minHeight: '40px',
                     maxHeight: '40px',
