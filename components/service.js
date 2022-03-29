@@ -69,7 +69,7 @@ const Service = () => {
         <Grid item xs={12} md={7}>
           <Item>
             <Image 
-              src='/gif/wireframe.gif' 
+              src='/gif/wireflame.gif' 
               width={550} 
               height={327} 
               alt='wireframe-gif' 
