@@ -1,4 +1,4 @@
-import BlogHeader from '../components/blogheader'
+import Header from '../components/header'
 import Footer from '../components/footer'
 
 
@@ -6,9 +6,8 @@ import Footer from '../components/footer'
 const ArticleLayout = ({children}) => {
   return (
     <>
-    <BlogHeader />
-   
-    {children}
+    <Header />
+      {children}
     <Footer />
     </>
   )

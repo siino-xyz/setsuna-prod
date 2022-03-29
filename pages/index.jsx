@@ -15,48 +15,35 @@ import Grid from '@mui/material/Grid'
 export default function Home({articles}) {
   return (
     <>
-            <SectionTitle
-        sectiontitle={'News/blog'}
-      />
-      <Grid 
-       container spacing={{ xs: 2, md: 5 }}
-       columns={{ xs: 4, sm: 8, md: 12 }}
-       sx={{
-         mx: 'auto',
-         pt: 0,
-         pb: 1,
 
-       }}
-      >
+      <div id='services'>
+        <SectionTitle
+          sectiontitle={'SE-27(刹那)は、Jamstack専門のWeb制作サービスです'}
+        />
+      </div>
 
-        {articles.map((articles) => (
-          <ArticleCard
-          articles={articles}
-          key={articles.id}
-          >
-          </ArticleCard>
-        ))}
-      </Grid>
-
-      <LinkButton
-        url={'/blog'}
-        button={'setsuna Blogを見る'}
-      />
-      <SectionTitle
-        sectiontitle={'SE-27(setsuna)は「速さ」について考えるweb制作所です。'}
-      />
       <Service />
+      
       <SectionTitle
-        sectiontitle={'Jamstackとは？'}
+        sectiontitle={'Jamstackのメリット'}
       />
+
       <Detail />
-      <SectionTitle
-        sectiontitle={'Profile'}
-      />
+
+      <div id='profile'>
+        <SectionTitle
+          sectiontitle={'Profile'}
+        />
+      </div>
+
       <Profile />
-      <SectionTitle
-        sectiontitle={'Contact'}
-      />
+
+      <div id='contact'>
+        <SectionTitle
+          sectiontitle={'Contact'}
+        />
+      </div>
+
         <Box sx={{
           pb: 1,
           mt: 3,
@@ -75,6 +62,33 @@ export default function Home({articles}) {
       <LinkButton
         url={'/contact'}
         button={'フォームからお問い合わせする'}
+      />
+
+      <SectionTitle
+        sectiontitle={'News/blog'}
+      />
+
+      <Grid 
+       container spacing={{ xs: 2, md: 5 }}
+       columns={{ xs: 4, sm: 8, md: 12 }}
+       sx={{
+         mx: 'auto',
+         pt: 0,
+         pb: 1,
+       }}
+      >
+        {articles.map((articles) => (
+          <ArticleCard
+          articles={articles}
+          key={articles.id}
+          >
+          </ArticleCard>
+        ))}
+      </Grid>
+
+      <LinkButton
+        url={'/blog'}
+        button={'setsuna Blogを見る'}
       />
 
     </>

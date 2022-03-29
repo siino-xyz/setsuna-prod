@@ -22,7 +22,7 @@ const ArticlesHome = ({ articles ,category }) => {
       }}>
 
         {/* Category tab menu start */}
-        <Box sx={{
+        {/* <Box sx={{
                 textAlign: 'center',
                 mx: 'auto',
                 pt: 5,
@@ -36,12 +36,12 @@ const ArticlesHome = ({ articles ,category }) => {
                     />
                   ))}
                 </Tabs>
-              </Box>
+              </Box> */}
         {/* Category tab menu  end */}
 
         <Box sx={{ 
             flexGrow: 1,
-            my: 10,
+            my: 20,
           }}>
             <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
               {articles.map((articles) => (

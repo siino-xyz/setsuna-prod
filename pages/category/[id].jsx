@@ -27,7 +27,7 @@ const CategoryId = ({ articles , category }) => {
       }}>
   
   {/* Category tab menu start */}
-        <Box sx={{
+        {/* <Box sx={{
           textAlign: 'center',
           mx: 'auto',
           pt: 5,
@@ -41,7 +41,7 @@ const CategoryId = ({ articles , category }) => {
               />
             ))}
           </Tabs>
-        </Box>
+        </Box> */}
   {/* Category tab menu  end */}
   
        <Box sx={{

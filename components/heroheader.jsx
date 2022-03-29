@@ -18,7 +18,7 @@ const TypoSub1 = styled.span`
 
 const HikakinTv = styled.div`
  padding-top: 5rem;
- padding-left: 5rem;
+ ${'' /* padding-left: 5rem; */}
 `;
 //emotion styled end
 
@@ -32,13 +32,18 @@ const HeroHeader = () => {
         container 
         spacing={2}
         sx={{
+        position: 'sticky',
+        top: '0',
+        left: '0',
         width: '100%',
         height: '100vh',
         overFlow: 'hidden',
         margin:0,
-        background: "linear-gradient( 110deg, #121212 58% , #52D5F2 42%)",
+        zIndex: '-123',
+        background: '#121212'
+        // background: "linear-gradient( 110deg, #121212 58% , #52D5F2 42%)",
       }}>
-        <Grid 
+        {/* <Grid 
           item
           xs={12} 
           md={6}
@@ -60,21 +65,21 @@ const HeroHeader = () => {
             やるなら「速い」ほうがいい。
             </TypoH1>
           </Box>
-        </Grid>
+        </Grid> */}
 
         <Grid 
           item 
           xs={12}
-          md={6}
+          md={12}
           direction="column"
           justifyContent="center"
           textAlign="center"
         >
         <HikakinTv>
           <Image 
-            src='/logo/se-newlogo.svg'
-            width={379}
-            height={475}
+            src='/logo/bg-logo.svg'
+            width={388}
+            height={486}
             layout='intrinsic'
             alt="hikakin-tv"
           />

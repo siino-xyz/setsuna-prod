@@ -14,10 +14,10 @@ const ContactFormPage = () => {
         direction="column"
         justifyContent="center"
         alignItems="center"
-        spacing={5}
+        spacing={1}
         sx={{
           height: '90h',
-          pt: 12
+          pt: 7,
         }}
       >
         <SectionTitle

@@ -5,15 +5,15 @@ import styled from '@emotion/styled'
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid'
-
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const AppBar = styled.div`
   display: flex;
   flex-direction: ;
   justify-content: space-between;
-  background-color: rgba(0,0,0,0);
+  background-color: #292929;
   backdrop-filter: blur(4px);
-  padding: 0.4rem 1rem 0 1rem;
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,6 +26,8 @@ const Totoplink = styled.a`
   cursor: pointer !important;
 `
 const ToTopBtn = styled.button`
+  display: flex;
+  align-items: center;
   padding: 0.5rem 1.5rem;
   border-radius: 0.2rem;
   background-color: #F39423;
@@ -38,6 +40,7 @@ const ToTopBtn = styled.button`
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.01rem;
+  margin: 0 1rem;
 `;
 
 const Item = (props) => {
@@ -68,9 +71,12 @@ const BlogHeader = () => {
  
   return (
     <Box sx={{ 
-      flexGrow: 1,      
+      flexGrow: 1, 
+      p: 0,     
     }}>
-      <AppBar>
+      <AppBar sx={{
+  
+      }}>
         <Grid
           container
           direction="row"
@@ -78,20 +84,27 @@ const BlogHeader = () => {
           alignItems="center"
           spacing="1"
           sx={{
-          }}>
+            mx: 1.5,
+            my: 0.5,
+          }}
+          >
+          <Grid item >
+            <Link href='/blog' passHref>
+              <a>
+                <Image 
+                  src="/logo/se-minilogo.svg" 
+                  width={65} height={82} 
+                  alt='setsuna-logo'
+                  layout='intrinsic'
+                />
+              </a>
+            </Link>
+          </Grid>
 
-            
           <Grid item>
-          <Link href='/blog' passHref>
-          <a>
-            <Image 
-              src="/logo/blog-h.svg" 
-              width={210} height={70} 
-              alt='setsuna-logo'
-              layout='intrinsic'
-            />
-          </a>
-        </Link>
+           <div>
+            JamstackなWEB制作事務所、SE-27(せつな)のTechブログ
+           </div>
           </Grid>
 
 
@@ -101,7 +114,8 @@ const BlogHeader = () => {
             <Link href="/" passHref>
               <Totoplink target="_blank" rel="noopener noreferrer">
                 <ToTopBtn>
-                 {`ご依頼・ご相談はコチラ`}
+                  <LogoutIcon />
+                  トップページ
                 </ToTopBtn>
               </Totoplink>
             </Link>

@@ -21,7 +21,7 @@ const Typography = styled.span`
       mt: 5,
       mb: 0,
       mx: 0,
-      background: '#292929',
+      background: '#121212',
     }}>
       <Grid 
         spacing={0}

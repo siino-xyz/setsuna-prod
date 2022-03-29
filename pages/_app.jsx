@@ -24,7 +24,7 @@ export default function MyApp(props) {
         </Head>
         <Script
                 src="https://sdk.form.run/js/v2/formrun.js"
-                strategy='beforeInteractive'
+                strategy='lazyOnload'
             />
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
