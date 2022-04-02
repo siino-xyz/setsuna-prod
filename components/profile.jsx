@@ -36,7 +36,7 @@ const Profile = () => {
         <Prag sx={{
           textAlign: 'center'
         }}>
-          篠田&nbsp; 亜理伊（しのだ・あり）
+          siino
         </Prag>
         <Prag>
           鳥取県出身の1995/04/27生まれ。<br />

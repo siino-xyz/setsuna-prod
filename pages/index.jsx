@@ -60,12 +60,12 @@ export default function Home({articles}) {
         </Box>
       
       <LinkButton
-        url={'/contact'}
+        url={'contact'}
         button={'フォームからお問い合わせする'}
       />
 
       <SectionTitle
-        sectiontitle={'News/blog'}
+        sectiontitle={'News.blog'}
       />
 
       <Grid 
@@ -87,8 +87,8 @@ export default function Home({articles}) {
       </Grid>
 
       <LinkButton
-        url={'/blog'}
-        button={'setsuna Blogを見る'}
+        url={'blog'}
+        button={'記事一覧'}
       />
 
     </>

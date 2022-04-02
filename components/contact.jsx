@@ -20,6 +20,7 @@ const InputFormWrapper = styled.div`
   width: 100%;
   max-width: 500px;
   margin: 1rem auto;
+  ${'' /* background: #ffffff; */}
 `;
 
 const FromrunGotcha = styled.div`
@@ -37,11 +38,13 @@ const ContactForm = () => {
                 id="outlined-basic"
                 fullWidth 
                 name="お名前" 
+                required="true"
                 type="text"
-                label="お名前" 
+                color='primary'
+                label="お名前"
                 variant="outlined"
                 sx={{
-                  backgroundColor: '#101010'
+                  // backgroundColor: '#C8C8C8'
                 }}
               />
             </InputFormWrapper>
@@ -53,7 +56,8 @@ const ContactForm = () => {
                 id="outlined-basic" 
                 name="メールアドレス" 
                 type="text"
-                label="メールアドレス" 
+                label="メールアドレス"
+                required="true"
                 variant="outlined"
                 data-formrun-type="email" 
                 data-formrun-required

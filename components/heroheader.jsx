@@ -18,7 +18,6 @@ const TypoSub1 = styled.span`
 
 const HikakinTv = styled.div`
  padding-top: 5rem;
- ${'' /* padding-left: 5rem; */}
 `;
 //emotion styled end
 
@@ -40,8 +39,8 @@ const HeroHeader = () => {
         overFlow: 'hidden',
         margin:0,
         zIndex: '-123',
-        background: '#121212'
-        // background: "linear-gradient( 110deg, #121212 58% , #52D5F2 42%)",
+        background: '#121212',
+        userSelect: 'none',
       }}>
         {/* <Grid 
           item

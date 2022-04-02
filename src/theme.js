@@ -188,16 +188,7 @@ const theme = createTheme({
             '"Segoe UI Symbol"',
         ].join(','),
     },
-    // components: {
-    //     MuiCardContent: {
-    //         styleOverrides: {
-    //             root: {
-    //                 paddingBottom: '0.5rem !important',
-    //                 padding: 0,
-    //             },
-    //         },
-    //     },
-    // },
+    
 });
 
 export default theme;

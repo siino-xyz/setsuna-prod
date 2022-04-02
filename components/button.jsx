@@ -17,7 +17,7 @@ const LinkButton = (props) => {
       sx={{
         margin: 'auto',
         textAlign: 'center',
-        color: 'common.white',
+        color: 'common.black',
         borderRadius: 0.5,
       }}>
         {props.button}
