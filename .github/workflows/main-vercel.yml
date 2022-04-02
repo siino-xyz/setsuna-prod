@@ -16,6 +16,7 @@ jobs:
       run: |
         touch .env
         echo "MICROCMS_API_KEY = ${{ secrets.MICROCMS_API_KRY }}" >> .env
+        echo "NEXT_PUBLIC_GA_ID = ${{ secrets.NEXT_PUBLIC_GA_ID }}" >> .env
         npm install
         npm run build
         
