@@ -24,8 +24,9 @@ export default function MyApp(props) {
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
         <Script
-                src="https://sdk.form.run/js/v2/formrun.js"
-                strategy='lazyOnload'
+          defer
+          src="https://sdk.form.run/js/v2/formrun.js"
+          strategy='afterInteractive'
         />
 
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
