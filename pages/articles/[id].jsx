@@ -5,7 +5,7 @@ import Moment from 'react-moment'
 import ArticleLayout from '../../layouts/article-layout'
 import NestedLayout from '../../layouts/nested-layout'
 
-import LinkButton from '../../components/button'
+import LinkButton from '../../components/common/button'
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box'

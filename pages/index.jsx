@@ -1,13 +1,14 @@
 import Layout from '../layouts/layout'
 import NestedLayout from '../layouts/nested-layout'
 
-import LinkButton from '../components/button'
 import Service from '../components/service'
 import Detail from '../components/detail'
 import Profile from '../components/profile'
-import SectionTitle from '../components/sectiontitle'
-import SectionText from '../components/section-text'
-import ArticleCard from '../components/articles'
+
+import ArticleCard from '../components/common/articles'
+import LinkButton from '../components/common/button'
+import SectionTitle from '../components/common/section-title'
+import Paragraph from '../components/common/paragraph'
 
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
@@ -18,17 +19,24 @@ export default function Home({articles}) {
 
       <div id='services'>
         <SectionTitle
-          sectiontitle={'SE-27(刹那)は、Jamstack専門のWeb制作サービスです'}
+          sectiontitle={'安全で速く、使いやすいウェブサイトをつくります'}
         />
       </div>
+      <Paragraph 
+        paragraph={'SE-27(せつな)は、大阪を拠点に活動するフリーランスのWEB制作所です。jamstackを用いた、パフォーマンスの高いウェブサイト構築を強みとしています。'}
+      />
 
       <Service />
       
       <SectionTitle
-        sectiontitle={'Jamstackのメリット'}
+        sectiontitle={'こんなことでお困りではありませんか？'}
       />
 
       <Detail />
+
+      <SectionTitle
+        sectiontitle={'Jamstackで高速・セキュアなウェブサイトを'}
+      />
 
       <div id='profile'>
         <SectionTitle
@@ -48,14 +56,14 @@ export default function Home({articles}) {
           pb: 1,
           mt: 3,
         }}>
-          <SectionText 
-            sectiontext={'個人・事業者様問わずご依頼をお引き受けしておりますので、'}
+          <Paragraph 
+            paragraph={'個人・事業者様問わずご依頼をお引き受けしておりますので、'}
           />
-          <SectionText 
-            sectiontext={'まずは下記フォームよりお気軽にお問い合わせください。'}
+          <Paragraph 
+            paragraph={'まずは下記フォームよりお気軽にお問い合わせください。'}
           />
-          <SectionText 
-            sectiontext={'コーディングのみ、デザインのみのご相談も歓迎しております。'}
+          <Paragraph 
+            paragraph={'コーディングのみ、デザインのみのご相談も歓迎しております。'}
           />
         </Box>
       

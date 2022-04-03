@@ -2,8 +2,8 @@ import ContactForm from '../components/contact'
 import ContactFormLayout from '../layouts/contact-layout'
 import NestedLayout from '../layouts/nested-layout'
 
-import SectionTitle from '../components/sectiontitle'
-import SectionText from '../components/section-text'
+import SectionTitle from '../components/common/section-title'
+import Paragraph from '../components/common/paragraph'
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
@@ -27,11 +27,11 @@ const ContactFormPage = () => {
           pb: 1,
           mt: 0,
         }}>
-          <SectionText 
-            sectiontext={'Webサイト制作のご相談はもちろん、簡単なお見積りや制作プランについてのご質問なども歓迎しております。'}
+          <Paragraph 
+            paragraph={'Webサイト制作のご相談はもちろん、簡単なお見積りや制作プランについてのご質問なども歓迎しております。'}
           />
-          <SectionText 
-            sectiontext={'まずは下記フォームよりお気軽にお声がけください。'}
+          <Paragraph 
+            paragraph={'まずは下記フォームよりお気軽にお声がけください。'}
           />
         </Box>
         <ContactForm />

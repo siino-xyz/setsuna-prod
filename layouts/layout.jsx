@@ -1,6 +1,6 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
-import HeroHeader from '../components/heroheader'
+import HeroHeader from '../components/firstview'
 
 const Layout = ({children}) => {
   return (

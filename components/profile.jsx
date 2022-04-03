@@ -2,11 +2,8 @@ import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles';
+import Paragraph from './common/paragraph'
 
-const Prag = styled(Typography)(({ theme }) => ({
-  ...theme.typography.smallParagraph,
-  // marginTop: '1rem'
-}))
 
 const Profile = () => {
   return (
@@ -33,20 +30,19 @@ const Profile = () => {
             alt='about-1'
             />
         </Box>
-        <Prag sx={{
-          textAlign: 'center'
-        }}>
-          siino
-        </Prag>
-        <Prag>
-          鳥取県出身の1995/04/27生まれ。<br />
-          今は大坂でフリーランスエンジニア/デザイナーをやっています。<br />
-          昔はテレビ局の報道部門で働いていたりしました。
-        </Prag>
-        <Prag>
-          何かを作ったり、ものを考えたりすることが得意です。 <br />
-          趣味はギターと自作キーボードとWikipedia巡り。
-        </Prag>
+        
+        <Paragraph 
+          paragraph={'siino'}
+        />
+          
+        <Paragraph 
+          paragraph={'鳥取県出身の1995/04/27生まれ。今は大坂でフリーランスエンジニア/デザイナーをやっています。昔はテレビ局の報道部門で働いていたりしました。'}
+        />
+
+        <Paragraph 
+          paragraph={'何かを作ったり、ものを考えたりすることが得意です。趣味はギターと自作キーボードとWikipedia巡り。'}
+        />
+
       </Box>
     </>
   )

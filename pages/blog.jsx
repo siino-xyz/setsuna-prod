@@ -1,12 +1,12 @@
 import { client } from '../libs/client'
 import ArticleLayout from '../layouts/article-layout'
 import NestedLayout from '../layouts/nested-layout'
-import ArticleCard from '../components/articles'
-import CategoryTab from '../components/category'
+import ArticleCard from '../components/common/articles'
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
+// import CategoryTab from '../components/common/category'
+// import Tabs from '@mui/material/Tabs';
 
 const ArticlesHome = ({ articles ,category }) => {
   const [value, setValue] = React.useState(2);

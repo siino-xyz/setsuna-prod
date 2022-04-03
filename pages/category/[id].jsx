@@ -4,8 +4,8 @@ import * as React from 'react'
 import ArticleLayout from '../../layouts/article-layout'
 import NestedLayout from '../../layouts/nested-layout'
 
-import ArticleCard from '../../components/articles'
-import CategoryTab from '../../components/category'
+import ArticleCard from '../../components/common/articles'
+import CategoryTab from '../../components/common/category'
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid'

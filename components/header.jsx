@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from '@emotion/styled'
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import * as React from 'react'
-import ReactDOM from "react-dom";
 
 //mui
 import Box from '@mui/material/Box';

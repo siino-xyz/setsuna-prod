@@ -56,7 +56,7 @@ const theme = createTheme({
             fontWeight: 700,
             letterSpacing: '0.08rem',
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'Zen Kaku Gothic New',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -71,7 +71,7 @@ const theme = createTheme({
         h3: {
             fontSize: "1.5rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'Zen Kaku Gothic New',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -82,13 +82,13 @@ const theme = createTheme({
                 '"Segoe UI Emoji"',
                 '"Segoe UI Symbol"',
             ].join(','),
-            letterSpacing: '0.1rem',
+            letterSpacing: '0.05rem',
             fontWeight: 700,
         },
         h4: {
             fontSize: "1.25rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'Zen Kaku Gothic New',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -104,7 +104,7 @@ const theme = createTheme({
         subtitle1: {
             fontSize: "1rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'Zen Kaku Gothic New',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -121,7 +121,7 @@ const theme = createTheme({
             fontSize: "0.8rem",
             letterSpacing: "0.07rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'Zen Kaku Gothic New',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -138,7 +138,7 @@ const theme = createTheme({
             fontSize: "0.8rem",
             letterSpacing: "0.07rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'Zen Kaku Gothic New',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -154,7 +154,7 @@ const theme = createTheme({
         body1: {
             fontSize: "1rem",
             fontFamily: [
-                'Zen Kaku Gothic Antique',
+                'Zen Kaku Gothic New',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -170,7 +170,7 @@ const theme = createTheme({
             lineHeight: '1.6rem' 
         },
         button: {
-            fontFamily: 'Zen Kaku Gothic Antique',
+            fontFamily: 'Zen Kaku Gothic New',
             fontWeight: 700,
             fontSizz: '0.7rem',
             textTransform: 'none',

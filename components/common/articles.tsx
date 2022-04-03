@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Articles from "../models/post"
+import Articles from "../../models/post"
 import Image from 'next/image'
 import Moment from 'react-moment'
 

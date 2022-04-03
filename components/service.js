@@ -2,9 +2,9 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { Typography } from '@mui/material';
 import Image from 'next/image'
-import InnerTitle from '../components/inner-title'
+import InnerTitle from './common/sub-title'
+import Paragraph from './common/paragraph'
 
 const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(0.5),
@@ -12,14 +12,10 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.primary,
   backgroundColor: theme.palette.warning.main,
   boxShadow: 'none',
-  // marginTop: '5rem'
   paddingBottom: '2rem',
 }));
 
-const Prag = styled(Typography)(({ theme }) => ({
-  ...theme.typography.body1,
-  // marginTop: '1rem'
-}))
+
 
 
 const Service = () => {
@@ -32,15 +28,16 @@ const Service = () => {
         <Grid item xs={12} md={5}>
           <Item>
             <InnerTitle
-              
-              innertitle={'速さは正義。'}
+              innertitle={'Jamstackを用いたハイパフォーマンスなサイト構築'}
             />
-            <Prag component="p">
-              setsunaは、大阪を拠点に活動するフリーランスのWEB制作所です。jamstackを用いた、パフォーマンスの高いウェブサイト構築を強みとしています。
-            </Prag>
-            <Prag component="p">
-              sデザインにおいては、伝えたい情報に「いかに速くユーザーを導けるか」を意識した導線設計を心がけています。コーポレートサイトからオウンドメディアまで様々な形態に対応しており、最適な構築プランをご提案いたします。
-            </Prag>
+
+            <Paragraph 
+              paragraph={'jamstack （ジャムスタック）とは、J・A・M（JavaScript・API・Markup）の頭文字をとった、比較的新しいウェブサイト構築手法です。従来のサイト構築と異なり、特定のサーバを持たないことが大きな特徴です。'} 
+            />
+
+            <Paragraph 
+              paragraph={'jamstackを導入することで、高いユーザ体験と快適な運用体制を低コストで実現することができます。'}
+            />
           </Item>
         </Grid>
         <Grid item xs={12} md={7}>
@@ -56,14 +53,11 @@ const Service = () => {
         <Grid item xs={12} md={5}>
           <Item>
             <InnerTitle
-              innertitle={'速さは正義。'}
+              innertitle={'「目的ファースト」な導線設計とデザイン'}
             />
-            <Prag component="p">
-              setsunaは、大阪を拠点に活動するフリーランスのWEB制作所です。jamstackを用いた、パフォーマンスの高いウェブサイト構築を強みとしています。
-            </Prag>
-            <Prag component="p">
-              sデザインにおいては、伝えたい情報に「いかに速くユーザーを導けるか」を意識した導線設計を心がけています。コーポレートサイトからオウンドメディアまで様々な形態に対応しており、最適な構築プランをご提案いたします。
-            </Prag>
+            <Paragraph 
+             paragraph={'なんのためにウェブサイトを作るのか、本当にウェブサイトが必要なのか、一番伝えたいことは何なのか、といった疑問提起にはじまります。導線設計やデザインをご提案します。'} 
+            />
           </Item>
         </Grid>
         <Grid item xs={12} md={7}>

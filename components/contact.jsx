@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
@@ -88,17 +87,7 @@ const ContactForm = () => {
             
             <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
           </div>
-        
-          {/* 
-          <div>
-            <label>個人情報利用同意 [必須]</label>
-            <input 
-              type="checkbox" 
-              name="個人情報利用同意" 
-              data-formrun-required 
-            />
-            <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
-          </div> */}
+      
 
           <FromrunGotcha>
             <label>If you are a human, ignore this field</label>

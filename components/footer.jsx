@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from '@emotion/styled'
 
-const Typography = styled.span`
+const Copyright = styled.span`
   font-size: 12px;
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
   font-weight: 400;
@@ -53,9 +53,9 @@ const Typography = styled.span`
         <Grid item xs={12} md={8} sx={{
           textAlign: 'center',
         }}>
-          <Typography varitant='subtitle1' component='span'>
+          <Copyright>
             ©copylight setsuna all lights.
-          </Typography>
+          </Copyright>
         </Grid>
       </Grid>
     </Box>
