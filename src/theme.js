@@ -53,10 +53,10 @@ const theme = createTheme({
         },
         h2: {
             fontSize: "2rem",
-            fontWeight: 700,
-            letterSpacing: '0.08rem',
+            fontWeight: 600,
+            letterSpacing: '0.02rem',
             fontFamily: [
-                'Zen Kaku Gothic New',
+                'MuseoModerno',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -71,7 +71,7 @@ const theme = createTheme({
         h3: {
             fontSize: "1.5rem",
             fontFamily: [
-                'Zen Kaku Gothic New',
+                'MuseoModerno',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -83,7 +83,7 @@ const theme = createTheme({
                 '"Segoe UI Symbol"',
             ].join(','),
             letterSpacing: '0.05rem',
-            fontWeight: 700,
+            fontWeight: 600,
         },
         h4: {
             fontSize: "1.25rem",

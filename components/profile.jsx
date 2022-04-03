@@ -1,7 +1,5 @@
-import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
-import { styled } from '@mui/material/styles';
 import Paragraph from './common/paragraph'
 
 

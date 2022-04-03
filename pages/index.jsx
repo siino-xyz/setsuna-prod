@@ -1,14 +1,13 @@
 import Layout from '../layouts/layout'
 import NestedLayout from '../layouts/nested-layout'
 
-import Service from '../components/service'
-import Detail from '../components/detail'
 import Profile from '../components/profile'
 
 import ArticleCard from '../components/common/articles'
 import LinkButton from '../components/common/button'
 import SectionTitle from '../components/common/section-title'
 import Paragraph from '../components/common/paragraph'
+import Question from '../components/question'
 
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
@@ -19,23 +18,23 @@ export default function Home({articles}) {
 
       <div id='services'>
         <SectionTitle
-          sectiontitle={'安全で速く、使いやすいウェブサイトをつくります'}
+          sectiontitle={'Fast,Secure,Useful'}
         />
       </div>
       <Paragraph 
-        paragraph={'SE-27(せつな)は、大阪を拠点に活動するフリーランスのWEB制作所です。jamstackを用いた、パフォーマンスの高いウェブサイト構築を強みとしています。'}
+        paragraph={'SE-27(せつな)は、大阪を拠点に活動するフリーランスのWEB制作所です。'}
+      />
+      <Paragraph 
+        paragraph={'jamstackを用いた、パフォーマンスの高いウェブサイト構築を強みとしています。'}
       />
 
-      <Service />
-      
       <SectionTitle
-        sectiontitle={'こんなことでお困りではありませんか？'}
+        sectiontitle={'Raise a Question'}
       />
-
-      <Detail />
+      <Question />
 
       <SectionTitle
-        sectiontitle={'Jamstackで高速・セキュアなウェブサイトを'}
+        sectiontitle={'Solution'}
       />
 
       <div id='profile'>

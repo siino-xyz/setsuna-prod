@@ -17,9 +17,7 @@ const ArticleCard = ({ articles }: {
 }) => {
   return (
     <>
-
-    <Grid item xs={10} sm={4} md={4}
-         
+    <Grid item xs={10} sm={4} md={4} 
     >
       <Card sx={{ 
           maxWidth: 330,

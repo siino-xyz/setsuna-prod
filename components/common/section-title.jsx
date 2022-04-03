@@ -7,17 +7,19 @@ const SectionTitle = (props) => {
     component='h2'
     color='common.black'
     sx= {{
-      mb: 6,
-      mt: 12,
+      mb: 2,
+      mt: 8,
       textAlign: 'left',
       backgroundColor: 'common.white',
-      px: 1,
-      py: 0.6,
+      px: 0.7,
+      py: 0.2,
       display: 'inline-block',
-      borderRadius: '0.11rem',
+      borderRadius: '0',
     }}
     >
       {props.sectiontitle}
+      
+
     </Typography>
   )
 }

@@ -1,28 +1,29 @@
 import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 
-const SubTitle = styled(Typography)(({ theme }) => ({
+const InnerTitle = styled(Typography)(({ theme }) => ({
   ...theme.typography.h3,
   color: theme.palette.common.black,
   backgroundColor: theme.palette.common.white,
   textAlign: 'left',
-  display: 'inline-block',
+  display: 'inline-block !important',
   marginTop: 0,
   borderRadius: '0.11rem',
 }))
 
-const InnerTitle = (props) => {
+const SubTitle = (props) => {
   return (
-    <SubTitle 
+    <InnerTitle 
     component="h3"
     sx={{
       px: 0.8,
-      py: 0.7,
+      py: 0.2,
       my: 1,
+      display: 'inline-block !important',
     }}>
-      {props.innertitle}
-    </SubTitle>
+      {props.subtitle}
+    </InnerTitle>
   )
 }
 
-export default InnerTitle
+export default SubTitle

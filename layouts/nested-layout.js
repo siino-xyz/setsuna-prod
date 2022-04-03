@@ -10,12 +10,13 @@ const NestedLayout = ({children, index}) => {
         mx: 'auto',
         my: 0,
         pb: 10,
-        backgroundColor: 'rgba(18, 18, 18, 0.8)',
+        backgroundColor: 'rgba(18, 18, 18, 0.92)',
         backdropFilter: 'blur(6px)',
 
         "@media screen and (max-width:600px)": {
-          width: "90%",
+          width: "100%",
           display: '',
+          px: 2,
         },
       }}>
         <main>{children}</main>
