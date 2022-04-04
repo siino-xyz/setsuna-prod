@@ -3,9 +3,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
-
-
-
 const FormInner = styled.form`
   display: flex;
   flex-direction: column;

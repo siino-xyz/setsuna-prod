@@ -53,21 +53,6 @@ export default function Home({articles}) {
           sectiontitle={'Contact'}
         />
       </div>
-
-        <Box sx={{
-          pb: 1,
-          mt: 3,
-        }}>
-          <Paragraph 
-            paragraph={'個人・事業者様問わずご依頼をお引き受けしておりますので、'}
-          />
-          <Paragraph 
-            paragraph={'まずは下記フォームよりお気軽にお問い合わせください。'}
-          />
-          <Paragraph 
-            paragraph={'コーディングのみ、デザインのみのご相談も歓迎しております。'}
-          />
-        </Box>
       
       <LinkButton
         url={'contact'}

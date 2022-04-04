@@ -7,8 +7,8 @@ const SectionTitle = (props) => {
     component='h2'
     color='common.black'
     sx= {{
-      mb: 2,
-      mt: 8,
+      mb: 5,
+      mt: 10,
       textAlign: 'left',
       backgroundColor: 'common.white',
       px: 0.7,

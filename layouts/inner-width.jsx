@@ -4,10 +4,8 @@ export const InnerWidth = ({children}) => {
   return (
     <>
       <Box sx={{
-        pb: 5,
-        maxWidth:'100%',
+        maxWidth:860,
         mx: 'auto',
-        my: 10,
       }}>
         {children}
       </Box>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from '@emotion/styled'
@@ -62,7 +62,7 @@ const Item = (props) => {
 
 
 const BlogHeader = () => {
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = useState('one');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

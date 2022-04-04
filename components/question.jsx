@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Grid'
 import SubTitle from './common/sub-title'
-import InnerWidth from '../layouts/inner-width'
 import Stack from '@mui/material/Stack'
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import styled  from '@emotion/styled'
@@ -37,7 +36,8 @@ const GridContainer = (props) => {
       justifyContent="center"
       alignItems="center"
       sx={{
-        margin: 'auto',
+        mx: 'auto',
+        pb: 7,
         "@media screen and (max-width:900px)": {
             flexDirection: 'column-reverse',
           },
@@ -68,9 +68,17 @@ import Image from 'next/image'
 export const Question = () => {
   return (
     <>
-    <InnerWidth>
+    <Stack
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          my: 5,
+          mx: 'auto',
+        }}
+      >
       <Stack 
-        spacing={4}
+        spacing={1}
         direction="column"
         justifyContent="flex-start"
         alignItems="baseline"
@@ -149,7 +157,7 @@ export const Question = () => {
 
         </GridContainer>
       </Stack>
-    </InnerWidth>
+    </Stack>
     </>
   )
 }
