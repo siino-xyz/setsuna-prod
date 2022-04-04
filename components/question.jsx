@@ -20,9 +20,9 @@ const Listitem = styled.li`
   justify-content: flex-start;
   margin:2rem 0;
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
         font-size: 1rem;
-        margin:1.5rem 0;
+        margin:1rem 0;
       }
 `;
 
@@ -40,6 +40,7 @@ const GridContainer = (props) => {
         pb: 7,
         "@media screen and (max-width:900px)": {
             flexDirection: 'column-reverse',
+            pb: 3,
           },
         ...sx,
       }}

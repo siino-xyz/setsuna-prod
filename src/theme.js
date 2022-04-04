@@ -166,7 +166,7 @@ const theme = createTheme({
                 '"Segoe UI Symbol"',
             ].join(','),
             fontWeight: 400,
-            letterSpacing: "0.08em", 
+            letterSpacing: "0.01em", 
             lineHeight: '1.6rem' 
         },
         button: {

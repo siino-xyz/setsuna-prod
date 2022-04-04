@@ -15,6 +15,10 @@ const SectionTitle = (props) => {
       py: 0.2,
       display: 'inline-block',
       borderRadius: '0',
+      "@media screen and (max-width:600px)": {
+        mb: 2,
+        mt: 5,
+      },
     }}
     >
       {props.sectiontitle}

@@ -26,7 +26,13 @@ const ArticleCard = ({ articles }: {
           borderRadius: '0.1rem',
           overflow: 'hidden',
           mx: 'auto',
+          my: 2,
           backgroundColor: 'common.black',
+
+
+          "@media screen and (max-width:600px)": {
+            px: 2,
+          },
         }} 
         key={articles.id}
       >

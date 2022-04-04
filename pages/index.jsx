@@ -88,7 +88,7 @@ export default function Home({articles}) {
 
       <LinkButton
         url={'blog'}
-        button={'記事一覧'}
+        button={'ブログを読む'}
       />
 
     </>

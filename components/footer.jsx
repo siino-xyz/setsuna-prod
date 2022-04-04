@@ -34,8 +34,11 @@ const Copyright = styled.span`
             px: 0,
             py: 0,
             "@media screen and (max-width:400px)": {
-                    textAlign: 'center',
-                  },
+              textAlign: 'center',
+              width: '50%',
+              mx: 'auto',
+              my: 1,
+            },
           }}>
             <Link href='/' passHref>
               <a>
