@@ -9,6 +9,7 @@ const List = styled.ul`
   padding-left: 0;
   list-style-type: none;
   margin: 1rem;
+ 
 `;
 
 const Listitem = styled.li`
@@ -20,8 +21,9 @@ const Listitem = styled.li`
   margin:2rem 0;
 
   @media (max-width: 600px) {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin:1rem 0;
+        text-align: left;
       }
 `;
 
@@ -48,7 +50,8 @@ const GridContainer = (props) => {
         pb: 7,
         "@media screen and (max-width:900px)": {
             flexDirection: 'column-reverse',
-            pb: 3,
+            pb: 4,
+            alignItems: 'start',
           },
         ...sx,
       }}
@@ -61,10 +64,13 @@ const CkeckIcon = (props) => {
   const {sx, ...other} = props
   return (
     <CheckBoxIcon
-      color='primary'
+      color='error'
       sx={{
         mr: 1,
         ...sx,
+        "@media screen and (max-width:600px)": {
+          mr: 0.4
+          },
       }}
       {...other}
     />
@@ -82,6 +88,9 @@ export const Question = () => {
           mb: 5,
           mx: 'auto',
           mt: 0,
+          "@media screen and (max-width:600px)": {
+            mb: 0,
+          },
         }}
       >
       <TextWrapper>
@@ -144,19 +153,19 @@ export const Question = () => {
               <List>
                 <Listitem>
                   <CkeckIcon />
-                  サーバーのメンテナンスを何年もやっていない
+                  サーバーの更新・確認を行っていない
                 </Listitem>
                 <Listitem>
-                <CkeckIcon />
-                プラグインなどのアップデートを確認していない
+                  <CkeckIcon />
+                  プラグインのバージョンが古いまま
                 </Listitem>
                 <Listitem>
-                <CkeckIcon />
-                セキュリティ対策の必要性が分からない
+                  <CkeckIcon />
+                  セキュリティ対策の必要性が分からない
                 </Listitem>
                 <Listitem>
-                <CkeckIcon />
-                  メンテナンスが出来る担当者が社内にいない 
+                  <CkeckIcon />
+                  メンテナンスの担当者が社内にいない 
                 </Listitem>
               </List>
           </Grid>

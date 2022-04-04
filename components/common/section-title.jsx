@@ -18,6 +18,7 @@ const SectionTitle = (props) => {
       "@media screen and (max-width:600px)": {
         mb: 2,
         mt: 5,
+        display: 'inherit',
       },
     }}
     >

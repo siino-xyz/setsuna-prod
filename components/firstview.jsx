@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 const HikakinTv = styled.div`
  padding-top: 5rem;
  @media (max-width:600px) {
+    padding-top: 0;
     width: 70%;
   }
 `;

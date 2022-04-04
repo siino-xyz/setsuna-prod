@@ -31,7 +31,7 @@ const MiniTitle = (props) => {
       component='h3'
       color='common.black'
       sx={{
-        background: '#909090',
+        background: '#C7C7C7',
         px: 1,
         py:0.7,
         borderRadius: '0.2rem',
