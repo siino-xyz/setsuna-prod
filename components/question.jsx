@@ -8,7 +8,8 @@ import styled  from '@emotion/styled'
 const List = styled.ul`
   padding-left: 0;
   list-style-type: none;
-  margin: 5rem;
+  margin: 1rem;
+
  
 `;
 
@@ -16,12 +17,13 @@ const Listitem = styled.li`
   padding-left: none;
   display: flex;
   flex-direction: row;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   justify-content: flex-start;
   margin:2rem 0;
 
-  @media (min-width: 420px) {
+  @media (max-width: 420px) {
         font-size: 1rem;
+        margin:1.5rem 0;
       }
 `;
 
@@ -46,6 +48,20 @@ const GridContainer = (props) => {
   )
 }
 
+const CkeckIcon = (props) => {
+  const {sx, ...other} = props
+  return (
+    <CheckBoxIcon
+      color='primary'
+      sx={{
+        mr: 1,
+        ...sx,
+      }}
+      {...other}
+    />
+  )
+}
+
 
 import Image from 'next/image'
 
@@ -53,40 +69,38 @@ export const Question = () => {
   return (
     <>
     <InnerWidth>
-      <Stack spacing={10}>
-
+      <Stack 
+        spacing={4}
+        direction="column"
+        justifyContent="flex-start"
+        alignItems="baseline"
+      >
+        <SubTitle
+          subtitle={'Performance'}
+        />
         <GridContainer>
-
+        
           <Grid item xs={12} md={6}>
-            <Stack 
-              spacing={1}
-              direction="column"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-            >
-              <SubTitle
-                subtitle={'Performance'}
-              />
               <List>
                 <Listitem>
-                  <CheckBoxIcon />
+                  <CkeckIcon />
                   自社サイトの読み込み速度が遅い
                 </Listitem>
                 <Listitem>
-                <CheckBoxIcon />
+                <CkeckIcon />
                   特にスマホからの読み込みが遅い
                 </Listitem>
                 <Listitem>
-                <CheckBoxIcon />
+                <CkeckIcon />
                   ユーザーの直帰率が高い
                 </Listitem>
                 <Listitem>
-                <CheckBoxIcon />
+                <CkeckIcon />
                   PageSpeed Insightsのスコアが低い
                 </Listitem>
               </List>
-            </Stack>
           </Grid>
+
           <Grid item xs={12} md={6}>
             <Image 
               src="/gif/MOSHED-2022-4-3-22-43-43.gif" 
@@ -98,41 +112,31 @@ export const Question = () => {
           </Grid>
         </GridContainer>
 
-
+        <SubTitle
+          subtitle={'Security'}
+        />
         <GridContainer>
 
-
-        <Grid item xs={12} md={6}>
-          <Stack 
-            spacing={1}
-            direction="column"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-          >
-            <SubTitle
-              subtitle={'Security'}
-             />
-            <List>
-              <Listitem>
-                <CheckBoxIcon />
-                サーバーのメンテナンスを何年もやっていない
-              </Listitem>
-              <Listitem>
-              <CheckBoxIcon />
-              プラグインなどのアップデートを確認していない
-              </Listitem>
-              <Listitem>
-              <CheckBoxIcon />
-              セキュリティ対策の必要性が分からない
-              </Listitem>
-              <Listitem>
-              <CheckBoxIcon />
-                メンテナンスが出来る担当者が社内にいない 
-              </Listitem>
-            </List>
-          </Stack>
-        </Grid>
-
+          <Grid item xs={12} md={6}>
+              <List>
+                <Listitem>
+                  <CkeckIcon />
+                  サーバーのメンテナンスを何年もやっていない
+                </Listitem>
+                <Listitem>
+                <CkeckIcon />
+                プラグインなどのアップデートを確認していない
+                </Listitem>
+                <Listitem>
+                <CkeckIcon />
+                セキュリティ対策の必要性が分からない
+                </Listitem>
+                <Listitem>
+                <CkeckIcon />
+                  メンテナンスが出来る担当者が社内にいない 
+                </Listitem>
+              </List>
+          </Grid>
           <Grid item xs={12} md={6}>
             <Image 
               src="/gif/MOSHED-2022-4-3-23-26-2 (1).gif" 
@@ -142,8 +146,8 @@ export const Question = () => {
               layout='intrinsic'
             />
           </Grid>
-        </GridContainer>
 
+        </GridContainer>
       </Stack>
     </InnerWidth>
     </>

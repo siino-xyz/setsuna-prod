@@ -8,6 +8,8 @@ import LinkButton from '../components/common/button'
 import SectionTitle from '../components/common/section-title'
 import Paragraph from '../components/common/paragraph'
 import Question from '../components/question'
+import Solution from '../components/solution'
+import CustomizedAccordions from '../components/q-and-a'
 
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
@@ -36,6 +38,7 @@ export default function Home({articles}) {
       <SectionTitle
         sectiontitle={'Solution'}
       />
+      <Solution />
 
       <div id='profile'>
         <SectionTitle
@@ -70,6 +73,11 @@ export default function Home({articles}) {
         url={'contact'}
         button={'フォームからお問い合わせする'}
       />
+
+      <SectionTitle
+        sectiontitle={'Q&A'}
+      />
+      <CustomizedAccordions />
 
       <SectionTitle
         sectiontitle={'News.blog'}
