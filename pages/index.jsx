@@ -32,17 +32,20 @@ export default function Home({articles}) {
 
       <SectionTitle
         sectiontitle={'Raise a Question'}
+        subscript={'こんな事でお困りでは有りませんか？'}
       />
       <Question />
 
       <SectionTitle
-        sectiontitle={'Solution'}
+        sectiontitle={'Our Solution'}
+        subscript={'Jamstackで高速・セキュアなウェブサイトを'}
       />
       <Solution />
 
       <div id='profile'>
         <SectionTitle
-          sectiontitle={'Profile'}
+          sectiontitle={'My Profile'}
+          subscript={'プロフィール'}
         />
       </div>
 
@@ -51,6 +54,7 @@ export default function Home({articles}) {
       <div id='contact'>
         <SectionTitle
           sectiontitle={'Contact'}
+          subscript={'ご依頼・ご相談はこちらから'}
         />
       </div>
       
@@ -61,11 +65,13 @@ export default function Home({articles}) {
 
       <SectionTitle
         sectiontitle={'Q&A'}
+        subscript={'よくあるご質問'}
       />
       <CustomizedAccordions />
 
       <SectionTitle
-        sectiontitle={'News.blog'}
+        sectiontitle={'Blog'}
+        subscript={'お知らせとテックブログ'}
       />
 
       <Grid 

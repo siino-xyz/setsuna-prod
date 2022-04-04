@@ -23,6 +23,31 @@ const StackContainer = (props) => {
   )
 }
 
+const MiniTitle = (props) => {
+  const { sx, ...other} = props;
+  return (
+    <Typography 
+      variant='subtitle1'
+      component='h3'
+      color='common.black'
+      sx={{
+        background: '#909090',
+        px: 1,
+        py:0.7,
+        borderRadius: '0.2rem',
+        textAlign: 'left',
+        mb:2,
+        "@media screen and (max-width:600px)": {
+          width:'100%',
+          textAlign: 'center'
+        },
+        ...sx,
+      }}
+      {...other}
+    />
+  )
+}
+
 const TextWrapper = styled.div`
   width: 100%;
   @media (max-width: 600px) {
@@ -47,12 +72,9 @@ export const Solution = () => {
         </TextWrapper>
         
         <StackContainer>
-          <Typography 
-            variant='h4'
-            component='h3'
-          >
-            従来のウェブページ配信
-          </Typography>
+          <MiniTitle>
+            従来型のウェブページ配信（一例）
+          </MiniTitle>
           <Image 
             src="/images/ssr-path.svg" 
             width={860}
@@ -67,12 +89,9 @@ export const Solution = () => {
         </StackContainer>
 
         <StackContainer>
-        <Typography 
-            variant='h4'
-            component='h3'
-          >
-            Jamstackでのウェブページ配信
-          </Typography>
+          <MiniTitle>
+            Jamstackでのウェブページ配信（一例）
+          </MiniTitle>
           <Image 
             src="/images/ssg-path.svg" 
             width={860}

@@ -3,13 +3,12 @@ import SubTitle from './common/sub-title'
 import Stack from '@mui/material/Stack'
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import styled  from '@emotion/styled'
+import Image from 'next/image'
 
 const List = styled.ul`
   padding-left: 0;
   list-style-type: none;
   margin: 1rem;
-
- 
 `;
 
 const Listitem = styled.li`
@@ -24,6 +23,15 @@ const Listitem = styled.li`
         font-size: 1rem;
         margin:1rem 0;
       }
+`;
+
+const TextWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  @media (max-width: 600px) {
+    width: 93%;
+    margin: 0 auto 2rem auto !important;
+  }
 `;
 
 
@@ -63,9 +71,6 @@ const CkeckIcon = (props) => {
   )
 }
 
-
-import Image from 'next/image'
-
 export const Question = () => {
   return (
     <>
@@ -74,18 +79,27 @@ export const Question = () => {
         justifyContent="center"
         alignItems="center"
         sx={{
-          my: 5,
+          mb: 5,
           mx: 'auto',
+          mt: 0,
         }}
       >
+      <TextWrapper>
+        <p>ホームページやメディアサイトを運用したことのある方なら、以下のどれかのような課題・トラブルに遭遇したことがあるのではないでしょうか？</p>
+      </TextWrapper>
       <Stack 
         spacing={1}
         direction="column"
         justifyContent="flex-start"
         alignItems="baseline"
+        sx={{
+          "@media screen and (max-width:600px)": {
+            alignItems:'stretch',
+          },
+        }}
       >
         <SubTitle
-          subtitle={'Performance'}
+          subtitle={'Performance problems'}
         />
         <GridContainer>
         
@@ -122,7 +136,7 @@ export const Question = () => {
         </GridContainer>
 
         <SubTitle
-          subtitle={'Security'}
+          subtitle={'Security problems'}
         />
         <GridContainer>
 
@@ -158,6 +172,10 @@ export const Question = () => {
 
         </GridContainer>
       </Stack>
+      <TextWrapper>
+        <p>これらのトラブルはすべて、私が実際にウェブサイト開発の現場で対峙したものです。<br />
+        Wordpressで作ったサイトが重すぎて困っているウェブ担当者や、セキュリティの脆弱性を突かれて乗っ取り被害に遭ってしまったサイトをたくさん見てきました。</p>
+      </TextWrapper>
     </Stack>
     </>
   )

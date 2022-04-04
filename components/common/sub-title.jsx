@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles'
 const InnerTitle = styled(Typography)(({ theme }) => ({
   ...theme.typography.h3,
   color: theme.palette.common.black,
-  backgroundColor: theme.palette.common.white,
+  backgroundColor: '#909090',
   textAlign: 'left',
   display: 'inline-block !important',
   marginTop: 0,

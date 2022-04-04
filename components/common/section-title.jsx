@@ -7,12 +7,12 @@ const SectionTitle = (props) => {
     component='h2'
     color='common.black'
     sx= {{
-      mb: 5,
+      mb: 2,
       mt: 10,
       textAlign: 'left',
       backgroundColor: 'common.white',
       px: 0.7,
-      py: 0.2,
+      py: 0,
       display: 'inline-block',
       borderRadius: '0',
       "@media screen and (max-width:600px)": {
@@ -22,8 +22,19 @@ const SectionTitle = (props) => {
     }}
     >
       {props.sectiontitle}
-      
+      <Typography
+      variant='subtitle2'
+      component='h2'
+      color='common.black'
+      sx= {{
+        py: 0,
+        my: 0,
+        "@media screen and (max-width:600px)": {
 
+        },
+      }}>
+      {props.subscript}
+      </Typography>
     </Typography>
   )
 }
