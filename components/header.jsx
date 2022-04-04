@@ -11,11 +11,13 @@ import Backdrop from '@mui/material/Backdrop';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
-import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
-import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
-import ShareIcon from '@mui/icons-material/Share';
 
+import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import QuizIcon from '@mui/icons-material/Quiz';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import SendIcon from '@mui/icons-material/Send';
 const Item = (props) => {
   const { sx, ...other} = props;
   return (
@@ -89,13 +91,16 @@ const Fixed = styled.div`
   left: 0;
   width: 100%;
   z-index: 999;
+  pointer-events: none;
 `;
 
 const actions = [
-  { icon: <FileCopyIcon />, name: 'Copy' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
+  { icon: <SendIcon />, name: 'SE27に依頼する' },
+  { icon: <TwitterIcon />, name: 'TwitterLink' },
+  { icon: <QuizIcon />, name: 'Q&A' },
+  { icon: <AccountBoxIcon />, name: 'Profile' },
+  { icon: <NewspaperIcon />, name: 'TechBlog' },
+  { icon: <DeveloperBoardIcon />, name: 'Services' },
 ];
 
 const Header = () => {
@@ -117,7 +122,12 @@ const Header = () => {
               <Backdrop open={open} />
               <SpeedDial
                 ariaLabel="SpeedDial tooltip example"
-                sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                sx={{ 
+                  position: 'absolute', 
+                  bottom: 16, 
+                  right: 16,
+                  pointerEvents: 'auto',
+                }}
                 icon={<SpeedDialIcon />}
                 onClose={handleClose}
                 onOpen={handleOpen}
@@ -125,8 +135,8 @@ const Header = () => {
               >
                 {actions.map((action) => (
                   <SpeedDialAction
-                    key={action.name}
                     icon={action.icon}
+                    key={action.name}
                     tooltipTitle={action.name}
                     tooltipOpen
                     onClick={handleClose}

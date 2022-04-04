@@ -135,7 +135,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-            基本的なデザインも込みの、ざっくりとした予算感です。
+            基本的なデザインも込みの、ざっくりとした予算感です。ご参考までに。
             <ul>
               <li>ペライチ（1ページ構成）のLP、サービスサイトなど→15万円前後</li>
               <li>5ページ前後のコーポレートサイトなど→40～50万円</li>

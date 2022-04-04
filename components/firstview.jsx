@@ -1,15 +1,18 @@
-import Grid from '@mui/material/Grid'
+import Stack from '@mui/material/Stack'
 import Image from 'next/image'
 import styled from '@emotion/styled'
 
 
 const HikakinTv = styled.div`
  padding-top: 5rem;
+ @media (max-width:600px) {
+    width: 70%;
+  }
 `;
 const HeroHeader = () => {
   return (
     <>
-      <Grid 
+      <Stack 
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -28,15 +31,10 @@ const HeroHeader = () => {
         userSelect: 'none',
       }}>
 
-        <Grid 
-          item 
-          xs={12}
-          md={12}
-          direction="column"
-          justifyContent="center"
-          textAlign="center"
-        >
-        <HikakinTv>
+        <HikakinTv sx={{
+          mx: 'auto',
+  
+        }}>
           <Image 
             src='/logo/bg-logo.svg'
             width={388}
@@ -45,8 +43,7 @@ const HeroHeader = () => {
             alt="hikakin-tv"
           />
         </HikakinTv>
-        </Grid>
-      </Grid>
+      </Stack>
     </>
   )
 }
