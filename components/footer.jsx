@@ -33,7 +33,8 @@ const Copyright = styled.span`
           <Box sx={{
             px: 0,
             py: 0,
-            "@media screen and (max-width:400px)": {
+            
+            "@media screen and (max-width:900px)": {
               textAlign: 'center',
               width: '50%',
               mx: 'auto',

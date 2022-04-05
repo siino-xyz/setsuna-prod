@@ -96,8 +96,14 @@ const Fixed = styled.div`
 
 
 const actions = [
+  { icon:
+    <Link href='/blog' passHref>
+        <NewspaperIcon />
+    </Link>,
+    name: 'TechBlog' 
+  },
   { icon: 
-    <Link href='/' passHref>
+    <Link href='/contact' passHref>
       <SendIcon />
     </Link>, 
     name: 'SE27に依頼する' 
@@ -106,22 +112,16 @@ const actions = [
     <Link href='https://twitter.com/siino_webdev' passHref>
         <TwitterIcon />
     </Link>, 
-    name: 'TwitterLink' 
+    name: '@siino_webdev' 
   },
   { icon:
-    <Link href='/' passHref>
+    <Link href='https://setsuna-dev.vercel.app/#q-a' passHref>
         <QuizIcon />
     </Link>, 
     name: 'Q&A' 
   },
   { icon:
-    <Link href='/blog' passHref>
-        <NewspaperIcon />
-    </Link>,
-    name: 'TechBlog' 
-  },
-  { icon:
-    <Link href='/' passHref>
+    <Link href='https://setsuna-dev.vercel.app/#services' passHref>
         <DeveloperBoardIcon />
     </Link>,
     name: 'Services' 
@@ -209,7 +209,7 @@ export const Header = () => {
                   spacing={4}
                 >
 
-                  <Link href="http://localhost:8080/#services" passHref>
+                  <Link href="https://setsuna-dev.vercel.app/#services" passHref>
                     <a>
                       <MenuItem>
                         Services
@@ -217,7 +217,7 @@ export const Header = () => {
                     </a>
                   </Link>
 
-                  <Link href="http://localhost:8080/#profile" passHref>
+                  <Link href="https://setsuna-dev.vercel.app/#profile" passHref>
                     <a>
                       <MenuItem>
                         Profile

@@ -14,12 +14,12 @@ const theme = createTheme({
       main: '#92FF26',
     },
     text: {
-      primary: '#EEEEEE',
+      primary: '#E7E7E7',
       secondary: '#C8C8C8'
     },
     common: {
       black: '#121212',
-      white: '#EEEEEE',
+      white: '#E7E7E7',
     },
     success: {
         main: '#F37D27'

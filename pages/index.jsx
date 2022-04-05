@@ -10,6 +10,8 @@ import Question from '../components/question'
 import Solution from '../components/solution'
 import CustomizedAccordions from '../components/q-and-a'
 
+import InnerWidth from '../layouts/inner-width'
+
 import Grid from '@mui/material/Grid'
 
 export default function Home({articles}) {
@@ -18,27 +20,16 @@ export default function Home({articles}) {
 
       <div id='services'>
         <SectionTitle
-          sectiontitle={'Fast,Secure,Useful'}
+          sectiontitle={'Raise a Question'}
+          subscript={'こんな事でお困りでは有りませんか？'}
         />
       </div>
-      <Paragraph 
-        paragraph={'SE-27(せつな)は、大阪を拠点に活動するフリーランスのWEB制作所です。'}
-      />
-      <Paragraph 
-        paragraph={'jamstackを用いた、パフォーマンスの高いウェブサイト構築を強みとしています。'}
-      />
-
-      <SectionTitle
-        sectiontitle={'Raise a Question'}
-        subscript={'こんな事でお困りでは有りませんか？'}
-      />
-      <Question />
-
-      <SectionTitle
-        sectiontitle={'Our Solution'}
-        subscript={'Jamstackで高速・セキュアなウェブサイトを'}
-      />
-      <Solution />
+        <Question />
+        <SectionTitle
+          sectiontitle={'Our Solution'}
+          subscript={'Jamstackで高速・セキュアなウェブサイトを'}
+        />
+        <Solution />
 
       <div id='profile'>
         <SectionTitle
@@ -55,18 +46,23 @@ export default function Home({articles}) {
           subscript={'ご依頼・ご相談はこちらから'}
         />
       </div>
-      <Paragraph 
-        paragraph={'ご興味をお持ち頂けましたら、いつでもお気軽にお問い合わせください。SE-27では個人・法人を問わずご依頼をお引き受けしております。'}
-      />
-      <LinkButton
-        url={'contact'}
-        button={'フォームからお問い合わせする'}
-      />
 
-      <SectionTitle
-        sectiontitle={'Q&A'}
-        subscript={'よくあるご質問'}
-      />
+      <InnerWidth>
+        <Paragraph 
+          paragraph={'ご興味をお持ち頂けましたら、いつでもお気軽にお問い合わせください。SE-27では個人・法人を問わずご依頼をお引き受けしております。'}
+        />
+        <LinkButton
+          url={'contact'}
+          button={'フォームからお問い合わせする'}
+        />
+      </InnerWidth>
+
+      <div id='q-a'>
+            <SectionTitle
+              sectiontitle={'Q&A'}
+              subscript={'よくあるご質問'}
+            />
+      </div>
       <CustomizedAccordions />
 
       <SectionTitle

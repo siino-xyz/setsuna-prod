@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack'
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import styled  from '@emotion/styled'
 import Image from 'next/image'
-
+import InnerWidth from '../layouts/inner-width'
 const List = styled.ul`
   padding-left: 0;
   list-style-type: none;
@@ -79,7 +79,7 @@ const CkeckIcon = (props) => {
 
 export const Question = () => {
   return (
-    <>
+    <InnerWidth>
     <Stack
         direction="column"
         justifyContent="center"
@@ -186,7 +186,7 @@ export const Question = () => {
         Wordpressで作ったサイトが重すぎて困っているウェブ担当者や、セキュリティの脆弱性を突かれて乗っ取り被害に遭ってしまったサイトをたくさん見てきました。</p>
       </TextWrapper>
     </Stack>
-    </>
+    </InnerWidth>
   )
 }
 
