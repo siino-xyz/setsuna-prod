@@ -5,12 +5,13 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack'
 import { useState } from 'react';
-
+import dynamic from 'next/dynamic'
 //mui speedDial
-import Backdrop from '@mui/material/Backdrop';
-import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
+const Backdrop = dynamic(() => import('@mui/material/Backdrop'))
+const SpeedDial = dynamic(() => import('@mui/material/SpeedDial'))
+const SpeedDialIcon = dynamic(() => import('@mui/material/SpeedDialIcon'))
+const SpeedDialAction = dynamic(() => import('@mui/material/SpeedDialAction'))
+
 
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import NewspaperIcon from '@mui/icons-material/Newspaper';

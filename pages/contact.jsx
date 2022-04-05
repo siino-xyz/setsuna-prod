@@ -1,4 +1,7 @@
-import ContactForm from '../components/contact'
+
+import dynamic from 'next/dynamic'
+const ContactForm = dynamic(() => import('../components/contact'))
+
 import ContactFormLayout from '../layouts/contact-layout'
 import NestedLayout from '../layouts/nested-layout'
 

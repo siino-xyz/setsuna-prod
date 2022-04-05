@@ -1,14 +1,23 @@
 import Layout from '../layouts/layout'
 import NestedLayout from '../layouts/nested-layout'
 import Profile from '../components/profile'
+import dynamic from 'next/dynamic'
 
-import ArticleCard from '../components/common/articles'
-import LinkButton from '../components/common/button'
-import SectionTitle from '../components/common/section-title'
-import Paragraph from '../components/common/paragraph'
-import Question from '../components/question'
-import Solution from '../components/solution'
-import CustomizedAccordions from '../components/q-and-a'
+// import LinkButton from '../components/common/button'
+// import SectionTitle from '../components/common/section-title'
+// import Paragraph from '../components/common/paragraph'
+// import Question from '../components/question'
+// import Solution from '../components/solution'
+
+const LinkButton = dynamic(() => import('../components/common/button'))
+const SectionTitle = dynamic(() => import('../components/common/section-title'))
+const Paragraph = dynamic(() => import('../components/common/paragraph'))
+const Question = dynamic(() => import('../components/question'))
+const Solution = dynamic(() => import('../components/solution'))
+
+const ArticleCard = dynamic(() => import('../components/common/articles'))
+const CustomizedAccordions = dynamic(() => import('../components/q-and-a'))
+
 
 import InnerWidth from '../layouts/inner-width'
 

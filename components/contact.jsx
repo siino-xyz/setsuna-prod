@@ -1,7 +1,11 @@
 import styled from '@emotion/styled'
-import TextField from '@mui/material/TextField';
+// import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+
+import dynamic from 'next/dynamic'
+
+const TextField = dynamic(() => import('@mui/material/TextField'))
 
 const FormInner = styled.form`
   display: flex;

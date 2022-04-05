@@ -1,6 +1,5 @@
 import { client } from "../../libs/client"
 import Image from 'next/image'
-import Moment from 'react-moment'
 
 import ArticleLayout from '../../layouts/article-layout'
 import NestedLayout from '../../layouts/nested-layout'
@@ -92,9 +91,9 @@ export default function ArticlesId({ articles }) {
             sx={{
               pl: 0.5,
             }}>
-            <Moment format="YYYY/MM/DD">
+            <div>
               {articles.publishedAt}
-            </Moment>
+            </div>
           </Typography>
         </Stack>
 
