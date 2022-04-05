@@ -5,8 +5,7 @@ import ArticleCard from '../components/common/articles'
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-// import CategoryTab from '../components/common/category'
-// import Tabs from '@mui/material/Tabs';
+import SectionTitle from '../components/common/section-title';
 
 const ArticlesHome = ({ articles ,category }) => {
   const [value, setValue] = React.useState(2);
@@ -18,9 +17,12 @@ const ArticlesHome = ({ articles ,category }) => {
   return (
     <>
       <Box sx={{
-        mt: 8,
+        mt: 18,
       }}>
-
+        <SectionTitle
+          sectiontitle={'All Posts'}
+          subscript={'記事一覧'}
+        />
         {/* Category tab menu start */}
         {/* <Box sx={{
                 textAlign: 'center',
@@ -41,7 +43,7 @@ const ArticlesHome = ({ articles ,category }) => {
 
         <Box sx={{ 
             flexGrow: 1,
-            my: 20,
+            my: 8,
           }}>
             <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
               {articles.map((articles) => (

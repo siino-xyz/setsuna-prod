@@ -14,7 +14,6 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import QuizIcon from '@mui/icons-material/Quiz';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import SendIcon from '@mui/icons-material/Send';
@@ -46,15 +45,17 @@ const AppBar = styled.div`
   display: flex;
   flex-direction: ;
   justify-content: space-between;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(2px);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  @media (max-width: 600px) {
-        padding: 0.4rem 1rem 0 0;
-  }
+    @media (max-width: 600px) {
+      padding: 0.4rem 1rem 0 0;
+      background-color: rgba(18, 18, 18, 0.4);
+    }
 `;
 const IconWrapper = styled.div`
   display: flex;
@@ -92,13 +93,39 @@ const Fixed = styled.div`
   pointer-events: none;
 `;
 
+
+
 const actions = [
-  { icon: <SendIcon />, name: 'SE27に依頼する' },
-  { icon: <TwitterIcon />, name: 'TwitterLink' },
-  { icon: <QuizIcon />, name: 'Q&A' },
-  { icon: <AccountBoxIcon />, name: 'Profile' },
-  { icon: <NewspaperIcon />, name: 'TechBlog' },
-  { icon: <DeveloperBoardIcon />, name: 'Services' },
+  { icon: 
+    <Link href='/' passHref>
+      <SendIcon />
+    </Link>, 
+    name: 'SE27に依頼する' 
+  },
+  { icon: 
+    <Link href='https://twitter.com/siino_webdev' passHref>
+        <TwitterIcon />
+    </Link>, 
+    name: 'TwitterLink' 
+  },
+  { icon:
+    <Link href='/' passHref>
+        <QuizIcon />
+    </Link>, 
+    name: 'Q&A' 
+  },
+  { icon:
+    <Link href='/blog' passHref>
+        <NewspaperIcon />
+    </Link>,
+    name: 'TechBlog' 
+  },
+  { icon:
+    <Link href='/' passHref>
+        <DeveloperBoardIcon />
+    </Link>,
+    name: 'Services' 
+  },
 ];
 
 export const Header = () => {

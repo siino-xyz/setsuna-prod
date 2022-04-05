@@ -1,14 +1,22 @@
-import  Typography  from "@mui/material/Typography";
+import styled from '@emotion/styled'
+
+const TextWrapper = styled.div`
+  width: 100%;
+  @media (max-width: 600px) {
+    width: 93%;
+    margin: 0 auto !important;
+  }
+`;
 
 
 
 const Paragraph = (props) => {
   return (
-    <Typography variant='body1' component='p' sx={{
+    <TextWrapper sx={{
         
     }}>
       {props.paragraph}
-    </Typography>
+    </TextWrapper>
   )
 }
 

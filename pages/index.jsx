@@ -1,6 +1,5 @@
 import Layout from '../layouts/layout'
 import NestedLayout from '../layouts/nested-layout'
-
 import Profile from '../components/profile'
 
 import ArticleCard from '../components/common/articles'
@@ -11,7 +10,6 @@ import Question from '../components/question'
 import Solution from '../components/solution'
 import CustomizedAccordions from '../components/q-and-a'
 
-import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 export default function Home({articles}) {
@@ -57,7 +55,9 @@ export default function Home({articles}) {
           subscript={'ご依頼・ご相談はこちらから'}
         />
       </div>
-      
+      <Paragraph 
+        paragraph={'ご興味をお持ち頂けましたら、いつでもお気軽にお問い合わせください。SE-27では個人・法人を問わずご依頼をお引き受けしております。'}
+      />
       <LinkButton
         url={'contact'}
         button={'フォームからお問い合わせする'}

@@ -16,8 +16,8 @@ const SectionTitle = (props) => {
       display: 'inline-block',
       borderRadius: '0',
       "@media screen and (max-width:600px)": {
-        mb: 2,
-        mt: 5,
+        mb: 5,
+        mt: 8,
         display: 'inherit',
       },
     }}

@@ -60,7 +60,8 @@ export default function CustomizedAccordions() {
         alignItems="center"
         sx={{
           mx: 'auto',
-          mt: 4,
+          pb:10,
+          pt: 5,
         }}
       >
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>

@@ -26,7 +26,7 @@ export default function MyApp(props) {
         <Script
           defer
           src="https://sdk.form.run/js/v2/formrun.js"
-          strategy='afterInteractive'
+          strategy='lazyOnload'
         />
 
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
@@ -34,12 +34,12 @@ export default function MyApp(props) {
           <>
             <Script 
               defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
             <Script 
               id="gtag-init" 
               defer 
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               dangerouslySetInnerHTML ={{
                 __html:
                 `window.dataLayer = window.dataLayer || [];

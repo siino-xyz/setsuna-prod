@@ -29,9 +29,9 @@ const MiniTitle = (props) => {
     <Typography 
       variant='subtitle1'
       component='h3'
-      color='common.black'
+      color='common.white'
       sx={{
-        background: '#C7C7C7',
+        background: '#292929',
         px: 1,
         py:0.7,
         borderRadius: '0.2rem',
