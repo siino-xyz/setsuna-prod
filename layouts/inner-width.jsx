@@ -1,14 +1,11 @@
-import Box from '@mui/material/Box'
+import styles from '../styles/layouts/inner-width.module.scss'
 
 export const InnerWidth = ({children}) => {
   return (
     <>
-      <Box sx={{
-        maxWidth:860,
-        mx: 'auto',
-      }}>
+      <div className={styles.innerWidth}>
         {children}
-      </Box>
+      </div>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { client } from '../libs/client'
-import ArticleLayout from '../layouts/article-layout'
-import NestedLayout from '../layouts/nested-layout'
+import BlogLayout from '../layouts/blog-layout'
+import BlogInnerLayout from '../layouts/blog-inner-layout'
 import ArticleCard from '../components/common/articles'
 import { useState } from 'react';
 import Grid from '@mui/material/Grid';
@@ -63,9 +63,9 @@ const ArticlesHome = ({ articles ,category }) => {
 
 ArticlesHome.getLayout = function ArticlesHome(articleshome) {
   return (
-    <ArticleLayout>
-      <NestedLayout index>{articleshome}</NestedLayout>
-    </ArticleLayout>
+    <BlogLayout>
+      <BlogInnerLayout >{articleshome}</BlogInnerLayout>
+    </BlogLayout>
   )
 }
 

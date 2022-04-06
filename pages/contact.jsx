@@ -2,11 +2,11 @@
 import dynamic from 'next/dynamic'
 const ContactForm = dynamic(() => import('../components/contact'))
 
-import ContactFormLayout from '../layouts/contact-layout'
+import BlogLayout from '../layouts/blog-layout'
 import NestedLayout from '../layouts/nested-layout'
 
 import SectionTitle from '../components/common/section-title'
-import Paragraph from '../components/common/paragraph'
+// import Paragraph from '../components/common/paragraph'
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
@@ -30,12 +30,12 @@ const ContactFormPage = () => {
           pb: 1,
           mt: 0,
         }}>
-          <Paragraph 
+          {/* <Paragraph 
             paragraph={'Webサイト制作のご相談はもちろん、簡単なお見積りや制作プランについてのご質問なども歓迎しております。'}
           />
           <Paragraph 
             paragraph={'まずは下記フォームよりお気軽にお声がけください。'}
-          />
+          /> */}
         </Box>
         <ContactForm />
       </Stack>
@@ -45,9 +45,9 @@ const ContactFormPage = () => {
 
 ContactFormPage.getLayout = function getLayout(contactformpage) {
   return (
-    <ContactFormLayout>
-      <NestedLayout index>{contactformpage}</NestedLayout>
-    </ContactFormLayout>
+    <BlogLayout>
+      <NestedLayout>{contactformpage}</NestedLayout>
+    </BlogLayout>
   )
 }
 

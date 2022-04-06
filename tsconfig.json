@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "layouts/article-layout.jsx", "pages/_app.jsx"  ],
+, "layouts/blog-layout.jsx", "pages/_app.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,29 +1,16 @@
-import Button from "@mui/material/Button";
-import Box from '@mui/material/Box'
 import Link from 'next/link'
 
+import styles from '../../styles/components/common/button.module.scss';
 
 const LinkButton = (props) => {
   return (
-    <Box sx={{
-      width: '100%',
-      mx: 'auto',
-      my: 3,
-      textAlign: 'center',
-    }}>
-    <Link href={`/${props.url}`} passHref>
-      <Button 
-      variant="contained"
-      sx={{
-        margin: 'auto',
-        textAlign: 'center',
-        color: 'common.white',
-        borderRadius: 0.5,
-      }}>
-        {props.button}
-      </Button>
-    </Link>
-    </Box>
+    <div className={styles.btnWrapper}>
+      <Link href={`/${props.url}`} passHref>
+        <div className={styles.btn}>
+            {props.button}
+        </div>
+      </Link>
+    </div>
   )
 }
 

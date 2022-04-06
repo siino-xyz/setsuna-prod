@@ -1,0 +1,84 @@
+
+
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1100px,
+);
+
+@mixin mq($size) {
+  @media screen and (max-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}
+
+//colors
+$bgBlack: #121212;
+$keyGreen: #80EF7E;
+$accentOrange: #F39423;
+
+//grayScale
+$white: #E7E7E7;
+$lightGray: #b5b5b5;
+$midGray: #747474;
+$deepGray: #444444;
+
+//fonts
+@mixin h1() {
+  font-family: 'MuseoModerno';
+  font-size:  3rem;
+  font-weight: 600;
+}
+
+@mixin h2() {
+  font-family: 'MuseoModerno';
+  font-size:  2rem;
+  font-weight: 600;
+}
+
+@mixin h3() {
+  font-family: 'MuseoModerno';
+  font-size:  1.5rem;
+  font-weight: 600;
+}
+
+@mixin h3_jp() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  1.5rem;
+  font-weight: 600;
+}
+
+@mixin h4() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  1.25rem;
+  font-weight: 700;
+}
+
+@mixin subtitle_md() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  1rem;
+  font-weight: 700;
+}
+
+@mixin subtitle_sm() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  0.8rem;
+  font-weight:  600;
+}
+
+@mixin body() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  0.1rem;
+  font-weight:  400;
+  line-height: 1.6rem;
+}
+
+
+//layouts
+@mixin columnStack($justify: center, $align: center ) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}

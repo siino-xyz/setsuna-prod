@@ -1,0 +1,19 @@
+@import 'variables';
+
+.columnStack {
+  @include columnStack();
+}
+
+.miniTitle {
+  @include subtitle_md();
+  background-color: $lightGray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  text-align: left;
+  margin: 0 0 2rem 0;
+  @include mq(sm) {
+    width: 100%;
+    text-align: center;
+  }
+}
+

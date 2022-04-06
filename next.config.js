@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
 const nextConfig = {
   reactStrictMode: true,
   watchers: {
@@ -12,7 +13,12 @@ const nextConfig = {
   images: {
    domains: ['images.microcms-assets.io'],
   },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  }
 }
+
+
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',

@@ -6,7 +6,7 @@ const Layout = dynamic(() => import('../layouts/layout'))
 
 const LinkButton = dynamic(() => import('../components/common/button'))
 const SectionTitle = dynamic(() => import('../components/common/section-title'))
-const Paragraph = dynamic(() => import('../components/common/paragraph'))
+
 const Question = dynamic(() => import('../components/question'))
 const Solution = dynamic(() => import('../components/solution'))
 
@@ -21,7 +21,6 @@ import Grid from '@mui/material/Grid'
 export default function Home({articles}) {
   return (
     <>
-
       <div id='services'>
         <SectionTitle
           sectiontitle={'Raise a Question'}
@@ -52,9 +51,9 @@ export default function Home({articles}) {
       </div>
 
       <InnerWidth>
-        <Paragraph 
+        {/* <Paragraph 
           paragraph={'ご興味をお持ち頂けましたら、いつでもお気軽にお問い合わせください。SE-27では個人・法人を問わずご依頼をお引き受けしております。'}
-        />
+        /> */}
         <LinkButton
           url={'contact'}
           button={'フォームからお問い合わせする'}
@@ -104,7 +103,7 @@ export default function Home({articles}) {
 Home.getLayout = function getLayout(home) {
   return (
     <Layout>
-      <NestedLayout index>{home}</NestedLayout>
+      <NestedLayout>{home}</NestedLayout>
     </Layout>
   )
 }

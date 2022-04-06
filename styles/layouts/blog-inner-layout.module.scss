@@ -1,0 +1,10 @@
+@import 'variables';
+
+.blogInnerLayout {
+  max-width: 944px;
+  width: 90%;
+  margin: 1rem auto;
+    @include mq(sm) {
+      width: 95%;
+    }
+}

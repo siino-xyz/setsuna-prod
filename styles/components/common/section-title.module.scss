@@ -1,0 +1,22 @@
+@import 'variables';
+
+.sectionTitle {
+  color: $bgBlack;
+  margin: 3rem 0 1rem 0;
+  text-align: left;
+  background-color: $white;
+  padding: 0 0.5rem;
+  display: inline-block;
+  border-radius: 0;
+  @include h2();
+
+  @include mq(sm) {
+    display: inherit;
+  }
+}
+
+.subScript {
+  color: $bgBlack;
+
+  @include subtitle_sm();
+}

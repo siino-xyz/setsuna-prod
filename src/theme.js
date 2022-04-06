@@ -19,7 +19,7 @@ const theme = createTheme({
     },
     common: {
       black: '#121212',
-      white: '#E7E7E7',
+      white: '#EDEDED',
     },
     success: {
         main: '#F37D27'

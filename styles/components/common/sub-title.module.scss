@@ -1,0 +1,12 @@
+@import 'variables';
+
+
+.subTitle {
+  background: $bgBlack;
+  @include h3();
+  text-align: left;
+  display: inline-block !important;
+  margin: 1rem 0;
+  border-radius: 0.11rem;
+  padding: 0.5rem;
+}

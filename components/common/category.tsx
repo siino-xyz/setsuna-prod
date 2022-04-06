@@ -2,7 +2,6 @@ import Link from "next/link"
 import Category from "../../models/category"
 
 import Tab from '@mui/material/Tab';
-// import * as React from 'react'
 
 function LinkTab(props) {
   return (

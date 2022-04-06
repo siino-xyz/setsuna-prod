@@ -1,8 +1,8 @@
 import { client } from "../../libs/client";
 import {useState }from 'react'
 
-import ArticleLayout from '../../layouts/article-layout'
-import NestedLayout from '../../layouts/nested-layout'
+import BlogLayout from '../../layouts/blog-layout'
+import BlogInnerLayout from '../../layouts/blog-inner-layout'
 
 import ArticleCard from '../../components/common/articles'
 import CategoryTab from '../../components/common/category'
@@ -106,9 +106,9 @@ const CategoryId = ({ articles , category }) => {
 
 CategoryId.getLayout = function ArticlesHome(categoryid) {
   return (
-    <ArticleLayout>
-      <NestedLayout>{categoryid}</NestedLayout>
-    </ArticleLayout>
+    <BlogLayout>
+      <BlogInnerLayout>{categoryid}</BlogInnerLayout>
+    </BlogLayout>
   )
 }
 

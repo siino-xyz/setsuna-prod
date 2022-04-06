@@ -1,14 +1,16 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
 
-const ContactFormLayout = ({children}) => {
+
+
+const BlogLayout = ({children}) => {
   return (
     <>
-    <Header />      
-        {children}
+    <Header />
+      {children}
     <Footer />
     </>
   )
 }
 
-export default ContactFormLayout
+export default BlogLayout

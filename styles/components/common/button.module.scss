@@ -1,0 +1,19 @@
+@import 'variables';
+
+.btnWrapper {
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+  // width: '100%',
+  // mx: 'auto',
+  // my: 3,
+  // textAlign: 'center',
+}
+
+.btn {
+  margin: auto;
+  text-align: center;
+  color: $white;
+  border-radius: 0.5rem;
+  background-color: $accentOrange;
+}

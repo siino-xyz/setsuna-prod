@@ -1,8 +1,8 @@
 import { client } from "../../libs/client"
 import Image from 'next/image'
 
-import ArticleLayout from '../../layouts/article-layout'
-import NestedLayout from '../../layouts/nested-layout'
+import BlogLayout from '../../layouts/blog-layout'
+import BlogInnerLayout from '../../layouts/blog-inner-layout'
 
 import LinkButton from '../../components/common/button'
 
@@ -166,9 +166,9 @@ export default function ArticlesId({ articles }) {
 
 ArticlesId.getLayout = function ArticlesHome(articlesid) {
   return (
-    <ArticleLayout>
-      <NestedLayout>{articlesid}</NestedLayout>
-    </ArticleLayout>
+    <BlogLayout>
+      <BlogInnerLayout>{articlesid}</BlogInnerLayout>
+    </BlogLayout>
   )
 }
 
