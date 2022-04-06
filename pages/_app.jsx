@@ -1,3 +1,4 @@
+import * as React from 'react';
 import '../styles/globals.css'
 import PropTypes from 'prop-types';
 import Head from 'next/head';
@@ -25,7 +26,7 @@ export default function MyApp(props) {
         <Script
           defer
           src="https://sdk.form.run/js/v2/formrun.js"
-          strategy='lazyOnload'
+          strategy='afterInteractive'
         />
 
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
@@ -33,12 +34,12 @@ export default function MyApp(props) {
           <>
             <Script 
               defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-              strategy="lazyOnload"
+              strategy="afterInteractive"
             />
             <Script 
               id="gtag-init" 
               defer 
-              strategy="lazyOnload"
+              strategy="afterInteractive"
               dangerouslySetInnerHTML ={{
                 __html:
                 `window.dataLayer = window.dataLayer || [];
