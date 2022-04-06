@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styled from '@emotion/styled'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack'
 import { useState } from 'react';
 import dynamic from 'next/dynamic'
 //mui speedDial
+const styled = dynamic(() => import('@emotion/styled'))
 const Backdrop = dynamic(() => import('@mui/material/Backdrop'))
 const SpeedDial = dynamic(() => import('@mui/material/SpeedDial'))
 const SpeedDialIcon = dynamic(() => import('@mui/material/SpeedDialIcon'))
