@@ -22,11 +22,11 @@ export default function MyApp(props) {
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
-        <Script
+        {/* <Script
           defer
           src="https://sdk.form.run/js/v2/formrun.js"
           strategy='afterInteractive'
-        />
+        /> */}
 
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
         {existsGaId && (
