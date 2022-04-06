@@ -251,7 +251,7 @@ export const Header = () => {
                       <a target="_blank" rel="noopener noreferrer">
                         <Image 
                         src="/icons/twitter-logo.svg" 
-                        width={35} 
+                        width={35}
                         height={35}
                         alt="twitter-logo"
                         layout='intrinsic'
