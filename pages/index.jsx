@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
 
-const NestedLayout = dynamic(() => import('../layouts/nested-layout'))
+// const NestedLayout = dynamic(() => import('../layouts/nested-layout'))
 // const Profile = dynamic(() => import('../components/profile'))
-const Layout = dynamic(() => import('../layouts/layout'))
+// const Layout = dynamic(() => import('../layouts/layout'))
 
 const LinkButton = dynamic(() => import('../components/common/button'))
 const SectionTitle = dynamic(() => import('../components/common/section-title'))
@@ -101,13 +101,13 @@ export default function Home({articles}) {
   )
 }
 
-Home.getLayout = function getLayout(home) {
-  return (
-    <Layout>
-      <NestedLayout index>{home}</NestedLayout>
-    </Layout>
-  )
-}
+// Home.getLayout = function getLayout(home) {
+//   return (
+//     <Layout>
+//       <NestedLayout index>{home}</NestedLayout>
+//     </Layout>
+//   )
+// }
 
 export const getStaticProps = async () => {
   const key = {
