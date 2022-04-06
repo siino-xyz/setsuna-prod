@@ -5,7 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 import dynamic from 'next/dynamic'
 
-const TextField = dynamic(() => import('@mui/material/TextField'))
+// const TextField = dynamic(() => import('@mui/material/TextField'))
 
 const FormInner = styled.form`
   display: flex;
@@ -35,7 +35,7 @@ const FromrunGotcha = styled.div`
 const ContactForm = () => {
   return (
     <>
-        <FormInner action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
+        {/* <FormInner action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
             <InputFormWrapper>
               <TextField 
                 id="outlined-basic"
@@ -120,7 +120,7 @@ const ContactForm = () => {
             />
               送信する
           </Button>
-        </FormInner>
+        </FormInner> */}
     </>
   )
 }
