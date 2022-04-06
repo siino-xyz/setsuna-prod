@@ -11,15 +11,6 @@
   padding: 2;
   margin: 0;
   background-color: $deepGray;
-  // flexGrow: 1,
-  // width: '100%',
-  // pt: 2,
-  // pb: 2,
-  // px: 2,
-  // mt: 0,
-  // mb: 0,
-  // mx: 0,
-  // background: '#292929',
 }
 
 .twoWayFlex {
@@ -31,5 +22,11 @@
 }
 
 .footerLogoWrapper {
-
+  padding: 0;
+  
+  @include mq(sm) {
+    text-align: center;
+    width: 50%;
+    margin: 1 auto;
+  }
 }
