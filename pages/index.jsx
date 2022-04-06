@@ -1,17 +1,17 @@
 import dynamic from 'next/dynamic'
 
 const NestedLayout = dynamic(() => import('../layouts/nested-layout'))
-const Profile = dynamic(() => import('../components/profile'))
+// const Profile = dynamic(() => import('../components/profile'))
 const Layout = dynamic(() => import('../layouts/layout'))
 
 const LinkButton = dynamic(() => import('../components/common/button'))
 const SectionTitle = dynamic(() => import('../components/common/section-title'))
 const Paragraph = dynamic(() => import('../components/common/paragraph'))
 const Question = dynamic(() => import('../components/question'))
-const Solution = dynamic(() => import('../components/solution'))
+// const Solution = dynamic(() => import('../components/solution'))
 
 const ArticleCard = dynamic(() => import('../components/common/articles'))
-const CustomizedAccordions = dynamic(() => import('../components/q-and-a'))
+// const CustomizedAccordions = dynamic(() => import('../components/q-and-a'))
 
 
 import InnerWidth from '../layouts/inner-width'
@@ -22,7 +22,7 @@ export default function Home({articles}) {
   return (
     <>
 
-      <div id='services'>
+      {/* <div id='services'>
         <SectionTitle
           sectiontitle={'Raise a Question'}
           subscript={'こんな事でお困りでは有りませんか？'}
@@ -67,7 +67,7 @@ export default function Home({articles}) {
               subscript={'よくあるご質問'}
             />
       </div>
-      <CustomizedAccordions />
+      <CustomizedAccordions /> */}
 
       <SectionTitle
         sectiontitle={'Blog'}
