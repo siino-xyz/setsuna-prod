@@ -8,7 +8,7 @@ import { CacheProvider } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 import Script from 'next/script'
-import { GA_TRACKING_ID, existsGaId } from '../libs/gtag'
+// import { GA_TRACKING_ID, existsGaId } from '../libs/gtag'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -23,14 +23,14 @@ export default function MyApp(props) {
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
-        <Script
+        {/* <Script
           defer
           src="https://sdk.form.run/js/v2/formrun.js"
           strategy='afterInteractive'
-        />
+        /> */}
 
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        {existsGaId && (
+        {/* {existsGaId && (
           <>
             <Script 
               defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -51,7 +51,7 @@ export default function MyApp(props) {
               }}
             />
           </>
-        )}
+        )} */}
         
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
