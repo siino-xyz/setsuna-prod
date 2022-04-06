@@ -1,0 +1,12 @@
+@import 'variables';
+
+.columnStack {
+  @include columnStack();
+
+}
+
+.imageWrapper {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}

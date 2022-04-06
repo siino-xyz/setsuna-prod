@@ -1,0 +1,68 @@
+@import 'variables';
+
+.flexItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.headerLogo {
+  color: red;
+  cursor: pointer !important;
+  margin: 0.5rem 1rem;
+}
+
+.appBar {
+  display: flex;
+  flex-direction: center;
+  justify-content: space-between;
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  @include mq(sm) {
+    padding: 0.4rem 1rem 0 0;
+    background-color: rgba(18, 18, 18, 0.4);
+  }
+}
+
+.headerLink {
+  font-family: 'MuseoModerno';
+  font-weight: 700;
+  font-size: 1rem;
+  color: #EEEEEE;
+  transition: all .3s;
+
+  &:hover {
+    color: #80EF7E;
+  }
+}
+
+.svgLogo {
+  fill: #f4f4f4;
+  transition: all .3s;
+
+  &:hover {
+    fill: #80EF7E;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.dialMenuWrapper {
+  height: 100vh;
+  transform: translateZ(0px);
+  position: relative;
+  flex-grow: 1;
+}

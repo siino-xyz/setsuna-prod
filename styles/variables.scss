@@ -76,9 +76,17 @@ $deepGray: #444444;
 
 
 //layouts
-@mixin columnStack($justify: center, $align: center ) {
+@mixin columnStack( $justify: center, $align: center ) {
   display: flex;
   flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin twoWayFlex( $justify: center, $align: center ) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: $justify;
   align-items: $align;
 }

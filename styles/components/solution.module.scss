@@ -11,6 +11,7 @@
   border-radius: 0.2rem;
   text-align: left;
   margin: 0 0 2rem 0;
+  
   @include mq(sm) {
     width: 100%;
     text-align: center;

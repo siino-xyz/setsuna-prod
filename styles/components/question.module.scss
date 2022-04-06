@@ -1,0 +1,33 @@
+@import 'variables';
+
+.list {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 1rem;
+}
+.listItem {
+  padding-left: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.1rem;
+  justify-content: flex-start;
+  margin:2rem 0;
+
+  @include mq(sm) {
+    font-size: 0.9rem;
+    margin:1rem 0;
+    text-align: left;
+  }
+}
+
+.twoWayFlex {
+  @include twoWayFlex();
+}
+
+.flexItem {
+  width: 50%;
+  @include mq(sm) {
+   width: 100%;
+  }
+}
+// .container{}
