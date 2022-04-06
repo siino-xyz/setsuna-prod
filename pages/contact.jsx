@@ -1,6 +1,6 @@
 
 import dynamic from 'next/dynamic'
-// const ContactForm = dynamic(() => import('../components/contact'))
+const ContactForm = dynamic(() => import('../components/contact'))
 
 import ContactFormLayout from '../layouts/contact-layout'
 import NestedLayout from '../layouts/nested-layout'
@@ -37,7 +37,7 @@ const ContactFormPage = () => {
             paragraph={'まずは下記フォームよりお気軽にお声がけください。'}
           />
         </Box>
-        {/* <ContactForm /> */}
+        <ContactForm />
       </Stack>
     </>
   )
