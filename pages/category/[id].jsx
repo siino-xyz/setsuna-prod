@@ -1,5 +1,5 @@
 import { client } from "../../libs/client";
-import * as React from 'react'
+import {useState }from 'react'
 
 import ArticleLayout from '../../layouts/article-layout'
 import NestedLayout from '../../layouts/nested-layout'
@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography'
 
 const CategoryId = ({ articles , category }) => {
 
-  const [value, setValue] = React.useState(2);
+  const [value, setValue] = useState(2);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

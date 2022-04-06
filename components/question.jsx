@@ -134,13 +134,13 @@ export const Question = () => {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Image 
+            {/* <Image 
               src="/gif/MOSHED-2022-4-3-22-43-43.gif" 
               width={500} 
               height={320}
               alt="lazy_phone"
               layout='intrinsic'
-            />
+            /> */}
           </Grid>
         </GridContainer>
 
@@ -170,13 +170,13 @@ export const Question = () => {
               </List>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Image 
+            {/* <Image 
               src="/gif/MOSHED-2022-4-3-23-26-2 (1).gif" 
               width={500} 
               height={320}
               alt="lazy_phone"
               layout='intrinsic'
-            />
+            /> */}
           </Grid>
 
         </GridContainer>
