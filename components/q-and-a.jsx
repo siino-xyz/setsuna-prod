@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import dynamic from 'next/dynamic'
 import Stack from '@mui/material/Stack'
 import InnerWidth from '../layouts/inner-width';
+
+
+const ArrowForwardIosSharpIcon = dynamic(() => import('@mui/icons-material/ArrowForwardIosSharp'))
+const MuiAccordion = dynamic(() => import('@mui/material/Accordion'))
+const MuiAccordionSummary = dynamic(() => import('@mui/material/AccordionSummary'))
+const MuiAccordionDetails = dynamic(() => import('@mui/material/AccordionDetails'))
+const Typography = dynamic(() => import('@mui/material/Typography'))
+
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />

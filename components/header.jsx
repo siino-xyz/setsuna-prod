@@ -13,11 +13,12 @@ const SpeedDialIcon = dynamic(() => import('@mui/material/SpeedDialIcon'))
 const SpeedDialAction = dynamic(() => import('@mui/material/SpeedDialAction'))
 
 
-import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
-import QuizIcon from '@mui/icons-material/Quiz';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import SendIcon from '@mui/icons-material/Send';
+
+const DeveloperBoardIcon = dynamic(() => import('@mui/icons-material/DeveloperBoard'))
+const NewspaperIcon = dynamic(() => import('@mui/icons-material/Newspaper'))
+const QuizIcon = dynamic(() => import('@mui/icons-material/Quiz'))
+const TwitterIcon = dynamic(() => import('@mui/icons-material/Twitter'))
+const SendIcon = dynamic(() => import('@mui/icons-material/Send'))
 
 const Item = (props) => {
   const { sx, ...other} = props;
