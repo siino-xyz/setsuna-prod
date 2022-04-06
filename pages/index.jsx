@@ -1,13 +1,8 @@
-import Layout from '../layouts/layout'
-import NestedLayout from '../layouts/nested-layout'
-import Profile from '../components/profile'
 import dynamic from 'next/dynamic'
 
-// import LinkButton from '../components/common/button'
-// import SectionTitle from '../components/common/section-title'
-// import Paragraph from '../components/common/paragraph'
-// import Question from '../components/question'
-// import Solution from '../components/solution'
+const NestedLayout = dynamic(() => import('../layouts/nested-layout'))
+const Profile = dynamic(() => import('../components/profile'))
+const Layout = dynamic(() => import('../layouts/layout'))
 
 const LinkButton = dynamic(() => import('../components/common/button'))
 const SectionTitle = dynamic(() => import('../components/common/section-title'))

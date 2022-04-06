@@ -11,10 +11,10 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <link
+          {/* <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
+          /> */}
           <link 
             href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet" 
           />
