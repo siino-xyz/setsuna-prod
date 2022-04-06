@@ -11,7 +11,7 @@ const Question = dynamic(() => import('../components/question'))
 const Solution = dynamic(() => import('../components/solution'))
 
 const ArticleCard = dynamic(() => import('../components/common/articles'))
-const CustomizedAccordions = dynamic(() => import('../components/q-and-a'))
+// const CustomizedAccordions = dynamic(() => import('../components/q-and-a'))
 
 
 import InnerWidth from '../layouts/inner-width'
@@ -67,7 +67,7 @@ export default function Home({articles}) {
               subscript={'よくあるご質問'}
             />
       </div>
-      <CustomizedAccordions />
+      {/* <CustomizedAccordions /> */}
 
       <SectionTitle
         sectiontitle={'Blog'}
