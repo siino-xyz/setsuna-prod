@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           /> */}
 
 
-          <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&family=Zen+Kaku+Gothic+New&display=optional" rel="stylesheet" />
 
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
