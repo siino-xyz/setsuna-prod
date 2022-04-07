@@ -33,10 +33,10 @@ $deepGray: #444444;
 //   font-family: '';
 //   src: url('')
 // }
-@font-face {
-  font-family: 'bizud-normal';
-  src: url('../fonts/biz/BIZUDGothic-Regular.ttf') format('truetype');
-}
+// @font-face {
+//   font-family: 'BIZ UDPGothic';
+//   src: url('../fonts/biz/BIZUDGothic-Regular.ttf') format('truetype');
+// }
 
 // BIZ UDPGothic
 // 400(regular),700(bold)
@@ -66,14 +66,14 @@ $deepGray: #444444;
 }
 
 @mixin h3_jp() {
-  font-family: 'bizud-normal';
+  font-family: 'BIZ UDPGothic';
   font-size:  1.5rem;
   font-weight: 700;
   font-display: optional;
 }
 
 @mixin h4() {
-  font-family: 'bizud-normal';
+  font-family: 'BIZ UDPGothic';
   font-size:  1.25rem;
   font-weight: 700;
   font-display: optional;
@@ -81,21 +81,21 @@ $deepGray: #444444;
 }
 
 @mixin subtitle_md() {
-  font-family: 'bizud-normal';
+  font-family: 'BIZ UDPGothic';
   font-size:  1rem;
   font-weight: 700;
   font-display: optional;
 }
 
 @mixin subtitle_sm() {
-  font-family: 'bizud-normal';
+  font-family: 'BIZ UDPGothic';
   font-size:  0.8rem;
   font-weight:  700;
   font-display: optional;
 }
 
 @mixin body() {
-  font-family: 'bizud-normal';
+  font-family: 'BIZ UDPGothic';
   font-size:  1rem;
   font-weight:  400;
   line-height: 1.6rem;
