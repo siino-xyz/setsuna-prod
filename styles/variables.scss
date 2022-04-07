@@ -25,10 +25,10 @@ $midGray: #747474;
 $deepGray: #444444;
 
 // fonts
-@font-face {
-  font-family: 'museo-semibold';
-  src: url('../fonts/museo/MuseoModerno-Bold.woff2') format('woff2');
-}
+// @font-face {
+//   font-family: 'MuseoModerno';
+//   src: url('../fonts/museo/MuseoModerno-Bold.woff2') format('woff2');
+// }
 // @font-face {
 //   font-family: '';
 //   src: url('')
@@ -45,21 +45,21 @@ $deepGray: #444444;
 //500(regular),600(semibold)
 
 @mixin h1() {
-  font-family: 'museo-semibold';
+  font-family: 'MuseoModerno';
   font-size:  3rem;
   // font-weight: 600;
   font-display: optional;
 }
 
 @mixin h2() {
-  font-family: 'museo-semibold';
+  font-family: 'MuseoModerno';
   font-size:  2rem;
   // font-weight: 600;
   font-display: optional;
 }
 
 @mixin h3() {
-  font-family: 'museo-semibold';
+  font-family: 'MuseoModerno';
   font-size:  1.5rem;
   // font-weight: 600;
   font-display: optional;
