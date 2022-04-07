@@ -66,14 +66,14 @@ $deepGray: #444444;
 }
 
 @mixin h3_jp() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'BIZ UDPGothic' sans-serif;
   font-size:  1.5rem;
   font-weight: 700;
   font-display: optional;
 }
 
 @mixin h4() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'BIZ UDPGothic' sans-serif;
   font-size:  1.25rem;
   font-weight: 700;
   font-display: optional;
@@ -81,14 +81,14 @@ $deepGray: #444444;
 }
 
 @mixin subtitle_md() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'BIZ UDPGothic' sans-serif;
   font-size:  1rem;
   font-weight: 700;
   font-display: optional;
 }
 
 @mixin subtitle_sm() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'BIZ UDPGothic' sans-serif;
   font-size:  0.8rem;
   font-weight:  700;
   font-display: optional;
