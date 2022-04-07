@@ -4,9 +4,8 @@ import BlogInnerLayout from '../layouts/blog-inner-layout'
 import ArticleCard from '../components/common/articles'
 import { useState } from 'react';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import SectionTitle from '../components/common/section-title';
-
+import styles from '../styles/pages/blog.module.scss'
 const ArticlesHome = ({ articles ,category }) => {
   const [value, setValue] = useState(2);
 
@@ -16,9 +15,7 @@ const ArticlesHome = ({ articles ,category }) => {
 
   return (
     <>
-      <Box sx={{
-        mt: 18,
-      }}>
+      <div className={styles.blogContainer}>
         <SectionTitle
           sectiontitle={'All Posts'}
           subscript={'記事一覧'}
@@ -41,10 +38,7 @@ const ArticlesHome = ({ articles ,category }) => {
               </Box> */}
         {/* Category tab menu  end */}
 
-        <Box sx={{ 
-            flexGrow: 1,
-            my: 8,
-          }}>
+          <div className={styles.blogInner}>
             <Grid container spacing={{ xs: 2, md: 5 }} columns={{ xs: 4, sm: 8, md: 12 }}>
               {articles.map((articles) => (
                 <ArticleCard
@@ -54,8 +48,8 @@ const ArticlesHome = ({ articles ,category }) => {
                 </ArticleCard>
               ))}
             </Grid>
-          </Box>
-      </Box>
+          </div>
+      </div>
     </>
   )
 }

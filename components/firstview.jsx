@@ -1,41 +1,12 @@
-import Stack from '@mui/material/Stack'
 import Image from 'next/image'
-import styled from '@emotion/styled'
+import styles from '../styles/components/firstview.module.scss'
 
-
-const HikakinTv = styled.div`
- padding-top: 5rem;
- @media (max-width:600px) {
-    padding-top: 0;
-    width: 70%;
-  }
-`;
 const HeroHeader = () => {
   return (
     <>
-      <Stack 
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        container 
-        spacing={2}
-        sx={{
-        position: 'sticky',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100vh',
-        overFlow: 'hidden',
-        margin:0,
-        zIndex: '-123',
-        background: '#121212',
-        userSelect: 'none',
-      }}>
+      <div className={styles.fvLogoWrapper}>
 
-        <HikakinTv sx={{
-          mx: 'auto',
-  
-        }}>
+        <div className={styles.fvLogo}>
           <Image 
             src='/logo/bg-logo.svg'
             width={388}
@@ -43,8 +14,8 @@ const HeroHeader = () => {
             layout='intrinsic'
             alt="hikakin-tv"
           />
-        </HikakinTv>
-      </Stack>
+        </div>
+      </div>
     </>
   )
 }

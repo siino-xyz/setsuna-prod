@@ -1,0 +1,6 @@
+@import 'variables';
+
+.contactContainer {
+  @include columnStack();
+}
+

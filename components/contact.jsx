@@ -1,5 +1,4 @@
-import styled from '@emotion/styled'
-// import TextField from '@mui/material/TextField';
+import styles from '../styles/components/contact.module.scss'
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
@@ -7,36 +6,12 @@ import dynamic from 'next/dynamic'
 
 const TextField = dynamic(() => import('@mui/material/TextField'))
 
-const FormInner = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
-`;
-const InputFormWrapper = styled.div`
-  width: 100%;
-  max-width: 500px;
-  margin: 1rem auto;
-  ${'' /* background: #ffffff; */}
-`;
-
-const FromrunGotcha = styled.div`
-  position:absolute!important;
-  height:1px;width:1px;
-  overflow:hidden;
-`;
-
-
-
 
 const ContactForm = () => {
   return (
     <>
-        <FormInner action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
-            <InputFormWrapper>
+        <form className={styles.formInner} action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
+            <div className={styles.inputFormInner}>
               <TextField 
                 id="outlined-basic"
                 fullWidth 
@@ -46,14 +21,12 @@ const ContactForm = () => {
                 color='primary'
                 label="お名前"
                 variant="outlined"
-                sx={{
-                  // backgroundColor: '#C8C8C8'
-                }}
+                
               />
-            </InputFormWrapper>
+            </div>
 
           <div>
-            <InputFormWrapper>
+            <div className={styles.inputFormInner}>
               <TextField
                 fullWidth
                 id="outlined-basic" 
@@ -68,12 +41,12 @@ const ContactForm = () => {
                   backgroundColor: '#101010'
                 }}
               />
-            </InputFormWrapper>
-              <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+            </div>
+              {/* <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div> */}
           </div>
           <div>
 
-          <InputFormWrapper>
+          <div className={styles.inputFormInner}>
             <TextField
               fullWidth
               multiline
@@ -87,20 +60,20 @@ const ContactForm = () => {
                   backgroundColor: '#101010'
                 }}
             />
-          </InputFormWrapper>
+          </div>
             
-            <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+            {/* <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div> */}
           </div>
       
 
-          <FromrunGotcha>
+          {/* <div className={styles.formRunGotcha}>
             <label>If you are a human, ignore this field</label>
             <input 
               type="text" 
               name="_formrun_gotcha" 
               id="_formrun_gotcha" 
             />
-          </FromrunGotcha>
+          </div> */}
 
           <Button
             variant="contained"
@@ -120,7 +93,7 @@ const ContactForm = () => {
             />
               送信する
           </Button>
-        </FormInner>
+        </form>
     </>
   )
 }

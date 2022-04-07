@@ -1,0 +1,67 @@
+@import 'variables';
+
+.item {
+
+}
+
+.articleContainer {
+margin-top: 7rem;
+}
+
+.eyeCatchWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.contentsWrapper {
+  width: 85%;
+  margin: 0 auto 5rem auto;
+
+  .headerItems {
+    @include columnStack();
+    
+    .categoryTag {
+      @include subtitle_sm;
+      background-color: $bgBlack;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.2rem;
+    }
+    .postTitle {
+      @include h3_jp;
+      padding: 1rem 0;
+      text-decoration:  none !important;
+    }
+    
+    .postDate {
+      @include subtitle_sm;
+      padding-left: 0.5rem;
+    }
+  }
+  
+  .textWrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .shareWrapper {
+   @include columnStack();
+   margin: 2rem auto;
+
+   .h4 {
+     @include h4;
+
+   }
+
+   .shareBtns {
+     @include columnStack($fd:row);
+
+     .item {
+       text-align: center;
+       margin: 0 auto;
+     }
+   }
+  }
+}
+

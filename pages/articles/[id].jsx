@@ -1,17 +1,9 @@
 import { client } from "../../libs/client"
 import Image from 'next/image'
-
 import BlogLayout from '../../layouts/blog-layout'
 import BlogInnerLayout from '../../layouts/blog-inner-layout'
-
 import LinkButton from '../../components/common/button'
-
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
-
+import styles from '../../styles/pages/articles/article.module.scss'
 
 import {
   TwitterIcon,
@@ -24,13 +16,6 @@ import {
   PinterestShareButton
 } from "react-share";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.warning.main,
-  textAlign: 'center',
-  boxShadow: 'none',
-  mx: 'auto',
-}));
-
 
 
 export default function ArticlesId({ articles }) {
@@ -38,16 +23,9 @@ export default function ArticlesId({ articles }) {
   return (
     <>
    
-      <Box sx={{
-        mt: '7rem'
-      }}>
+      <div className={styles.articleContainer}>
 
-        <Box sx={{
-          display: 'flex',
-          alignItems: 'center',
-          width: '100%',
-          margin: 'auto',
-        }}>
+        <div className={styles.eyeCatchWrapper}>
           <Image 
             src={articles.eye_catch.url}
             width={944}
@@ -55,108 +33,61 @@ export default function ArticlesId({ articles }) {
             layout='intrinsic'
             alt="eye_catch"
           />
-        </Box>
+        </div>
 
-        <Box sx={{
-          width: '85%',
-          mx: 'auto',
-          mb: '5rem',
-        }}>
+        <div className={styles.contentWrapper}>
 
-        <Stack spacing={1}   alignItems="flex-start"
-          sx={{
-            mt: 2,
-            mb: 4,
-        }}>
-      
-          <Typography variant='subtitle2' color='primary' component='span' 
-          sx={{
-            backgroundColor:'common.black',
-            px: 1.5,
-            py: 0.5,
-            borderRadius: '0.2rem',
-          }}>
-              {articles.categories.name}
-          </Typography>
-
-          <Typography variant='h3' component='h1' 
-            sx={{
-              pt: 1,
-              textDecoration: 'none !important',
-              
-            }}>
-            {articles.title}
-          </Typography>
-          <Typography variant='smalltitle2' component='p' 
-            sx={{
-              pl: 0.5,
-            }}>
-            <div>
-              {articles.publishedAt}
+          <div className={styles.headerItems}>
+            <div className={styles.categoryTag}>
+                {articles.categories.name}
             </div>
-          </Typography>
-        </Stack>
+            <h3 className={styles.postTitle}>
+              {articles.title}
+            </h3>
+            <div className={styles.postDate}>
+                {articles.publishedAt}
+            </div>       
+          </div>
 
-
-          <Box
-            sx={{
-              width:'100%',
-              mx: 'auto',
-              
-            }}
-            dangerouslySetInnerHTML={{
+          <div className={styles.textWrapper} dangerouslySetInnerHTML={{
               __html: `${articles.body}`,
-            }}
+            }} 
           />
-          <Box sx={{
-            my: '2rem',
-          }}>
-            <Stack
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
-              spacing={2}
-            >
-              <Typography variant='h4' component='div'>
-                この記事をシェアする
-              </Typography>
-              <Stack 
-                direction="row"
-                spacing={2}
-                justifyContent="center"
-                alignItems="center"
-              >
 
-                <Item>
+          
+            <div className={styles.shareWrapper}>
+              <div className={styles.h4}>
+                この記事をシェアする
+              </div>
+              <div className={styles.shareBtns}>
+                <div className={styles.item}>
                   <TwitterShareButton url={[`hhttps://setsuna-dev.vercel.app/articles/${articles.id}`]} title={[articles.title]}>
                     <TwitterIcon size={32} round />
                   </TwitterShareButton>
-                </Item>
-                <Item>
+                </div>
+                <div className={styles.item}>
                   <FacebookShareButton url={[`https://setsuna-dev.vercel.app/articles/${articles.id}`]}>
                     <FacebookIcon size={32} round />
                   </FacebookShareButton>
-                </Item>
-                <Item>
+                </div>
+                <div className={styles.item}>
                   <LineShareButton url={[`https://setsuna-dev.vercel.app/articles/${articles.id}`]} title={[articles.title]}>
                     <LineIcon size={32} round />
                   </LineShareButton>
-                </Item>
-                <Item>
+                </div>
+                <div className={styles.item}>
                   <PinterestShareButton url={[`https://setsuna-dev.vercel.app/articles/articles/${articles.id}`]} media={[`http://localhost:8080/${articles.eye_catch.url}`]} description={[articles.title]}>
                     <PinterestIcon size={32} round />
                   </PinterestShareButton>
-                </Item>
-              </Stack>
-            </Stack>
-
-          </Box>
+                </div>
+              </div>
+            </div>
           <LinkButton 
             url={'/blog'}
             button={'ブログ一覧に戻る'}
           />
-        </Box>
-      </Box>
+        </div>
+      </div>
      
 
     </>

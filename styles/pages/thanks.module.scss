@@ -1,0 +1,21 @@
+@import 'variables';
+
+
+.thanksContainer {
+  height: 80vh;
+  width: 80%;
+  max-width: 710px;
+  margin: auto;
+}
+
+.columnStack {
+  @include columnStack();
+}
+
+.largeTx {
+  @include h4;
+}
+
+.subScript {
+  @include subtitle_sm;
+}
