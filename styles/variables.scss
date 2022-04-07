@@ -25,50 +25,59 @@ $midGray: #747474;
 $deepGray: #444444;
 
 //fonts
+@font-face {
+  font-family: 'museo_sb';
+  src: url('../fonts/museo/MuseoModerno-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'zenkaku_regular';
+  src: url('../fonts/zenkaku/ZenKakuGothicAntique-Regular.ttf');
+}
+
 @mixin h1() {
-  font-family: 'MuseoModerno';
+  font-family: 'museo_sb';
   font-size:  3rem;
   font-weight: 600;
 }
 
 @mixin h2() {
-  font-family: 'MuseoModerno';
+  font-family: 'museo_sb';
   font-size:  2rem;
   font-weight: 600;
 }
 
 @mixin h3() {
-  font-family: 'MuseoModerno';
+  font-family: 'museo_sb';
   font-size:  1.5rem;
   font-weight: 600;
 }
 
 @mixin h3_jp() {
-  font-family: 'Zen Kaku Gothic New';
+  font-family: 'Zenkaku_regular';
   font-size:  1.5rem;
   font-weight: 600;
 }
 
 @mixin h4() {
-  font-family: 'Zen Kaku Gothic New';
+  font-family: 'Zenkaku_regular';
   font-size:  1.25rem;
   font-weight: 700;
 }
 
 @mixin subtitle_md() {
-  font-family: 'Zen Kaku Gothic New';
+  font-family: 'Zenkaku_regular';
   font-size:  1rem;
   font-weight: 700;
 }
 
 @mixin subtitle_sm() {
-  font-family: 'Zen Kaku Gothic New';
+  font-family: 'Zenkaku_regular';
   font-size:  0.8rem;
   font-weight:  600;
 }
 
 @mixin body() {
-  font-family: 'Zen Kaku Gothic New';
+  font-family: 'Zenkaku_regular';
   font-size:  0.1rem;
   font-weight:  400;
   line-height: 1.6rem;
