@@ -58,11 +58,11 @@ export default function Home({articles}) {
           subscript={'よくあるご質問'}
         />
       </div>
-
+{/* 
       <LinkButton
         url={'/q-and-a'}
         button={'Q&Aを見る'}
-      />
+      /> */}
 
       <SectionTitle
         sectiontitle={'Blog'}
