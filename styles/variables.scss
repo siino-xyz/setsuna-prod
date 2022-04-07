@@ -24,15 +24,19 @@ $lightGray: #b5b5b5;
 $midGray: #747474;
 $deepGray: #444444;
 
-//fonts
+// fonts
+@font-face {
+  font-family: 'museo-semibold';
+  src: url('../fonts/museo/MuseoModerno-Bold.woff2') format('woff2');
+}
 // @font-face {
-//   font-family: 'museo_sb';
-//   src: url('../fonts/museo/MuseoModerno-SemiBold.ttf');
+//   font-family: '';
+//   src: url('')
 // }
-// @font-face {
-//   font-family: 'zenkaku_regular';
-//   src: url('../fonts/zenkaku/ZenKakuGothicAntique-Regular.ttf');
-// }
+@font-face {
+  font-family: 'bizud-normal';
+  src: url('../fonts/biz/BIZUDGothic-Regular.ttf') format('truetype');
+}
 
 // BIZ UDPGothic
 // 400(regular),700(bold)
@@ -41,39 +45,35 @@ $deepGray: #444444;
 //500(regular),600(semibold)
 
 @mixin h1() {
-  font-family: 'MuseoModerno';
+  font-family: 'museo-semibold';
   font-size:  3rem;
-  font-weight: 600;
+  // font-weight: 600;
   font-display: optional;
 }
 
 @mixin h2() {
-  font-family: 'MuseoModerno';
+  font-family: 'museo-semibold';
   font-size:  2rem;
-  font-weight: 600;
+  // font-weight: 600;
   font-display: optional;
 }
 
 @mixin h3() {
-  font-family: 'MuseoModerno';
+  font-family: 'museo-semibold';
   font-size:  1.5rem;
-  font-weight: 600;
+  // font-weight: 600;
   font-display: optional;
-
 }
 
 @mixin h3_jp() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'bizud-normal';
   font-size:  1.5rem;
   font-weight: 700;
   font-display: optional;
-    font-display: optional;
-
-
 }
 
 @mixin h4() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'bizud-normal';
   font-size:  1.25rem;
   font-weight: 700;
   font-display: optional;
@@ -81,28 +81,25 @@ $deepGray: #444444;
 }
 
 @mixin subtitle_md() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'bizud-normal';
   font-size:  1rem;
   font-weight: 700;
   font-display: optional;
-
 }
 
 @mixin subtitle_sm() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'bizud-normal';
   font-size:  0.8rem;
   font-weight:  700;
   font-display: optional;
-
 }
 
 @mixin body() {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'bizud-normal';
   font-size:  1rem;
   font-weight:  400;
   line-height: 1.6rem;
   font-display: optional;
-
 }
 
 
