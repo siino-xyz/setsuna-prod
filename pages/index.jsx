@@ -1,22 +1,14 @@
 import dynamic from 'next/dynamic'
-
+import InnerWidth from '../layouts/inner-width'
+import styles from '../styles/pages/index.module.scss'
 const NestedLayout = dynamic(() => import('../layouts/nested-layout'))
 const Profile = dynamic(() => import('../components/profile'))
 const Layout = dynamic(() => import('../layouts/layout'))
-
 const LinkButton = dynamic(() => import('../components/common/button'))
 const SectionTitle = dynamic(() => import('../components/common/section-title'))
-
 const Question = dynamic(() => import('../components/question'))
 const Solution = dynamic(() => import('../components/solution'))
-
 const ArticleCard = dynamic(() => import('../components/common/articles'))
-
-
-
-import InnerWidth from '../layouts/inner-width'
-
-import Grid from '@mui/material/Grid'
 
 export default function Home({articles}) {
   return (
@@ -27,12 +19,15 @@ export default function Home({articles}) {
           subscript={'こんな事でお困りでは有りませんか？'}
         />
       </div>
-        <Question />
-        <SectionTitle
-          sectiontitle={'Our Solution'}
-          subscript={'Jamstackで高速・セキュアなウェブサイトを'}
-        />
-        <Solution />
+
+      <Question />
+
+      <SectionTitle
+        sectiontitle={'Our Solution'}
+        subscript={'Jamstackで高速・セキュアなウェブサイトを'}
+      />
+
+      <Solution />
 
       <div id='profile'>
         <SectionTitle
@@ -58,30 +53,23 @@ export default function Home({articles}) {
       </InnerWidth>
 
       <div id='q-a'>
-            <SectionTitle
-              sectiontitle={'Q&A'}
-              subscript={'よくあるご質問'}
-            />
-      </div>
-              <LinkButton
-          url={'/q-and-a'}
-          button={'Q&Aを見る'}
+        <SectionTitle
+          sectiontitle={'Q&A'}
+          subscript={'よくあるご質問'}
         />
+      </div>
+
+      <LinkButton
+        url={'/q-and-a'}
+        button={'Q&Aを見る'}
+      />
 
       <SectionTitle
         sectiontitle={'Blog'}
         subscript={'お知らせとテックブログ'}
       />
 
-      <Grid 
-       container spacing={{ xs: 2, md: 5 }}
-       columns={{ xs: 4, sm: 8, md: 12 }}
-       sx={{
-         mx: 'auto',
-         pt: 0,
-         pb: 1,
-       }}
-      >
+      <div className={styles.articleConatiner}>
         {articles.map((articles) => (
           <ArticleCard
           articles={articles}
@@ -89,13 +77,12 @@ export default function Home({articles}) {
           >
           </ArticleCard>
         ))}
-      </Grid>
+      </div>
 
       <LinkButton
         url={'blog'}
         button={'ブログを読む'}
       />
-
     </>
   )
 }

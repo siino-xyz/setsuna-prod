@@ -1,0 +1,49 @@
+@import 'variables';
+
+.card {
+  max-width: 330px;
+  padding: 0;
+  margin: 2rem auto;
+  border-radius: 0.1rem;
+  overflow: hidden;
+  background-color: $bgBlack;
+
+  @include mq(sm) {
+    padding: 0 2rem;
+  }
+
+    // .eyeCatch {
+    
+    // }
+  
+  .cardContent {
+    background-color: $white;
+  
+    .categoryTag {
+      @include subtitle_sm;
+      background-color: $bgBlack;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.2rem;
+    }
+
+    .postTitle {
+      @include h4;
+      padding: 1rem 0;
+      text-decoration:  none !important;
+      line-height: 1.5rem;
+      cursor: pointer;
+      min-height: 70px;
+      max-height: 70px;
+
+      @include mq(sm) {
+        min-height: 40px;
+        max-height: 40px;  
+      }
+    }
+
+    .postDate {
+      @include subtitle_sm;
+      padding-left: 0.5rem;
+    }
+  }
+}

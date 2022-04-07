@@ -56,13 +56,13 @@ export const Question = () => {
           </div>
 
           <div className={styles.flexItem}>
-            {/* <Image 
+            <Image 
               src="/gif/MOSHED-2022-4-3-22-43-43.gif" 
               width={500} 
               height={320}
               alt="lazy_phone"
               layout='intrinsic'
-            /> */}
+            />
           </div>
         </div>
 
@@ -92,13 +92,13 @@ export const Question = () => {
               </ul>
           </div>
           <div className={styles.flexItem}>
-            {/* <Image 
+            <Image 
               src="/gif/MOSHED-2022-4-3-23-26-2 (1).gif" 
               width={500} 
               height={320}
               alt="lazy_phone"
               layout='intrinsic'
-            /> */}
+            />
           </div>
 
         </div>

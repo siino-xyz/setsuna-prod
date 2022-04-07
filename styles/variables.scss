@@ -24,25 +24,6 @@ $lightGray: #b5b5b5;
 $midGray: #747474;
 $deepGray: #444444;
 
-// fonts
-// @font-face {
-//   font-family: 'MuseoModerno';
-//   src: url('../fonts/museo/MuseoModerno-Bold.woff2') format('woff2');
-// }
-// @font-face {
-//   font-family: '';
-//   src: url('')
-// }
-// @font-face {
-//   font-family: 'BIZ UDPGothic';
-//   src: url('../fonts/biz/BIZUDGothic-Regular.ttf') format('truetype');
-// }
-
-// BIZ UDPGothic
-// 400(regular),700(bold)
-
-// MuseoModerno
-//500(regular),600(semibold)
 
 @mixin h1() {
   font-family: 'MuseoModerno';
@@ -104,7 +85,7 @@ $deepGray: #444444;
 
 
 //layouts
-@mixin columnStack( $justify: center, $align: center,  $fd: column) {
+@mixin columnStack($fd: column, $justify: center, $align: center) {
   display: flex;
   flex-direction: $fd;
   justify-content: $justify;

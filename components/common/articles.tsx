@@ -1,44 +1,17 @@
+import styles from '../../styles/components/common/article.module.scss';
 import Link from "next/link"
 import Articles from "../../models/post"
 import Image from 'next/image'
-// //mui-components
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid'
-import Box from '@mui/material/Box'
-
 
 const ArticleCard = ({ articles }: {
   articles: Articles
 }) => {
   return (
-    <>
-    <Grid item xs={10} sm={4} md={4} 
-    >
-      <Card sx={{ 
-          maxWidth: 330,
-          py: 0,
-          boxShadow: 'none',
-          borderRadius: '0.1rem',
-          overflow: 'hidden',
-          mx: 'auto',
-          my: 2,
-          backgroundColor: 'common.black',
-
-
-          "@media screen and (max-width:600px)": {
-            px: 2,
-          },
-        }} 
-        key={articles.id}
-      >
+      <div className={styles.card} key={articles.id}>
 
         <Link href={`/articles/${articles.id}`} passHref>
           <a>
-            <Box sx={{
-              
-            }}>
+            <div>
               <Image
                 src={articles.eye_catch.url}
                 width={330}
@@ -46,65 +19,32 @@ const ArticleCard = ({ articles }: {
                 layout='responsive'
                 alt="eye_catch"
               />
-            </Box>
+            </div>
           </a>
         </Link>
-        <CardContent sx={{
-             backgroundColor: 'common.white',
-        }}>
-          <Typography variant='subtitle2' component='span'
-          sx={{
-            backgroundColor: 'common.black',
-            color: 'common.white',
-            px: 1,
-            pt: 0.2,
-            pb: 0.3,
-            my: 0,
-            borderRadius: 0.7,
-          }}>
+
+        <div className={styles.cardContent}>
+
+          <div className={styles.categoryTag}>
             {articles.categories.name}
-          </Typography>
+          </div>
 
           <Link href={`/articles/${articles.id}`} passHref>
             <a>
-             <Typography 
-             variant='subtitle1'
-             component='h1'
-             sx={{
-               color: 'common.black',
-               lineHeight: '1.5rem',
-               cursor: 'pointer',
-               my: 1,
-               mx: 0,
-               minHeight: '70px',
-               maxHeight: '70px',
-                  "@media screen and (max-width:400px)": {
-                    minHeight: '40px',
-                    maxHeight: '40px',
-                  },
-             }}
-             >
+             <h2 className={styles.postTitle}>
               {articles.title}
-             </Typography>
+             </h2>
             </a>
           </Link>
 
+          <div className={styles.postDate}>
+            <div>
+              {articles.publishedAt}
+            </div>
+          </div>
 
-        
-          <Typography variant='subtitle2' component='p' 
-            sx={{
-                color: 'common.black',
-                
-              }}
-              >
-              <div>
-                {articles.publishedAt}
-              </div>
-          </Typography>
-        </CardContent>
-      </Card>
-    </Grid>
-   </>
+        </div>
+      </div>
   )
 }
 
