@@ -11,7 +11,7 @@ const Question = dynamic(() => import('../components/question'))
 const Solution = dynamic(() => import('../components/solution'))
 
 const ArticleCard = dynamic(() => import('../components/common/articles'))
-const CustomizedAccordions = dynamic(() => import('../components/q-and-a'))
+
 
 
 import InnerWidth from '../layouts/inner-width'
@@ -51,11 +51,8 @@ export default function Home({articles}) {
       </div>
 
       <InnerWidth>
-        {/* <Paragraph 
-          paragraph={'ご興味をお持ち頂けましたら、いつでもお気軽にお問い合わせください。SE-27では個人・法人を問わずご依頼をお引き受けしております。'}
-        /> */}
         <LinkButton
-          url={'contact'}
+          url={'/contact'}
           button={'フォームからお問い合わせする'}
         />
       </InnerWidth>
@@ -66,7 +63,10 @@ export default function Home({articles}) {
               subscript={'よくあるご質問'}
             />
       </div>
-      <CustomizedAccordions />
+              <LinkButton
+          url={'/q-and-a'}
+          button={'Q&Aを見る'}
+        />
 
       <SectionTitle
         sectiontitle={'Blog'}
