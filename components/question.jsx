@@ -38,19 +38,19 @@ export const Question = () => {
               <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <CkeckIcon />
-                  自社サイトの読み込み速度が遅い
+                  <p>自社サイトの読み込み速度が遅い</p>
                 </li>
                 <li className={styles.listItem}>
                 <CkeckIcon />
-                  特にスマホからの読み込みが遅い
+                  <p>特にスマホからの読み込みが遅い</p>
                 </li>
                 <li className={styles.listItem}>
                 <CkeckIcon />
-                  ユーザーの直帰率が高い
+                  <p>ユーザーの直帰率が高い</p>
                 </li>
                 <li className={styles.listItem}>
                 <CkeckIcon />
-                  PageSpeed Insightsのスコアが低い
+                  <p>PageSpeed Insightsのスコアが低い</p>
                 </li>
               </ul>
           </div>
@@ -75,19 +75,19 @@ export const Question = () => {
               <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <CkeckIcon />
-                  サーバーの更新・確認を行っていない
+                  <p>サーバーの更新・確認を行っていない</p>
                 </li>
                 <li className={styles.listItem}>
                   <CkeckIcon />
-                  プラグインのバージョンが古いまま
+                  <p>プラグインのバージョンが古いまま</p>
                 </li>
                 <li className={styles.listItem}>
                   <CkeckIcon />
-                  セキュリティ対策の必要性が分からない
+                  <p>セキュリティ対策の必要性が分からない</p>
                 </li>
                 <li className={styles.listItem}>
                   <CkeckIcon />
-                  メンテナンスの担当者が社内にいない 
+                  <p>メンテナンスの担当者が社内にいない</p>
                 </li>
               </ul>
           </div>

@@ -9,15 +9,10 @@ html{
   width: 100%;
   font-size: 14px;
   color: $white;
+  font-family: 'BIZ UDPGothic' ,sans-serif;
+  font-display: optional;
 }
 h1,h2,h3,h4,h5,p {
- font-family:  '-apple-system',
-                'BlinkMacSystemFont',
-                '"Segoe UI"',
-                '"Helvetica Neue"',
-                'Arial',
-                'sans-serif',
-                '"Apple Color Emoji"',
-                '"Segoe UI Emoji"',
-                '"Segoe UI Symbol"', sans-serif;
+  letter-spacing: 0.09rem;
+
 }

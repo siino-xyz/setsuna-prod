@@ -25,62 +25,84 @@ $midGray: #747474;
 $deepGray: #444444;
 
 //fonts
-@font-face {
-  font-family: 'museo_sb';
-  src: url('../fonts/museo/MuseoModerno-SemiBold.ttf');
-}
-@font-face {
-  font-family: 'zenkaku_regular';
-  src: url('../fonts/zenkaku/ZenKakuGothicAntique-Regular.ttf');
-}
+// @font-face {
+//   font-family: 'museo_sb';
+//   src: url('../fonts/museo/MuseoModerno-SemiBold.ttf');
+// }
+// @font-face {
+//   font-family: 'zenkaku_regular';
+//   src: url('../fonts/zenkaku/ZenKakuGothicAntique-Regular.ttf');
+// }
+
+// BIZ UDPGothic
+// 400(regular),700(bold)
+
+// MuseoModerno
+//500(regular),600(semibold)
 
 @mixin h1() {
-  font-family: 'museo_sb';
+  font-family: 'MuseoModerno';
   font-size:  3rem;
   font-weight: 600;
+  font-display: optional;
 }
 
 @mixin h2() {
-  font-family: 'museo_sb';
+  font-family: 'MuseoModerno';
   font-size:  2rem;
   font-weight: 600;
+  font-display: optional;
 }
 
 @mixin h3() {
-  font-family: 'museo_sb';
+  font-family: 'MuseoModerno';
   font-size:  1.5rem;
   font-weight: 600;
+  font-display: optional;
+
 }
 
 @mixin h3_jp() {
-  font-family: 'Zenkaku_regular';
+  font-family: 'BIZ UDPGothic';
   font-size:  1.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-display: optional;
+    font-display: optional;
+
+
 }
 
 @mixin h4() {
-  font-family: 'Zenkaku_regular';
+  font-family: 'BIZ UDPGothic';
   font-size:  1.25rem;
   font-weight: 700;
+  font-display: optional;
+
 }
 
 @mixin subtitle_md() {
-  font-family: 'Zenkaku_regular';
+  font-family: 'BIZ UDPGothic';
   font-size:  1rem;
   font-weight: 700;
+  font-display: optional;
+
 }
 
 @mixin subtitle_sm() {
-  font-family: 'Zenkaku_regular';
+  font-family: 'BIZ UDPGothic';
   font-size:  0.8rem;
-  font-weight:  600;
+  font-weight:  700;
+  font-display: optional;
+
 }
 
 @mixin body() {
-  font-family: 'Zenkaku_regular';
-  font-size:  0.1rem;
+  font-family: 'BIZ UDPGothic';
+  font-size:  1rem;
   font-weight:  400;
   line-height: 1.6rem;
+  font-display: optional;
+
 }
 
 
