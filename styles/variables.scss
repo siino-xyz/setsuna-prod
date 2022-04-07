@@ -69,10 +69,11 @@ $deepGray: #444444;
 }
 
 @mixin subtitle_sm() {
-  font-family: 'BIZ UDPGothic' sans-serif;
+  font-family: 'MuseoModerno';
   font-size:  0.8rem;
   font-weight:  700;
   font-display: optional;
+  margin: 0;
 }
 
 @mixin body() {

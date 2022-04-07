@@ -16,7 +16,7 @@ export default function Home({articles}) {
       <div id='services'>
         <SectionTitle
           sectiontitle={'Raise a Question'}
-          subscript={'こんな事でお困りでは有りませんか？'}
+          subscript={''}
         />
       </div>
 
@@ -58,11 +58,11 @@ export default function Home({articles}) {
           subscript={'よくあるご質問'}
         />
       </div>
-{/* 
+
       <LinkButton
         url={'/q-and-a'}
         button={'Q&Aを見る'}
-      /> */}
+      />
 
       <SectionTitle
         sectiontitle={'Blog'}
